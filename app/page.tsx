@@ -1,4 +1,5 @@
 import { BenefitsSection } from '@/components/sections/BenefitsSection';
+import { ComparisonSection } from '@/components/sections/ComparisonSection';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { CredibilitySection } from '@/components/sections/CredibilitySection';
 import { DifferentiationSection } from '@/components/sections/DifferentiationSection';
@@ -19,6 +20,7 @@ export default function Home() {
         <HeroSection />
         <ProblemSection />
         <SolutionSection />
+        <ComparisonSection />
         <BenefitsSection />
         <ProcessSection />
         <DifferentiationSection />
