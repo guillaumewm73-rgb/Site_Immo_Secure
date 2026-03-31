@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from 'react';
 import { Container } from '@/components/ui/Container';
-import { company } from '@/content/siteContent';
+import { company, contactContent, ctaLabels } from '@/content/siteContent';
 
 type ContactFormValues = {
   firstName: string;
@@ -112,11 +112,9 @@ export function ContactSection() {
               <p className="inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/85">
                 Prise de contact
               </p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-                Voyez où vous perdez vos mandats
-              </h2>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">{contactContent.title}</h2>
               <p className="mt-3 text-base leading-relaxed text-white/85">
-                En 30 minutes, vous voyez où votre agence perd des opportunités et comment les récupérer.
+                {contactContent.subtitle}
               </p>
 
               <ul className="mt-6 space-y-2">
@@ -208,10 +206,11 @@ export function ContactSection() {
               disabled={status === 'loading'}
               className="btn-primary mt-6 w-full disabled:cursor-not-allowed disabled:opacity-70"
             >
-              {status === 'loading' ? 'Envoi en cours...' : 'Voir comment ça fonctionne chez vous'}
+              {status === 'loading' ? 'Envoi en cours...' : ctaLabels.secondary}
             </button>
 
             <p className="mt-3 text-center text-sm text-slate-500">Réponse rapide. Aucun engagement.</p>
+            <p className="mt-2 text-center text-sm font-medium text-steel">{contactContent.closing}</p>
 
             {status === 'success' ? (
               <p className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { BoltIcon, RepeatIcon } from '@/components/ui/Icons';
 import { Container } from '@/components/ui/Container';
 import { SectionHeader } from '@/components/ui/SectionHeader';
-import { solutionContent } from '@/content/siteContent';
+import { ctaLabels, solutionContent } from '@/content/siteContent';
 
 const iconMap = [BoltIcon, RepeatIcon];
 
@@ -29,15 +29,20 @@ export function SolutionSection() {
 
                 <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-700 sm:text-base">
                   <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Ce que ça fait</p>
-                    <p className="mt-1">{pillar.description}</p>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Ce que fait le système</p>
+                    <p className="mt-1">{pillar.does}</p>
                   </div>
 
                   <div className="panel-muted p-4">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
-                      Pourquoi ça rapporte plus
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Ce que voit l’agence</p>
+                    <p className="mt-1 text-steel">{pillar.sees}</p>
+                  </div>
+
+                  <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-700">
+                      Ce que cela change commercialement
                     </p>
-                    <p className="mt-1 font-medium text-steel">{pillar.result}</p>
+                    <p className="mt-1 font-medium text-emerald-900">{pillar.impact}</p>
                   </div>
                 </div>
               </article>
@@ -47,7 +52,7 @@ export function SolutionSection() {
 
         <div className="mt-8 flex justify-center">
           <Link href="#contact" className="btn-primary w-full sm:w-auto">
-            Voir comment ça fonctionne chez vous
+            {ctaLabels.primary}
           </Link>
         </div>
       </Container>

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { company, navLinks } from '@/content/siteContent';
+import { company, ctaLabels, navLinks } from '@/content/siteContent';
 import { Container } from '@/components/ui/Container';
 
 export function SiteHeader() {
@@ -44,8 +44,8 @@ export function SiteHeader() {
             {company.phoneDisplay}
           </Link>
           <Link href="#contact" className="btn-primary px-4 py-2 text-xs sm:px-6 sm:py-3 sm:text-sm">
-            <span className="sm:hidden">Mandats</span>
-            <span className="hidden sm:inline">Récupérer plus de mandats</span>
+            <span className="sm:hidden">Diagnostic</span>
+            <span className="hidden sm:inline">{ctaLabels.secondary}</span>
           </Link>
         </div>
       </Container>

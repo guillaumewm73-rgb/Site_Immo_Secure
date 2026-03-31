@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { BoltIcon, CheckIcon, ShieldIcon } from '@/components/ui/Icons';
+import { comparisonContent, ctaLabels } from '@/content/siteContent';
 
 const beforeItems = [
   'Leads traités trop tard',
@@ -36,8 +37,8 @@ export function ComparisonSection() {
       <Container>
         <SectionHeader
           kicker="Visualisation"
-          title="Ce qui change concrètement dans votre agence"
-          description="Un avant / après simple à lire en quelques secondes."
+          title={comparisonContent.title}
+          description={comparisonContent.description}
           align="center"
         />
 
@@ -92,7 +93,7 @@ export function ComparisonSection() {
 
         <div className="mt-8 flex justify-center">
           <Link href="#contact" className="btn-primary w-full sm:w-auto">
-            Voir comment récupérer plus de mandats
+            {ctaLabels.primary}
           </Link>
         </div>
       </Container>

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { SectionHeader } from '@/components/ui/SectionHeader';
-import { problemContent } from '@/content/siteContent';
+import { ctaLabels, problemContent, problemScenarios } from '@/content/siteContent';
 
 const lossTimeline = [
   {
@@ -48,7 +48,7 @@ export function ProblemSection() {
             </p>
 
             <Link href="#contact" className="btn-primary mt-6 w-full sm:w-auto">
-              Voir comment récupérer plus de mandats
+              {ctaLabels.primary}
             </Link>
           </div>
 
@@ -70,6 +70,15 @@ export function ProblemSection() {
               <p className="mt-4 rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm font-medium text-rose-700">
                 1 lead non suivi = 1 mandat potentiel offert à la concurrence.
               </p>
+
+              <div className="mt-5 space-y-3">
+                {problemScenarios.map((scenario) => (
+                  <div key={scenario.title} className="panel-muted p-4">
+                    <p className="text-sm font-semibold text-ink">{scenario.title}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-600">{scenario.text}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

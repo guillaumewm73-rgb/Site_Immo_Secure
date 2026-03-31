@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { SectionHeader } from '@/components/ui/SectionHeader';
-import { benefits } from '@/content/siteContent';
+import { benefits, ctaLabels } from '@/content/siteContent';
 import { BoltIcon, CalendarIcon, ChartIcon, CheckIcon, ShieldIcon, UserGearIcon } from '@/components/ui/Icons';
 
 const icons = [ChartIcon, CalendarIcon, UserGearIcon, CheckIcon, BoltIcon, ShieldIcon];
@@ -36,7 +36,7 @@ export function BenefitsSection() {
 
         <div className="mt-8 flex justify-center">
           <Link href="#contact" className="btn-secondary w-full sm:w-auto">
-            Voir comment récupérer plus de mandats
+            {ctaLabels.primary}
           </Link>
         </div>
       </Container>

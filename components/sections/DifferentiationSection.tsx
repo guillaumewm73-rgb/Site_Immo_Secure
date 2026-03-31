@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
-import { differentiation } from '@/content/siteContent';
+import { ctaLabels, differentiation } from '@/content/siteContent';
 
 export function DifferentiationSection() {
   return (
@@ -24,7 +24,7 @@ export function DifferentiationSection() {
               href="#contact"
               className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-deep transition duration-300 ease-smooth hover:-translate-y-0.5 hover:bg-slate-100 sm:w-auto"
             >
-              Voir comment récupérer plus de mandats
+              {ctaLabels.primary}
             </Link>
           </div>
         </div>

@@ -59,8 +59,8 @@ export function HeroSection() {
               </Link>
             </div>
 
-            <p className="text-sm font-medium text-steel">
-              Chaque demande non traitée part chez un concurrent.
+            <p className="rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-700">
+              {heroContent.tension}
             </p>
           </div>
 
@@ -83,8 +83,8 @@ export function HeroSection() {
               ))}
             </div>
 
-            <div className="mt-4 rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm font-medium text-rose-700">
-              Sans ce flux, un lead surchauffé devient vite un mandat perdu.
+            <div className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-800">
+              Le système ne remplace pas l’agence. Il l’aide à intervenir exactement au bon moment.
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { SectionHeader } from '@/components/ui/SectionHeader';
-import { processSteps } from '@/content/siteContent';
+import { ctaLabels, processSteps } from '@/content/siteContent';
 
 export function ProcessSection() {
   return (
@@ -29,7 +29,7 @@ export function ProcessSection() {
         <div className="mt-8 flex flex-col items-center gap-3 text-center">
           <p className="text-sm text-slate-600">Pas besoin de changer de CRM. Pas de déploiement lourd.</p>
           <Link href="#contact" className="btn-secondary w-full sm:w-auto">
-            Voir comment ça fonctionne chez vous
+            {ctaLabels.secondary}
           </Link>
         </div>
       </Container>
