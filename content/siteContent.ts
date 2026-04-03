@@ -7,25 +7,43 @@ export const company = {
   phoneHref: '+33766133702'
 };
 
+export const seoContent = {
+  siteUrl: 'https://immosecure.fr',
+  title: 'Immo Secure | Réponse instantanée et relance des estimations pour agences immobilières',
+  shortTitle: 'Immo Secure',
+  description:
+    'Immo Secure aide les agences immobilières indépendantes à répondre instantanément aux leads, relancer les estimations et récupérer plus de mandats sans alourdir leur équipe.',
+  socialDescription:
+    'Réponse instantanée aux leads immobiliers, relance automatique des estimations et suivi commercial plus rigoureux pour signer plus de mandats.',
+  keywords: [
+    'agence immobilière indépendante',
+    'leads immobiliers',
+    'mandats immobiliers',
+    'relance estimation immobilière',
+    'automatisation immobilier',
+    'suivi commercial agence immobilière',
+    'réponse instantanée lead immobilier',
+    'récupérer plus de mandats'
+  ],
+  ogImageAlt: 'Immo Secure, système de réponse instantanée et de relance pour agences immobilières',
+  locale: 'fr_FR',
+  language: 'fr-FR'
+};
+
 export const ctaLabels = {
   primary: 'Voir comment récupérer plus de mandats',
   secondary: 'Demander un diagnostic'
 };
 
 export const heroContent = {
-  title: 'Des mandats se perdent pendant que votre agence attend encore de répondre.',
+  title: 'Chaque lead non suivi peut devenir un mandat perdu.',
   subtitle:
-    'Pour les agences immobilières indépendantes, nous mettons en place un système qui répond tout de suite, relance les estimations et remonte les leads chauds avant qu’ils ne partent ailleurs.',
+    'Nous mettons en place un système concret qui répond vite, relance les estimations et aide votre agence à signer plus de mandats.',
   primaryCta: {
     label: ctaLabels.primary,
     href: '#contact'
   },
-  secondaryCta: {
-    label: ctaLabels.secondary,
-    href: '#contact'
-  },
-  microProof: 'Pensé pour les agences immobilières indépendantes',
-  tension: 'Pendant que vous attendez, vos concurrents répondent.'
+  tension: 'Pendant que vous attendez, un concurrent prend le rendez-vous.'
 };
 
 export const heroSignals = [
@@ -53,9 +71,9 @@ export const proofStripItems = [
 export const navLinks = [
   { label: 'Problème', href: '#probleme' },
   { label: 'Solution', href: '#solution' },
-  { label: 'Bénéfices', href: '#benefices' },
-  { label: 'Méthode', href: '#comment-ca-marche' },
-  { label: 'FAQ', href: '#faq' }
+  { label: 'Résultats', href: '#resultats' },
+  { label: 'Confiance', href: '#confiance' },
+  { label: 'Contact', href: '#contact' }
 ];
 
 export const demoContent = {
@@ -74,19 +92,14 @@ export const demoContent = {
 };
 
 export const problemContent = {
-  title: 'Votre problème n’est pas le nombre de leads. C’est le suivi.',
-  paragraphs: [
-    'Chaque demande non traitée part chez un concurrent.',
-    'Un bon mois peut se jouer sur quelques opportunités mal traitées.'
-  ],
+  title: 'Le problème n’est pas le volume de leads. C’est le délai.',
+  paragraphs: ['Quand la réponse tarde ou que le suivi s’arrête, le mandat part ailleurs.'],
   bullets: [
     'Leads non rappelés à temps',
-    'Prospects qui refroidissent en quelques heures',
-    'Estimations oubliées après le rendez-vous',
-    'Suivi commercial irrégulier selon la charge',
-    'Opportunités perdues sans alerte'
+    'Estimations non relancées',
+    'Suivi irrégulier quand l’équipe est prise'
   ],
-  conclusion: 'Sans système, vous laissez du chiffre d’affaires sur la table chaque semaine.'
+  conclusion: 'Sans système clair, vous laissez du chiffre d’affaires sur la table.'
 };
 
 export const problemScenarios = [
@@ -138,22 +151,22 @@ export const scenarioContent = {
 };
 
 export const solutionContent = {
-  title: 'Un système clair pour ne plus perdre d’opportunités',
-  intro: 'Deux leviers simples. Un impact direct sur vos mandats.',
+  title: 'Le système fait peu de choses. Mais il les fait jusqu’au bout.',
+  intro: 'Deux leviers concrets pour récupérer ce que votre suivi laisse filer.',
   pillars: [
     {
       title: 'Réponse instantanée',
-      badge: 'Speed to lead',
-      does: 'Chaque demande entrante reçoit une réponse immédiate. Le lead est qualifié et un rendez-vous peut être proposé sans attendre.',
-      sees: 'Votre agence voit un lead trié, une demande cadrée et une alerte uniquement quand le contact devient prioritaire.',
-      impact: 'Vous prenez l’avantage sur les agences qui rappellent trop tard.'
+      badge: 'Lead entrant',
+      does: 'Chaque demande reçoit une réponse immédiate et avance vers le rendez-vous sans attendre.',
+      sees: 'Le lead arrive cadré, avec les bonnes infos et le bon niveau de priorité.',
+      impact: 'Vous prenez l’avantage plus vite.'
     },
     {
       title: 'Relance automatique des estimations',
-      badge: 'Suivi systématique',
-      does: 'Après chaque estimation, les relances partent automatiquement et s’arrêtent dès qu’une réponse arrive.',
-      sees: 'Votre équipe suit un pipeline propre, sans listes manuelles ni relances oubliées au fond du CRM.',
-      impact: 'Vous récupérez des mandats qui seraient restés inactifs.'
+      badge: 'Après estimation',
+      does: 'Les relances partent au bon moment et s’arrêtent dès qu’un prospect répond.',
+      sees: 'Le pipeline reste net, sans liste manuelle ni rappel oublié.',
+      impact: 'Vous récupérez des mandats qui seraient restés froids.'
     }
   ]
 };
@@ -198,27 +211,19 @@ export const comparisonContent = {
 export const benefits = [
   {
     title: 'Plus de mandats',
-    text: 'Vous transformez plus d’opportunités en signatures.'
+    text: 'Vous laissez moins d’opportunités se perdre.'
   },
   {
-    title: 'Plus de visites',
-    text: 'Vous répondez avant les autres agences.'
+    title: 'Plus de réactivité',
+    text: 'Votre agence répond mieux, même quand l’équipe est prise.'
   },
   {
-    title: 'Moins de charge mentale',
-    text: 'Le suivi tourne sans dépendre de la mémoire.'
+    title: 'Moins d’oubli',
+    text: 'Le suivi ne dépend plus de la mémoire des agents.'
   },
   {
-    title: 'Meilleure organisation',
-    text: 'Chaque lead suit un process clair.'
-  },
-  {
-    title: 'Réactivité maximale',
-    text: 'Votre délai de réponse devient un avantage.'
-  },
-  {
-    title: 'Avantage concurrentiel',
-    text: "Vous vendez plus sans alourdir l'équipe."
+    title: 'Suivi plus clair',
+    text: 'Chaque lead suit un chemin commercial net.'
   }
 ];
 
@@ -259,10 +264,10 @@ export const differentiation = {
 
 export const credibilityPoints = [
   'Pensé pour les agences immobilières indépendantes',
-  'Basé sur des problématiques réelles du terrain',
-  'Système orienté résultats, pas technologie',
-  'Mise en place personnalisée agence par agence',
-  'Compatible avec vos outils existants'
+  'Compatible avec vos outils actuels',
+  'Orienté résultats, pas gadget',
+  'Mise en place guidée',
+  'Interlocuteur direct'
 ];
 
 export const faqItems = [
@@ -299,8 +304,7 @@ export const finalCta = {
 };
 
 export const contactContent = {
-  title: 'Voyez exactement où votre agence perd des mandats',
-  subtitle:
-    'En 30 minutes, vous repartez avec un diagnostic clair et les points de correction prioritaires.',
-  closing: 'Si quelques opportunités mal traitées suffisent à changer votre mois, mieux vaut les voir maintenant.'
+  title: 'Voyez où votre agence perd des mandats',
+  subtitle: 'En 30 minutes, vous repartez avec un diagnostic clair et les priorités à corriger.',
+  closing: 'Quelques opportunités mieux traitées peuvent déjà changer votre mois.'
 };

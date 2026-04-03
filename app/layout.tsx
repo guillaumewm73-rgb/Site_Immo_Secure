@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Fraunces, Manrope } from 'next/font/google';
+import { company, seoContent } from '@/content/siteContent';
 import './globals.css';
 
 const manrope = Manrope({
@@ -15,20 +16,55 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://immosecure.fr'),
-  title: 'Immo Secure | Récupérez les mandats que votre agence perd',
-  description:
-    'Immo Secure aide les agences immobilières indépendantes à répondre instantanément et relancer leurs estimations pour signer plus de mandats.',
+  metadataBase: new URL(seoContent.siteUrl),
+  applicationName: seoContent.shortTitle,
+  title: {
+    default: seoContent.title,
+    template: `%s | ${seoContent.shortTitle}`
+  },
+  description: seoContent.description,
+  keywords: seoContent.keywords,
+  referrer: 'origin-when-cross-origin',
+  category: 'business',
+  creator: company.founder,
+  publisher: company.agency,
+  authors: [{ name: company.founder }],
   alternates: {
-    canonical: '/'
+    canonical: seoContent.siteUrl
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1
+    }
   },
   openGraph: {
-    title: 'Immo Secure | Zéro Opportunité Perdue',
-    description:
-      'Chaque lead non relancé peut coûter un mandat. Immo Secure sécurise votre suivi commercial.',
+    title: seoContent.title,
+    description: seoContent.socialDescription,
     type: 'website',
-    locale: 'fr_FR',
-    url: 'https://immosecure.fr'
+    locale: seoContent.locale,
+    url: seoContent.siteUrl,
+    siteName: seoContent.shortTitle,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: seoContent.ogImageAlt
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: seoContent.title,
+    description: seoContent.socialDescription,
+    images: ['/opengraph-image']
   }
 };
 

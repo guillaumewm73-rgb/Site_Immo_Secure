@@ -1,36 +1,21 @@
 import { Container } from '@/components/ui/Container';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CheckIcon, ShieldIcon } from '@/components/ui/Icons';
-import { company, credibilityPoints } from '@/content/siteContent';
-
-const trustBlocks = [
-  {
-    title: 'Spécialisation immobilière indépendante',
-    text: 'Le système est pensé pour les contraintes réelles des petites et moyennes agences.'
-  },
-  {
-    title: 'Problèmes terrain identifiés',
-    text: 'Focus sur la réactivité, le suivi post-estimation et la perte de leads chauds.'
-  },
-  {
-    title: 'Pilotage orienté résultats',
-    text: 'Objectif unique : récupérer des mandats que votre process actuel laisse partir.'
-  }
-];
+import { company, credibilityPoints, faqItems } from '@/content/siteContent';
 
 export function CredibilitySection() {
   return (
-    <section className="section-space section-tint">
+    <section id="confiance" className="section-space section-tint">
       <Container>
         <div className="grid items-start gap-10 lg:grid-cols-[1fr_1fr] lg:gap-12">
           <div>
             <SectionHeader
-              title="Pourquoi c’est crédible"
-              description="Pas de promesse floue. Une méthode commerciale cadrée, appliquée à votre agence."
+              title="Un système concret, pas une promesse floue"
+              description="Vous savez ce qui est mis en place, pourquoi, et dans quel but commercial."
               kicker="Confiance"
             />
 
-            <ul className="mt-8 space-y-4">
+            <ul className="mt-8 grid gap-4">
               {credibilityPoints.map((point) => (
                 <li
                   key={point}
@@ -50,18 +35,12 @@ export function CredibilitySection() {
               <ShieldIcon />
             </div>
 
-            <h3 className="mt-5 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-              Cadre d’intervention clair
-            </h3>
-            <p className="mt-3 text-base leading-relaxed text-slate-600">
-              Vous savez précisément ce qui est mis en place, pourquoi, et quel impact commercial attendre.
-            </p>
-
+            <h3 className="mt-5 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">Questions rapides</h3>
             <div className="mt-6 space-y-4">
-              {trustBlocks.map((block) => (
-                <div key={block.title} className="rounded-[1.5rem] border border-line/80 bg-white/95 p-5 shadow-soft">
-                  <p className="text-sm font-semibold text-ink sm:text-base">{block.title}</p>
-                  <p className="mt-2 text-sm text-slate-600">{block.text}</p>
+              {faqItems.slice(0, 3).map((item) => (
+                <div key={item.question} className="rounded-[1.5rem] border border-line/80 bg-white/95 p-5 shadow-soft">
+                  <p className="text-sm font-semibold text-ink sm:text-base">{item.question}</p>
+                  <p className="mt-2 text-sm text-slate-600">{item.answer}</p>
                 </div>
               ))}
             </div>

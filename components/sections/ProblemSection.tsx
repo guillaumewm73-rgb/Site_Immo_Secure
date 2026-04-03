@@ -1,8 +1,6 @@
-import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
-import { ArrowRightIcon } from '@/components/ui/Icons';
 import { SectionHeader } from '@/components/ui/SectionHeader';
-import { ctaLabels, problemContent, problemScenarios } from '@/content/siteContent';
+import { problemContent } from '@/content/siteContent';
 
 const lossTimeline = [
   {
@@ -23,17 +21,15 @@ export function ProblemSection() {
   return (
     <section id="probleme" className="section-space bg-white/60">
       <Container>
-        <div className="grid items-start gap-10 lg:grid-cols-[1.04fr_0.96fr] lg:gap-14">
+        <div className="grid items-start gap-10 lg:grid-cols-[0.98fr_1.02fr] lg:gap-14">
           <div>
             <SectionHeader title={problemContent.title} kicker="Point de friction" />
 
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-slate-700 sm:text-lg">
-              {problemContent.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-700 sm:text-lg">
+              {problemContent.paragraphs[0]}
+            </p>
 
-            <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+            <ul className="mt-8 grid gap-4">
               {problemContent.bullets.map((bullet) => (
                 <li
                   key={bullet}
@@ -50,14 +46,9 @@ export function ProblemSection() {
             <p className="mt-8 rounded-[1.75rem] border border-rose-200/80 bg-rose-50/90 p-6 text-base font-semibold leading-relaxed text-rose-700 shadow-soft sm:text-lg">
               {problemContent.conclusion}
             </p>
-
-            <Link href="#contact" className="btn-primary mt-8 w-full sm:w-auto">
-              {ctaLabels.primary}
-              <ArrowRightIcon className="h-4 w-4" />
-            </Link>
           </div>
 
-          <div className="lg:sticky lg:top-28">
+          <div>
             <div className="panel overflow-hidden border border-white/90 bg-gradient-to-br from-white via-white to-surface-alt/70 p-6 sm:p-7">
               <div className="flex items-start justify-between gap-4">
                 <div>
@@ -88,15 +79,6 @@ export function ProblemSection() {
               <p className="mt-6 rounded-[1.5rem] border border-rose-200 bg-rose-50 px-5 py-4 text-sm font-medium text-rose-700 sm:text-base">
                 1 lead non suivi = 1 mandat potentiel offert à la concurrence.
               </p>
-
-              <div className="mt-6 grid gap-4">
-                {problemScenarios.map((scenario) => (
-                  <div key={scenario.title} className="rounded-[1.5rem] border border-line/80 bg-white/90 p-5 shadow-soft">
-                    <p className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">{scenario.title}</p>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-600">{scenario.text}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>

@@ -1,24 +1,21 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRightIcon } from '@/components/ui/Icons';
+import { ArrowRightIcon, BoltIcon } from '@/components/ui/Icons';
 import { company, ctaLabels, navLinks } from '@/content/siteContent';
 import { Container } from '@/components/ui/Container';
 
 export function SiteHeader() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
+    <header className="relative z-50 px-4 pt-4 sm:fixed sm:inset-x-0 sm:top-0 sm:px-6">
       <Container>
-        <div className="flex h-16 items-center justify-between gap-3 rounded-full border border-white/80 bg-white/80 px-4 shadow-soft backdrop-blur-xl sm:h-20 sm:px-6">
-          <Link href="#top" className="group inline-flex items-center gap-2.5 sm:gap-3">
+        <div className="flex items-center justify-between gap-3 py-1 sm:h-20 sm:rounded-full sm:border sm:border-white/90 sm:bg-white/95 sm:px-6 sm:shadow-soft">
+          <Link
+            href="#top"
+            className="group inline-flex items-center gap-2.5 rounded-full bg-white/95 px-3 py-2 shadow-soft sm:gap-3 sm:bg-transparent sm:px-0 sm:py-0 sm:shadow-none"
+          >
             <span className="inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-2xl border border-white/80 bg-white shadow-soft sm:h-11 sm:w-11">
-              <Image
-                src="/logo-bolt.svg"
-                alt="Logo Immo Secure"
-                width={44}
-                height={44}
-                className="h-full w-full object-cover"
-                priority
-              />
+              <span className="inline-flex h-full w-full items-center justify-center rounded-2xl bg-black text-white">
+                <BoltIcon className="h-4 w-4" />
+              </span>
             </span>
             <span className="flex flex-col leading-tight">
               <span className="text-sm font-semibold tracking-[0.08em] text-ink">{company.agency}</span>
@@ -39,12 +36,6 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <Link
-              href={'tel:' + company.phoneHref}
-              className="hidden rounded-full border border-line/90 bg-white/90 px-4 py-2.5 text-xs font-semibold text-steel shadow-soft transition hover:-translate-y-0.5 hover:border-deep/15 hover:text-deep sm:inline-flex"
-            >
-              {company.phoneDisplay}
-            </Link>
             <Link href="#contact" className="btn-primary px-4 py-2.5 text-xs sm:px-6 sm:py-3 sm:text-sm">
               <span className="sm:hidden">Diagnostic</span>
               <span className="hidden items-center gap-2 sm:inline-flex">

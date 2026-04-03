@@ -1,9 +1,7 @@
-import Link from 'next/link';
 import { BoltIcon, RepeatIcon } from '@/components/ui/Icons';
 import { Container } from '@/components/ui/Container';
 import { SectionHeader } from '@/components/ui/SectionHeader';
-import { ArrowRightIcon } from '@/components/ui/Icons';
-import { ctaLabels, solutionContent } from '@/content/siteContent';
+import { solutionContent } from '@/content/siteContent';
 
 const iconMap = [BoltIcon, RepeatIcon];
 
@@ -35,33 +33,16 @@ export function SolutionSection() {
                 </div>
 
                 <div className="mt-6 space-y-4 text-sm leading-relaxed text-slate-700 sm:text-base">
-                  <div className="rounded-[1.5rem] border border-line/80 bg-white/95 p-5 shadow-soft">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Ce que fait le système</p>
-                    <p className="mt-2">{pillar.does}</p>
-                  </div>
-
-                  <div className="panel-muted p-5">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">Ce que voit l’agence</p>
-                    <p className="mt-2 text-steel">{pillar.sees}</p>
-                  </div>
+                  <p className="text-base leading-relaxed text-slate-700">{pillar.does}</p>
 
                   <div className="rounded-[1.5rem] border border-emerald-200 bg-emerald-50 p-5">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-700">
-                      Ce que cela change commercialement
-                    </p>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-700">Impact</p>
                     <p className="mt-2 font-medium text-emerald-900">{pillar.impact}</p>
                   </div>
                 </div>
               </article>
             );
           })}
-        </div>
-
-        <div className="mt-10 flex justify-center">
-          <Link href="#contact" className="btn-primary w-full sm:w-auto">
-            {ctaLabels.primary}
-            <ArrowRightIcon className="h-4 w-4" />
-          </Link>
         </div>
       </Container>
     </section>

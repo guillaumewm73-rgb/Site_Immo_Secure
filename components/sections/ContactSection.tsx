@@ -29,9 +29,9 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRegex = /^[+()\s\d.-]{8,}$/;
 
 const demoOutcomes = [
-  'Un diagnostic clair de votre suivi actuel',
-  'Les opportunités commerciales perdues à récupérer',
-  'Un plan simple de mise en place sur vos outils'
+  'Un diagnostic clair de votre suivi',
+  'Les priorités à corriger',
+  'Le potentiel à récupérer'
 ];
 
 function validate(values: ContactFormValues): FormErrors {
@@ -132,16 +132,16 @@ export function ContactSection() {
 
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 <div className="rounded-[1.25rem] border border-white/12 bg-white/10 px-4 py-4 text-sm text-white/80">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">Fondateur</p>
-                  <p className="mt-2 font-semibold text-white">{company.founder}</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">Diagnostic</p>
+                  <p className="mt-2 font-semibold text-white">30 minutes</p>
                 </div>
                 <div className="rounded-[1.25rem] border border-white/12 bg-white/10 px-4 py-4 text-sm text-white/80">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">Email</p>
-                  <p className="mt-2 font-semibold text-white">{company.email}</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">Contact direct</p>
+                  <p className="mt-2 font-semibold text-white">{company.founder}</p>
                 </div>
                 <div className="rounded-[1.25rem] border border-white/12 bg-white/10 px-4 py-4 text-sm text-white/80 sm:col-span-2">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">Téléphone</p>
-                  <p className="mt-2 font-semibold text-white">{company.phoneDisplay}</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">Coordonnées</p>
+                  <p className="mt-2 font-semibold text-white">{company.email} · {company.phoneDisplay}</p>
                 </div>
               </div>
             </div>
@@ -151,19 +151,7 @@ export function ContactSection() {
             <div className="mb-6 border-b border-line/80 pb-5">
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Formulaire</p>
               <h3 className="mt-2 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">Demander un diagnostic</h3>
-              <p className="mt-2 text-base text-slate-600">Réponse rapide. Aucun engagement. Visibilité claire sur vos pertes actuelles.</p>
-            </div>
-
-            <div className="mb-6 flex flex-wrap gap-3">
-              <span className="rounded-full border border-line/80 bg-surface-alt/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-steel">
-                Réponse rapide
-              </span>
-              <span className="rounded-full border border-line/80 bg-surface-alt/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-steel">
-                Aucun engagement
-              </span>
-              <span className="rounded-full border border-line/80 bg-surface-alt/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-steel">
-                Diagnostic concret
-              </span>
+              <p className="mt-2 text-base text-slate-600">Décrivez rapidement votre situation.</p>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
@@ -231,8 +219,7 @@ export function ContactSection() {
               {status === 'loading' ? null : <ArrowRightIcon className="h-4 w-4" />}
             </button>
 
-            <p className="mt-4 text-center text-sm text-slate-500">Réponse rapide. Aucun engagement.</p>
-            <p className="mt-2 text-center text-sm font-medium text-steel">{contactContent.closing}</p>
+            <p className="mt-4 text-center text-sm font-medium text-steel">{contactContent.closing}</p>
 
             {status === 'success' ? (
               <p className="mt-5 rounded-[1.25rem] border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
