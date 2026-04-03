@@ -22,21 +22,21 @@ export function ProblemSection() {
   return (
     <section id="probleme" className="section-space section-dark">
       <Container>
-        <div className="grid items-start gap-10 lg:grid-cols-[0.98fr_1.02fr] lg:gap-14">
-          <div>
+        <div className="grid gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-16">
+          <div className="lg:max-w-[35rem]">
             <SectionHeader title={problemContent.title} kicker="Point de friction" theme="dark" />
 
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/78 sm:text-lg">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/78 sm:text-lg">
               {problemContent.paragraphs[0]}
             </p>
 
-            <ul className="mt-8 grid gap-4">
+            <ul className="mt-8 grid max-w-xl gap-3.5">
               {problemContent.bullets.map((bullet) => (
                 <li
                   key={bullet}
-                  className="metric-card flex items-start gap-4 border-line bg-white px-5 py-4 text-sm font-medium text-ink sm:text-base"
+                  className="metric-card flex items-start gap-4 border-line bg-white px-4 py-3.5 text-sm font-medium text-ink sm:text-base"
                 >
-                  <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-accent-soft text-accent shadow-soft">
+                  <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent shadow-soft">
                     <ClockIcon className="h-4 w-4" />
                   </span>
                   <span>{bullet}</span>
@@ -44,12 +44,12 @@ export function ProblemSection() {
               ))}
             </ul>
 
-            <p className="mt-8 rounded-[1.75rem] border border-white/12 bg-white/8 p-6 text-base font-semibold leading-relaxed text-white shadow-soft sm:text-lg">
+            <p className="mt-6 max-w-xl rounded-[1.75rem] border border-white/12 bg-white/8 p-6 text-base font-semibold leading-relaxed text-white shadow-soft sm:text-lg">
               {problemContent.conclusion}
             </p>
           </div>
 
-          <div>
+          <div className="lg:ml-auto lg:w-full lg:max-w-[40rem]">
             <div className="panel overflow-hidden border border-line bg-white p-6 sm:p-7">
               <div className="flex items-start justify-between gap-4">
                 <div>
