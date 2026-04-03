@@ -76,11 +76,11 @@ export function HeroSection() {
               </span>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {heroSignals.map((item) => (
-                <div key={item.label} className="metric-card">
+                <div key={item.label} className="metric-card min-w-0">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">{item.label}</p>
-                  <p className="mt-3 text-sm font-semibold leading-snug text-ink sm:text-base">{item.value}</p>
+                  <p className="mt-3 text-sm font-semibold leading-snug text-ink [overflow-wrap:anywhere] sm:text-base">{item.value}</p>
                 </div>
               ))}
             </div>
@@ -101,8 +101,8 @@ export function HeroSection() {
               <div className="pointer-events-none absolute inset-x-8 top-0 h-32 rounded-full bg-accent/10 blur-3xl" />
 
               <div className="relative">
-                <div className="flex flex-wrap items-start justify-between gap-4">
-                  <div>
+                <div className="flex flex-col items-start gap-4 2xl:flex-row 2xl:justify-between">
+                  <div className="min-w-0 flex-1">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">
                       Flow de conversion
                     </p>
@@ -113,14 +113,14 @@ export function HeroSection() {
                       Une vue claire du parcours à sécuriser pour capter les opportunités avant qu’elles ne partent.
                     </p>
                   </div>
-                  <div className="rounded-full border border-accent/40 bg-accent-soft/70 px-4 py-2 text-sm font-semibold text-deep shadow-soft">
+                  <div className="self-start rounded-full border border-accent/40 bg-accent-soft/70 px-4 py-2 text-sm font-semibold text-deep shadow-soft">
                     Process visible, actionnable, mémorable
                   </div>
                 </div>
 
                 <div className="relative mt-8 hidden lg:block">
-                  <div className="pointer-events-none absolute left-[11%] right-[11%] top-11 h-px bg-gradient-to-r from-deep/0 via-accent/70 to-deep/0" />
-                  <div className="grid grid-cols-4 gap-4">
+                  <div className="pointer-events-none absolute left-[11%] right-[11%] top-11 hidden h-px bg-gradient-to-r from-deep/0 via-accent/70 to-deep/0 2xl:block" />
+                  <div className="grid gap-4 xl:grid-cols-2 2xl:grid-cols-4">
                     {processFlow.map((step, index) => {
                       const Icon = step.icon;
                       const isLast = index === processFlow.length - 1;
@@ -128,7 +128,7 @@ export function HeroSection() {
                       return (
                         <div
                           key={step.title}
-                          className={`flow-card ${isLast ? 'border-accent/45 bg-accent-soft/55' : 'bg-white/95'}`}
+                          className={`flow-card h-full ${isLast ? 'border-accent/45 bg-accent-soft/55' : 'bg-white/95'}`}
                         >
                           <div className="icon-chip">
                             <Icon className="h-5 w-5" />
@@ -136,8 +136,8 @@ export function HeroSection() {
                           <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
                             Étape {index + 1}
                           </p>
-                          <p className="mt-2 text-lg font-semibold text-ink">{step.title}</p>
-                          <p className="mt-2 text-sm leading-relaxed text-slate-600">{step.text}</p>
+                          <p className="mt-2 text-lg font-semibold text-ink [overflow-wrap:anywhere]">{step.title}</p>
+                          <p className="mt-2 text-sm leading-relaxed text-slate-600 [overflow-wrap:anywhere]">{step.text}</p>
                         </div>
                       );
                     })}
@@ -154,12 +154,12 @@ export function HeroSection() {
                           <div className="icon-chip shrink-0">
                             <Icon className="h-5 w-5" />
                           </div>
-                          <div>
+                          <div className="min-w-0 flex-1">
                             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
                               Étape {index + 1}
                             </p>
-                            <p className="mt-1 text-lg font-semibold text-ink">{step.title}</p>
-                            <p className="mt-2 text-sm leading-relaxed text-slate-600">{step.text}</p>
+                            <p className="mt-1 text-lg font-semibold text-ink [overflow-wrap:anywhere]">{step.title}</p>
+                            <p className="mt-2 text-sm leading-relaxed text-slate-600 [overflow-wrap:anywhere]">{step.text}</p>
                           </div>
                         </div>
                         {index < processFlow.length - 1 ? (
@@ -176,12 +176,12 @@ export function HeroSection() {
                       <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/12 text-white">
                         <BellIcon className="h-5 w-5" />
                       </span>
-                      <div>
+                      <div className="min-w-0 flex-1">
                         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70">
                           Notification utile
                         </p>
-                        <p className="mt-2 text-lg font-semibold">Lead chaud détecté. Rappel prioritaire conseillé.</p>
-                        <p className="mt-2 text-sm leading-relaxed text-white/75">
+                        <p className="mt-2 text-lg font-semibold [overflow-wrap:anywhere]">Lead chaud détecté. Rappel prioritaire conseillé.</p>
+                        <p className="mt-2 text-sm leading-relaxed text-white/75 [overflow-wrap:anywhere]">
                           Le système ne remplace pas l’agence. Il la fait intervenir au moment où elle a le plus d’impact.
                         </p>
                       </div>
@@ -195,15 +195,15 @@ export function HeroSection() {
                     <ul className="mt-4 space-y-3 text-sm font-medium text-slate-700">
                       <li className="flex items-center gap-2">
                         <ShieldIcon className="h-4 w-4 text-accent-strong" />
-                        <span>Réactivité visible</span>
+                        <span className="min-w-0 [overflow-wrap:anywhere]">Réactivité visible</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <BoltIcon className="h-4 w-4 text-accent-strong" />
-                        <span>Qualification immédiate</span>
+                        <span className="min-w-0 [overflow-wrap:anywhere]">Qualification immédiate</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CalendarIcon className="h-4 w-4 text-accent-strong" />
-                        <span>Passage au RDV plus fluide</span>
+                        <span className="min-w-0 [overflow-wrap:anywhere]">Passage au RDV plus fluide</span>
                       </li>
                     </ul>
                   </div>

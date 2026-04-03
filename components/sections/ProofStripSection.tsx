@@ -13,18 +13,18 @@ export function ProofStripSection() {
             const Icon = icons[index] ?? ShieldIcon;
 
             return (
-            <div
-              key={item}
-              className="metric-card flex items-center gap-4 px-5 py-4 text-left"
-            >
-              <span className="icon-chip h-11 w-11 shrink-0">
-                <Icon className="h-5 w-5" />
-              </span>
-              <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Repère</p>
-                <p className="mt-1 text-sm font-semibold text-steel sm:text-base">{item}</p>
+              <div
+                key={item}
+                className="metric-card flex min-w-0 items-center gap-4 px-5 py-4 text-left"
+              >
+                <span className="icon-chip h-11 w-11 shrink-0">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <div className="min-w-0 flex-1">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Repère</p>
+                  <p className="mt-1 text-sm font-semibold text-steel [overflow-wrap:anywhere] sm:text-base">{item}</p>
+                </div>
               </div>
-            </div>
             );
           })}
         </div>

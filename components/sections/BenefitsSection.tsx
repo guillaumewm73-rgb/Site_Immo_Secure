@@ -40,13 +40,13 @@ export function BenefitsSection() {
               return (
                 <article
                   key={benefit.title}
-                  className="metric-card p-6"
+                  className="metric-card min-w-0 p-6"
                 >
                   <div className="icon-chip">
                     <Icon />
                   </div>
-                  <h3 className="mt-5 text-lg font-semibold tracking-tight text-ink sm:text-xl">{benefit.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">{benefit.text}</p>
+                  <h3 className="mt-5 text-lg font-semibold tracking-tight text-ink [overflow-wrap:anywhere] sm:text-xl">{benefit.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600 [overflow-wrap:anywhere] sm:text-base">{benefit.text}</p>
                 </article>
               );
             })}

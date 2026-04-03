@@ -19,9 +19,9 @@ export function UrgencySection() {
               theme="dark"
             />
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {urgencyContent.items.map((item) => (
-                <div key={item} className="rounded-[1.5rem] border border-white/15 bg-white/8 px-5 py-5 text-sm font-medium text-white/90 shadow-soft">
+                <div key={item} className="min-w-0 rounded-[1.5rem] border border-white/15 bg-white/8 px-5 py-5 text-sm font-medium text-white/90 shadow-soft [overflow-wrap:anywhere]">
                   {item}
                 </div>
               ))}
