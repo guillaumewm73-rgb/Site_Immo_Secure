@@ -4,8 +4,8 @@ import { company } from '@/content/siteContent';
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-line bg-white py-8">
-      <Container className="flex flex-col gap-3 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
+    <footer className="border-t border-line/80 bg-surface-alt/70 py-10">
+      <Container className="flex flex-col gap-4 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
         <p>
           © {new Date().getFullYear()} {company.agency} · {company.offerName}
         </p>

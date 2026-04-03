@@ -9,20 +9,28 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        surface: '#f7f9fc',
-        ink: '#111827',
-        steel: '#2d3e57',
-        deep: '#0f2744',
-        accent: '#1c4f84',
-        line: '#dde5f0'
+        surface: '#f4f7fb',
+        'surface-alt': '#ebf1f7',
+        ink: '#0f1726',
+        steel: '#465a75',
+        deep: '#0b1b2f',
+        accent: '#d0a04b',
+        'accent-strong': '#b9842a',
+        'accent-soft': '#f3e5c7',
+        line: '#d6e0ea'
       },
       boxShadow: {
-        soft: '0 10px 30px rgba(17, 24, 39, 0.08)',
-        card: '0 14px 32px rgba(15, 39, 68, 0.1)'
+        soft: '0 18px 50px rgba(15, 23, 38, 0.08)',
+        card: '0 28px 80px rgba(15, 23, 38, 0.14)',
+        cta: '0 20px 48px rgba(208, 160, 75, 0.28)'
       },
       backgroundImage: {
         'mesh-soft':
-          'radial-gradient(circle at 10% 0%, rgba(28, 79, 132, 0.12), transparent 42%), radial-gradient(circle at 90% 100%, rgba(15, 39, 68, 0.16), transparent 40%)'
+          'radial-gradient(circle at 0% 0%, rgba(11, 27, 47, 0.12), transparent 34%), radial-gradient(circle at 100% 12%, rgba(208, 160, 75, 0.18), transparent 22%), radial-gradient(circle at 70% 100%, rgba(70, 90, 117, 0.12), transparent 26%)',
+        'section-wash':
+          'linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(236, 242, 248, 0.92))',
+        'hero-grid':
+          'linear-gradient(rgba(70, 90, 117, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(70, 90, 117, 0.08) 1px, transparent 1px)'
       },
       borderRadius: {
         xl2: '1.25rem'

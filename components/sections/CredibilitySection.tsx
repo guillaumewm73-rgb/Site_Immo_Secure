@@ -20,9 +20,9 @@ const trustBlocks = [
 
 export function CredibilitySection() {
   return (
-    <section className="section-space bg-white">
+    <section className="section-space section-tint">
       <Container>
-        <div className="grid items-start gap-8 lg:grid-cols-[1fr_1fr] lg:gap-10">
+        <div className="grid items-start gap-10 lg:grid-cols-[1fr_1fr] lg:gap-12">
           <div>
             <SectionHeader
               title="Pourquoi c’est crédible"
@@ -30,11 +30,11 @@ export function CredibilitySection() {
               kicker="Confiance"
             />
 
-            <ul className="mt-7 space-y-3">
+            <ul className="mt-8 space-y-4">
               {credibilityPoints.map((point) => (
                 <li
                   key={point}
-                  className="panel-muted flex items-start gap-3 px-4 py-3 text-sm font-medium text-slate-700 sm:text-base"
+                  className="metric-card flex items-start gap-4 px-5 py-4 text-sm font-medium text-slate-700 sm:text-base"
                 >
                   <span className="mt-0.5 inline-flex rounded-full bg-deep p-1 text-white">
                     <CheckIcon className="h-3.5 w-3.5" />
@@ -45,28 +45,28 @@ export function CredibilitySection() {
             </ul>
           </div>
 
-          <div className="panel p-5 sm:p-6">
-            <div className="inline-flex rounded-full border border-line bg-surface p-2 text-deep">
+          <div className="panel p-6 sm:p-7">
+            <div className="icon-chip">
               <ShieldIcon />
             </div>
 
-            <h3 className="mt-4 text-xl font-semibold tracking-tight text-ink sm:text-2xl">
+            <h3 className="mt-5 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
               Cadre d’intervention clair
             </h3>
-            <p className="mt-2 text-base leading-relaxed text-slate-600">
+            <p className="mt-3 text-base leading-relaxed text-slate-600">
               Vous savez précisément ce qui est mis en place, pourquoi, et quel impact commercial attendre.
             </p>
 
-            <div className="mt-5 space-y-3">
+            <div className="mt-6 space-y-4">
               {trustBlocks.map((block) => (
-                <div key={block.title} className="panel-muted p-4">
+                <div key={block.title} className="rounded-[1.5rem] border border-line/80 bg-white/95 p-5 shadow-soft">
                   <p className="text-sm font-semibold text-ink sm:text-base">{block.title}</p>
-                  <p className="mt-1 text-sm text-slate-600">{block.text}</p>
+                  <p className="mt-2 text-sm text-slate-600">{block.text}</p>
                 </div>
               ))}
             </div>
 
-            <p className="mt-5 rounded-2xl border border-line bg-white px-4 py-3 text-sm text-slate-600">
+            <p className="mt-6 rounded-[1.5rem] border border-line bg-white px-5 py-4 text-sm text-slate-600">
               Interlocuteur direct : <span className="font-semibold text-ink">{company.founder}</span>
             </p>
           </div>

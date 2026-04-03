@@ -1,19 +1,32 @@
 import { Container } from '@/components/ui/Container';
+import { ClockIcon, PlugIcon, ShieldIcon, SparkIcon } from '@/components/ui/Icons';
 import { proofStripItems } from '@/content/siteContent';
+
+const icons = [ClockIcon, PlugIcon, ShieldIcon, SparkIcon];
 
 export function ProofStripSection() {
   return (
-    <section className="pb-6 sm:pb-8">
+    <section className="pb-8 sm:pb-12">
       <Container>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {proofStripItems.map((item) => (
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {proofStripItems.map((item, index) => {
+            const Icon = icons[index] ?? ShieldIcon;
+
+            return (
             <div
               key={item}
-              className="panel-muted px-4 py-3 text-center text-sm font-semibold text-steel transition duration-300 ease-smooth hover:-translate-y-0.5 hover:border-deep/25"
+              className="metric-card flex items-center gap-4 px-5 py-4 text-left"
             >
-              {item}
+              <span className="icon-chip h-11 w-11 shrink-0">
+                <Icon className="h-5 w-5" />
+              </span>
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Repère</p>
+                <p className="mt-1 text-sm font-semibold text-steel sm:text-base">{item}</p>
+              </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </Container>
     </section>

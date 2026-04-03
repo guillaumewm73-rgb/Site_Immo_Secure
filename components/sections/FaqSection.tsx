@@ -4,7 +4,7 @@ import { faqItems } from '@/content/siteContent';
 
 export function FaqSection() {
   return (
-    <section id="faq" className="section-space">
+    <section id="faq" className="section-space bg-white">
       <Container>
         <SectionHeader
           title="Questions fréquentes"
@@ -12,16 +12,19 @@ export function FaqSection() {
           kicker="FAQ"
         />
 
-        <div className="mt-8 space-y-3">
+        <div className="mt-10 space-y-4">
           {faqItems.map((item) => (
             <details
               key={item.question}
-              className="panel group p-5 open:border-deep/35"
+              className="panel group p-6 open:border-deep/35"
             >
-              <summary className="cursor-pointer list-none pr-6 text-base font-semibold text-ink sm:text-lg">
-                {item.question}
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 pr-1 text-base font-semibold text-ink sm:text-lg">
+                <span>{item.question}</span>
+                <span className="text-2xl font-light text-accent-strong transition duration-300 group-open:rotate-45">
+                  +
+                </span>
               </summary>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">{item.answer}</p>
+              <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">{item.answer}</p>
             </details>
           ))}
         </div>

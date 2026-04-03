@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from 'react';
 import { Container } from '@/components/ui/Container';
+import { ArrowRightIcon, CheckIcon } from '@/components/ui/Icons';
 import { company, contactContent, ctaLabels } from '@/content/siteContent';
 
 type ContactFormValues = {
@@ -104,45 +105,65 @@ export function ContactSection() {
   return (
     <section id="contact" className="section-space">
       <Container>
-        <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:gap-8">
-          <div className="relative overflow-hidden rounded-3xl border border-deep/20 bg-gradient-to-br from-deep to-steel p-7 text-white shadow-card sm:p-8">
+        <div className="grid gap-7 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10">
+          <div className="relative overflow-hidden rounded-[2.25rem] border border-deep/20 bg-gradient-to-br from-deep via-[#11243c] to-steel p-8 text-white shadow-card sm:p-10">
             <div className="absolute -right-14 -top-12 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
+            <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-accent/20 blur-3xl" />
 
             <div className="relative">
-              <p className="inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/85">
+              <p className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80">
                 Prise de contact
               </p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">{contactContent.title}</h2>
-              <p className="mt-3 text-base leading-relaxed text-white/85">
+              <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">{contactContent.title}</h2>
+              <p className="mt-4 text-base leading-relaxed text-white/80 sm:text-lg">
                 {contactContent.subtitle}
               </p>
 
-              <ul className="mt-6 space-y-2">
+              <ul className="mt-8 space-y-3">
                 {demoOutcomes.map((item) => (
-                  <li key={item} className="rounded-xl border border-white/15 bg-white/10 px-3 py-2 text-sm text-white/90">
-                    {item}
+                  <li key={item} className="flex items-start gap-3 rounded-[1.25rem] border border-white/15 bg-white/10 px-4 py-3 text-sm text-white/90">
+                    <span className="mt-0.5 inline-flex rounded-full bg-white/15 p-1 text-white">
+                      <CheckIcon className="h-3.5 w-3.5" />
+                    </span>
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-7 space-y-2 text-sm text-white/85">
-                <p>
-                  <span className="font-semibold text-white">Fondateur :</span> {company.founder}
-                </p>
-                <p>
-                  <span className="font-semibold text-white">Email :</span> {company.email}
-                </p>
-                <p>
-                  <span className="font-semibold text-white">Téléphone :</span> {company.phoneDisplay}
-                </p>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                <div className="rounded-[1.25rem] border border-white/12 bg-white/10 px-4 py-4 text-sm text-white/80">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">Fondateur</p>
+                  <p className="mt-2 font-semibold text-white">{company.founder}</p>
+                </div>
+                <div className="rounded-[1.25rem] border border-white/12 bg-white/10 px-4 py-4 text-sm text-white/80">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">Email</p>
+                  <p className="mt-2 font-semibold text-white">{company.email}</p>
+                </div>
+                <div className="rounded-[1.25rem] border border-white/12 bg-white/10 px-4 py-4 text-sm text-white/80 sm:col-span-2">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">Téléphone</p>
+                  <p className="mt-2 font-semibold text-white">{company.phoneDisplay}</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} noValidate className="panel p-7 sm:p-8">
-            <div className="mb-5 border-b border-line pb-4">
+          <form onSubmit={handleSubmit} noValidate className="panel border border-white/90 p-7 shadow-card sm:p-9">
+            <div className="mb-6 border-b border-line/80 pb-5">
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Formulaire</p>
-              <p className="mt-1 text-base text-slate-600">Réponse rapide. Aucun engagement.</p>
+              <h3 className="mt-2 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">Demander un diagnostic</h3>
+              <p className="mt-2 text-base text-slate-600">Réponse rapide. Aucun engagement. Visibilité claire sur vos pertes actuelles.</p>
+            </div>
+
+            <div className="mb-6 flex flex-wrap gap-3">
+              <span className="rounded-full border border-line/80 bg-surface-alt/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-steel">
+                Réponse rapide
+              </span>
+              <span className="rounded-full border border-line/80 bg-surface-alt/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-steel">
+                Aucun engagement
+              </span>
+              <span className="rounded-full border border-line/80 bg-surface-alt/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-steel">
+                Diagnostic concret
+              </span>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
@@ -207,19 +228,20 @@ export function ContactSection() {
               className="btn-primary mt-6 w-full disabled:cursor-not-allowed disabled:opacity-70"
             >
               {status === 'loading' ? 'Envoi en cours...' : ctaLabels.secondary}
+              {status === 'loading' ? null : <ArrowRightIcon className="h-4 w-4" />}
             </button>
 
-            <p className="mt-3 text-center text-sm text-slate-500">Réponse rapide. Aucun engagement.</p>
+            <p className="mt-4 text-center text-sm text-slate-500">Réponse rapide. Aucun engagement.</p>
             <p className="mt-2 text-center text-sm font-medium text-steel">{contactContent.closing}</p>
 
             {status === 'success' ? (
-              <p className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
+              <p className="mt-5 rounded-[1.25rem] border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
                 Votre demande a bien été envoyée. Nous revenons vers vous rapidement.
               </p>
             ) : null}
 
             {status === 'error' ? (
-              <p className="mt-4 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
+              <p className="mt-5 rounded-[1.25rem] border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
                 Une erreur est survenue. Vous pouvez aussi nous écrire à {company.email}.
               </p>
             ) : null}
@@ -275,7 +297,7 @@ function Field({
           className="field-input"
         />
       )}
-      {error ? <span className="mt-1 block text-xs text-rose-600">{error}</span> : null}
+      {error ? <span className="mt-2 block text-xs text-rose-600">{error}</span> : null}
     </label>
   );
 }

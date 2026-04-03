@@ -165,11 +165,11 @@ export const deliverablesContent = {
   items: [
     {
       title: 'Qualification automatique des leads',
-      text: 'Les demandes sont triées avant d arriver à l équipe.'
+      text: "Les demandes sont triées avant d'arriver à l'équipe."
     },
     {
       title: 'Proposition de rendez-vous',
-      text: 'Le système pousse le prospect vers l étape suivante sans attente.'
+      text: "Le système pousse le prospect vers l'étape suivante sans attente."
     },
     {
       title: 'Relance automatique après estimation',
@@ -218,7 +218,7 @@ export const benefits = [
   },
   {
     title: 'Avantage concurrentiel',
-    text: 'Vous vendez plus sans alourdir l équipe.'
+    text: "Vous vendez plus sans alourdir l'équipe."
   }
 ];
 
@@ -228,7 +228,7 @@ export const urgencyContent = {
     'Le premier qui répond prend souvent l’avantage. Et une estimation non relancée ne revient pas toute seule.',
   items: [
     'Les leads refroidissent vite',
-    'Le premier contact garde souvent l avantage',
+    "Le premier contact garde souvent l'avantage",
     'Quelques opportunités mal traitées peuvent changer votre mois'
   ]
 };
