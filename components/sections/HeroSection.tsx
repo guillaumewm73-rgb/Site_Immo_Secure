@@ -35,19 +35,20 @@ const processFlow = [
 export function HeroSection() {
   return (
     <section id="top" className="relative overflow-hidden pb-16 pt-10 sm:pb-24 sm:pt-36 lg:pb-28 lg:pt-36">
+      <div className="pointer-events-none absolute inset-0 bg-mesh-soft opacity-80" />
       <Container>
-        <div className="grid items-start gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+        <div className="grid items-start gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
           <div className="reveal-up space-y-8 sm:space-y-10">
             <div className="space-y-4">
               <h1 className="max-w-4xl text-balance text-[2.9rem] font-semibold leading-[0.92] tracking-[-0.05em] text-ink sm:text-[4.1rem] lg:text-[5rem]">
                 {heroContent.title}
               </h1>
-              <p className="max-w-xl text-pretty text-lg leading-relaxed text-slate-700 sm:text-xl lg:text-[1.35rem]">
+              <p className="max-w-xl text-pretty text-lg leading-relaxed text-steel sm:text-xl lg:text-[1.35rem]">
                 {heroContent.subtitle}
               </p>
             </div>
 
-            <p className="max-w-lg rounded-[1.5rem] border border-rose-200/90 bg-gradient-to-r from-rose-50 to-amber-50 px-5 py-4 text-sm font-semibold text-rose-700 shadow-soft sm:text-base">
+            <p className="max-w-lg rounded-[1.5rem] border border-accent/15 bg-white px-5 py-4 text-sm font-semibold text-ink shadow-soft sm:text-base">
               {heroContent.tension}
             </p>
 
@@ -59,19 +60,20 @@ export function HeroSection() {
                 {heroContent.primaryCta.label}
                 <ArrowRightIcon className="h-4 w-4" />
               </Link>
-              <p className="text-sm font-medium text-slate-500">
+              <p className="text-sm font-medium text-steel">
                 Diagnostic en 30 min. Compatible avec vos outils actuels.
               </p>
             </div>
           </div>
 
           <div className="reveal-up relative lg:pt-4" style={{ animationDelay: '0.12s' }}>
-            <div className="panel relative overflow-hidden border border-amber-100 bg-gradient-to-br from-white via-white to-amber-50/35 p-6 sm:p-7 lg:p-8">
-              <div className="pointer-events-none absolute inset-0 bg-hero-grid [background-size:34px_34px] opacity-35" />
+            <div className="panel relative overflow-hidden border border-line bg-white p-6 sm:p-7 lg:p-8">
+              <div className="pointer-events-none absolute inset-0 bg-hero-grid [background-size:34px_34px] opacity-40" />
+              <div className="pointer-events-none absolute inset-x-10 top-0 h-24 rounded-full bg-accent/10 blur-3xl" />
 
               <div className="relative">
                 <div className="space-y-3">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent">
                     Lead → réponse → RDV → mandat
                   </p>
                   <h2 className="text-balance text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
@@ -79,7 +81,7 @@ export function HeroSection() {
                   </h2>
                 </div>
 
-                <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                <div className="relative mt-8 grid gap-4 sm:grid-cols-2">
                   {processFlow.map((step, index) => {
                     const Icon = step.icon;
                     const isLast = index === processFlow.length - 1;
@@ -87,18 +89,30 @@ export function HeroSection() {
                     return (
                       <div
                         key={step.title}
-                        className={`flow-card h-full ${isLast ? 'border-accent/45 bg-accent-soft/55' : 'bg-white/95'}`}
+                        className={`flow-card h-full ${
+                          isLast
+                            ? 'border-deep bg-deep text-white shadow-card'
+                            : 'border-line bg-white'
+                        }`}
                       >
-                        <div className="icon-chip">
+                        <div className={`icon-chip ${isLast ? 'border-white/15 bg-white/10 text-white' : ''}`}>
                           <Icon className="h-5 w-5" />
                         </div>
-                        <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+                        <p
+                          className={`mt-4 text-[11px] font-semibold uppercase tracking-[0.18em] ${
+                            isLast ? 'text-white/65' : 'text-accent'
+                          }`}
+                        >
                           Étape {index + 1}
                         </p>
-                        <p className="mt-2 text-lg font-semibold text-ink [overflow-wrap:anywhere]">
+                        <p className={`mt-2 text-lg font-semibold [overflow-wrap:anywhere] ${isLast ? 'text-white' : 'text-ink'}`}>
                           {step.title}
                         </p>
-                        <p className="mt-2 text-sm leading-relaxed text-slate-600 [overflow-wrap:anywhere]">
+                        <p
+                          className={`mt-2 text-sm leading-relaxed [overflow-wrap:anywhere] ${
+                            isLast ? 'text-white/75' : 'text-steel'
+                          }`}
+                        >
                           {step.text}
                         </p>
                       </div>

@@ -7,35 +7,29 @@ const icons = [ChartIcon, CalendarIcon, BoltIcon, CheckIcon];
 
 export function BenefitsSection() {
   return (
-    <section id="resultats" className="section-space bg-gradient-to-b from-white to-surface-alt/55">
+    <section id="resultats" className="section-space section-dark">
       <Container>
         <SectionHeader
           title="Ce que cela change pour votre agence"
           description="Moins de pertes. Plus de constance. Plus de mandats."
           kicker="Résultats"
           align="center"
+          theme="dark"
         />
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {benefits.map((benefit, index) => {
             const Icon = icons[index] ?? CheckIcon;
-            const cardTone = [
-              'border-amber-100 bg-gradient-to-br from-white to-amber-50/75',
-              'border-sky-100 bg-gradient-to-br from-white to-sky-50/75',
-              'border-rose-100 bg-gradient-to-br from-white to-rose-50/75',
-              'border-emerald-100 bg-gradient-to-br from-white to-emerald-50/75'
-            ][index] ?? 'border-white/80 bg-white/95';
 
             return (
-              <article
-                key={benefit.title}
-                className={`metric-card min-w-0 p-6 sm:p-7 ${cardTone}`}
-              >
+              <article key={benefit.title} className="metric-card min-w-0 border-line bg-white p-6 sm:p-7">
                 <div className="icon-chip">
                   <Icon />
                 </div>
-                <h3 className="mt-5 text-xl font-semibold tracking-tight text-ink [overflow-wrap:anywhere]">{benefit.title}</h3>
-                <p className="mt-3 text-base leading-relaxed text-slate-600 [overflow-wrap:anywhere]">{benefit.text}</p>
+                <h3 className="mt-5 text-xl font-semibold tracking-tight text-ink [overflow-wrap:anywhere]">
+                  {benefit.title}
+                </h3>
+                <p className="mt-3 text-base leading-relaxed text-steel [overflow-wrap:anywhere]">{benefit.text}</p>
               </article>
             );
           })}

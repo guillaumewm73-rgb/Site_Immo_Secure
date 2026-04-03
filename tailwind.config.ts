@@ -9,28 +9,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        surface: '#f4f7fb',
-        'surface-alt': '#ebf1f7',
-        ink: '#0f1726',
-        steel: '#465a75',
-        deep: '#0b1b2f',
-        accent: '#d0a04b',
-        'accent-strong': '#b9842a',
-        'accent-soft': '#f3e5c7',
-        line: '#d6e0ea'
+        surface: '#F8FAFC',
+        'surface-alt': '#F1F5F9',
+        ink: '#0F172A',
+        steel: '#64748B',
+        deep: '#0F172A',
+        secondary: '#1E293B',
+        accent: '#2563EB',
+        'accent-strong': '#1D4ED8',
+        'accent-soft': '#DBEAFE',
+        line: '#E2E8F0'
       },
       boxShadow: {
-        soft: '0 18px 50px rgba(15, 23, 38, 0.08)',
-        card: '0 28px 80px rgba(15, 23, 38, 0.14)',
-        cta: '0 20px 48px rgba(208, 160, 75, 0.28)'
+        soft: '0 16px 40px rgba(15, 23, 42, 0.08)',
+        card: '0 28px 64px rgba(15, 23, 42, 0.12)',
+        cta: '0 18px 38px rgba(37, 99, 235, 0.24)'
       },
       backgroundImage: {
         'mesh-soft':
-          'radial-gradient(circle at 0% 0%, rgba(11, 27, 47, 0.12), transparent 34%), radial-gradient(circle at 100% 12%, rgba(208, 160, 75, 0.18), transparent 22%), radial-gradient(circle at 70% 100%, rgba(70, 90, 117, 0.12), transparent 26%)',
+          'radial-gradient(circle at 0% 0%, rgba(37, 99, 235, 0.08), transparent 30%), radial-gradient(circle at 100% 12%, rgba(15, 23, 42, 0.06), transparent 28%), radial-gradient(circle at 70% 100%, rgba(30, 41, 59, 0.06), transparent 24%)',
         'section-wash':
-          'linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(236, 242, 248, 0.92))',
+          'linear-gradient(180deg, rgba(248, 250, 252, 1), rgba(241, 245, 249, 1))',
+        'section-dark':
+          'linear-gradient(180deg, rgba(15, 23, 42, 1), rgba(30, 41, 59, 1))',
         'hero-grid':
-          'linear-gradient(rgba(70, 90, 117, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(70, 90, 117, 0.08) 1px, transparent 1px)'
+          'linear-gradient(rgba(37, 99, 235, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(37, 99, 235, 0.08) 1px, transparent 1px)'
       },
       borderRadius: {
         xl2: '1.25rem'

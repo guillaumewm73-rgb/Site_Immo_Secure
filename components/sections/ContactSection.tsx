@@ -103,15 +103,15 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="section-space">
+    <section id="contact" className="section-space section-dark">
       <Container>
         <div className="grid gap-7 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10">
-          <div className="relative overflow-hidden rounded-[2.25rem] border border-deep/20 bg-gradient-to-br from-deep via-[#11243c] to-steel p-8 text-white shadow-card sm:p-10">
-            <div className="absolute -right-14 -top-12 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
-            <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-accent/20 blur-3xl" />
+          <div className="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-gradient-to-br from-deep to-secondary p-8 text-white shadow-card sm:p-10">
+            <div className="absolute -right-14 -top-12 h-40 w-40 rounded-full bg-accent/14 blur-3xl" />
+            <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-white/8 blur-3xl" />
 
             <div className="relative">
-              <p className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80">
+              <p className="inline-flex rounded-full border border-white/12 bg-white/8 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/75">
                 Prise de contact
               </p>
               <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">{contactContent.title}</h2>
@@ -121,8 +121,8 @@ export function ContactSection() {
 
               <ul className="mt-8 space-y-3">
                 {demoOutcomes.map((item) => (
-                  <li key={item} className="flex items-start gap-3 rounded-[1.25rem] border border-white/15 bg-white/10 px-4 py-3 text-sm text-white/90">
-                    <span className="mt-0.5 inline-flex rounded-full bg-white/15 p-1 text-white">
+                  <li key={item} className="flex items-start gap-3 rounded-[1.25rem] border border-white/12 bg-white/8 px-4 py-3 text-sm text-white/90">
+                    <span className="mt-0.5 inline-flex rounded-full bg-accent p-1 text-white">
                       <CheckIcon className="h-3.5 w-3.5" />
                     </span>
                     <span>{item}</span>
@@ -131,27 +131,27 @@ export function ContactSection() {
               </ul>
 
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-[1.25rem] border border-white/12 bg-white/10 px-4 py-4 text-sm text-white/80">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">Diagnostic</p>
+                <div className="rounded-[1.25rem] border border-white/12 bg-white/8 px-4 py-4 text-sm text-white/80">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">Diagnostic</p>
                   <p className="mt-2 font-semibold text-white">30 minutes</p>
                 </div>
-                <div className="rounded-[1.25rem] border border-white/12 bg-white/10 px-4 py-4 text-sm text-white/80">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">Contact direct</p>
+                <div className="rounded-[1.25rem] border border-white/12 bg-white/8 px-4 py-4 text-sm text-white/80">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">Contact direct</p>
                   <p className="mt-2 font-semibold text-white">{company.founderDisplay}</p>
                 </div>
-                <div className="rounded-[1.25rem] border border-white/12 bg-white/10 px-4 py-4 text-sm text-white/80 sm:col-span-2">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">Coordonnées</p>
+                <div className="rounded-[1.25rem] border border-white/12 bg-white/8 px-4 py-4 text-sm text-white/80 sm:col-span-2">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">Coordonnées</p>
                   <p className="mt-2 font-semibold text-white">{company.email} · {company.phoneDisplay}</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} noValidate className="panel border border-white/90 p-7 shadow-card sm:p-9">
+          <form onSubmit={handleSubmit} noValidate className="panel border border-line bg-white p-7 shadow-card sm:p-9">
             <div className="mb-6 border-b border-line/80 pb-5">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Formulaire</p>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">Formulaire</p>
               <h3 className="mt-2 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">Demander un diagnostic</h3>
-              <p className="mt-2 text-base text-slate-600">Décrivez rapidement votre situation.</p>
+              <p className="mt-2 text-base text-steel">Décrivez rapidement votre situation.</p>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
@@ -222,13 +222,13 @@ export function ContactSection() {
             <p className="mt-4 text-center text-sm font-medium text-steel">{contactContent.closing}</p>
 
             {status === 'success' ? (
-              <p className="mt-5 rounded-[1.25rem] border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
+              <p className="mt-5 rounded-[1.25rem] border border-accent/15 bg-accent-soft/45 px-4 py-3 text-sm text-accent">
                 Votre demande a bien été envoyée. Nous revenons vers vous rapidement.
               </p>
             ) : null}
 
             {status === 'error' ? (
-              <p className="mt-5 rounded-[1.25rem] border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
+              <p className="mt-5 rounded-[1.25rem] border border-line bg-surface px-4 py-3 text-sm text-steel">
                 Une erreur est survenue. Vous pouvez aussi nous écrire à {company.email}.
               </p>
             ) : null}
@@ -261,7 +261,7 @@ function Field({
   onChange
 }: FieldProps) {
   return (
-    <label htmlFor={id} className="block text-sm font-medium text-slate-700">
+    <label htmlFor={id} className="block text-sm font-medium text-ink">
       {label}
       {multiline ? (
         <textarea
@@ -284,7 +284,7 @@ function Field({
           className="field-input"
         />
       )}
-      {error ? <span className="mt-2 block text-xs text-rose-600">{error}</span> : null}
+      {error ? <span className="mt-2 block text-xs text-steel">{error}</span> : null}
     </label>
   );
 }

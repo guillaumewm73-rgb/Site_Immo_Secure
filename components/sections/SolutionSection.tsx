@@ -7,35 +7,23 @@ const iconMap = [BoltIcon, RepeatIcon];
 
 export function SolutionSection() {
   return (
-    <section id="solution" className="section-space bg-gradient-to-b from-white via-white to-amber-50/35">
+    <section id="solution" className="section-space bg-surface">
       <Container>
         <SectionHeader title={solutionContent.title} description={solutionContent.intro} kicker="Solution" />
 
         <div className="mt-10 grid items-stretch gap-6 lg:grid-cols-2">
           {solutionContent.pillars.map((pillar, index) => {
             const Icon = iconMap[index] ?? BoltIcon;
-            const articleTone =
-              index === 0
-                ? 'border-sky-100 bg-gradient-to-br from-white to-sky-50/80'
-                : 'border-amber-100 bg-gradient-to-br from-white to-amber-50/80';
-            const badgeTone =
-              index === 0
-                ? 'border-sky-100 bg-sky-50/90 text-sky-900'
-                : 'border-amber-100 bg-amber-50/90 text-amber-900';
-            const impactTone =
-              index === 0
-                ? 'border-sky-200 bg-sky-50 text-sky-900'
-                : 'border-emerald-200 bg-emerald-50 text-emerald-900';
 
             return (
               <article
                 key={pillar.title}
-                className={`panel group flex h-full flex-col overflow-hidden border p-7 transition duration-300 ease-smooth hover:-translate-y-1 hover:shadow-card sm:p-8 ${articleTone}`}
+                className="panel group flex h-full flex-col overflow-hidden border border-line bg-white p-7 transition duration-300 ease-smooth hover:-translate-y-1 hover:shadow-card sm:p-8"
               >
                 <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-5">
                   <div className="min-h-[9rem] min-w-0">
                     <div
-                      className={`mb-4 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] ${badgeTone}`}
+                      className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/15 bg-accent-soft/60 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent"
                     >
                       <Icon className="h-4 w-4" />
                       {pillar.badge}
@@ -47,18 +35,12 @@ export function SolutionSection() {
                   </span>
                 </div>
 
-                <div className="mt-6 flex flex-1 flex-col gap-4 text-sm leading-relaxed text-slate-700 sm:text-base">
-                  <p className="text-base leading-relaxed text-slate-700">{pillar.does}</p>
+                <div className="mt-6 flex flex-1 flex-col gap-4 text-sm leading-relaxed text-steel sm:text-base">
+                  <p className="text-base leading-relaxed text-steel">{pillar.does}</p>
 
-                  <div className={`mt-auto rounded-[1.5rem] border p-5 ${impactTone}`}>
-                    <p
-                      className={`text-[11px] font-semibold uppercase tracking-[0.16em] ${
-                        index === 0 ? 'text-sky-700' : 'text-emerald-700'
-                      }`}
-                    >
-                      Impact
-                    </p>
-                    <p className="mt-2 font-medium">{pillar.impact}</p>
+                  <div className="mt-auto rounded-[1.5rem] border border-accent/15 bg-accent-soft/45 p-5">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">Impact</p>
+                    <p className="mt-2 font-medium text-ink">{pillar.impact}</p>
                   </div>
                 </div>
               </article>
