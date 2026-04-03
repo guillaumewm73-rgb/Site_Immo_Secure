@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { CheckIcon, ShieldIcon } from '@/components/ui/Icons';
@@ -48,6 +49,14 @@ export function CredibilitySection() {
             <p className="mt-6 rounded-[1.5rem] border border-accent/15 bg-accent-soft/45 px-5 py-4 text-sm text-steel">
               Interlocuteur direct : <span className="font-semibold text-ink">{company.founderDisplay}</span>
             </p>
+            <Link
+              href={company.linkedinUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-secondary mt-4 w-full sm:w-auto"
+            >
+              Voir le profil LinkedIn
+            </Link>
           </div>
         </div>
       </Container>

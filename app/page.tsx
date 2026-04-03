@@ -39,9 +39,10 @@ export default function Home() {
         name: company.agency,
         alternateName: company.offerName,
         url: seoContent.siteUrl,
-        logo: `${seoContent.siteUrl}/logo-bolt.svg`,
+        logo: `${seoContent.siteUrl}/logo.png`,
         description: seoContent.description,
         founder: company.founder,
+        sameAs: [company.linkedinUrl],
         email: company.email,
         telephone: company.phoneHref,
         contactPoint: [

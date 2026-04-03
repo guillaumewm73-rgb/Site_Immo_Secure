@@ -19,8 +19,8 @@ export default function OpenGraphImage() {
           display: 'flex',
           position: 'relative',
           background:
-            'linear-gradient(135deg, #f8fafc 0%, #eef3f8 58%, #f8fbfd 100%)',
-          color: '#0f1726',
+            'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 58%, #f8fafc 100%)',
+          color: '#0f172a',
           fontFamily: 'sans-serif'
         }}
       >
@@ -32,7 +32,7 @@ export default function OpenGraphImage() {
             width: 360,
             height: 360,
             borderRadius: 9999,
-            background: 'rgba(208,160,75,0.18)',
+            background: 'rgba(37,99,235,0.12)',
             filter: 'blur(40px)'
           }}
         />
@@ -44,7 +44,7 @@ export default function OpenGraphImage() {
             width: 420,
             height: 420,
             borderRadius: 9999,
-            background: 'rgba(11,27,47,0.10)',
+            background: 'rgba(15,23,42,0.08)',
             filter: 'blur(46px)'
           }}
         />
@@ -69,16 +69,16 @@ export default function OpenGraphImage() {
                 width: 68,
                 height: 68,
                 borderRadius: 22,
-                background: '#0b1b2f',
-                color: '#d0a04b',
+                background: '#0f172a',
+                color: '#2563eb',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: 34,
+                fontSize: 30,
                 fontWeight: 700
               }}
             >
-              I
+              ⚡
             </div>
             <div
               style={{
@@ -87,7 +87,7 @@ export default function OpenGraphImage() {
               }}
             >
               <div style={{ fontSize: 34, fontWeight: 700 }}>{company.agency}</div>
-              <div style={{ fontSize: 20, color: '#5f7088' }}>{company.offerName}</div>
+              <div style={{ fontSize: 20, color: '#64748b' }}>{company.offerName}</div>
             </div>
           </div>
 
@@ -113,8 +113,8 @@ export default function OpenGraphImage() {
                   padding: '12px 22px',
                   borderRadius: 9999,
                   background: '#ffffff',
-                  border: '1px solid #d6e0ea',
-                  color: '#465a75',
+                  border: '1px solid #dbe4f0',
+                  color: '#2563eb',
                   fontSize: 18,
                   letterSpacing: '0.18em',
                   textTransform: 'uppercase',
@@ -139,7 +139,7 @@ export default function OpenGraphImage() {
                   marginTop: 26,
                   fontSize: 28,
                   lineHeight: 1.4,
-                  color: '#465a75'
+                  color: '#64748b'
                 }}
               >
                 Leads chauds, relance des estimations, suivi commercial plus rigoureux.
@@ -154,8 +154,8 @@ export default function OpenGraphImage() {
                 width: '36%',
                 padding: 28,
                 borderRadius: 34,
-                background: 'rgba(255,255,255,0.82)',
-                border: '1px solid rgba(214,224,234,0.9)'
+                background: 'rgba(255,255,255,0.88)',
+                border: '1px solid rgba(226,232,240,0.95)'
               }}
             >
               {['Lead entrant', 'Réponse immédiate', 'RDV proposé', 'Mandat sécurisé'].map((step, index) => (
@@ -167,8 +167,8 @@ export default function OpenGraphImage() {
                     gap: 8,
                     padding: '18px 20px',
                     borderRadius: 24,
-                    background: index === 3 ? 'rgba(208,160,75,0.18)' : '#ffffff',
-                    border: '1px solid rgba(214,224,234,0.9)'
+                    background: index === 3 ? '#0f172a' : '#ffffff',
+                    border: index === 3 ? '1px solid rgba(15,23,42,1)' : '1px solid rgba(226,232,240,0.95)'
                   }}
                 >
                   <div
@@ -177,13 +177,22 @@ export default function OpenGraphImage() {
                       fontSize: 14,
                       textTransform: 'uppercase',
                       letterSpacing: '0.16em',
-                      color: '#718196',
+                      color: index === 3 ? 'rgba(255,255,255,0.65)' : '#2563eb',
                       fontWeight: 700
                     }}
                   >
                     {`Étape ${index + 1}`}
                   </div>
-                  <div style={{ display: 'flex', fontSize: 28, fontWeight: 700 }}>{step}</div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      fontSize: 28,
+                      fontWeight: 700,
+                      color: index === 3 ? '#ffffff' : '#0f172a'
+                    }}
+                  >
+                    {step}
+                  </div>
                 </div>
               ))}
             </div>

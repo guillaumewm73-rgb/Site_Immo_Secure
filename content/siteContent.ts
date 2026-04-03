@@ -4,6 +4,7 @@ export const company = {
   agency: 'Immo Secure',
   offerName: 'Zéro Opportunité Perdue',
   email: 'immosecure@proton.me',
+  linkedinUrl: 'https://www.linkedin.com/in/guillaumewm',
   phoneDisplay: '+33 7 66 13 37 02',
   phoneHref: '+33766133702'
 };

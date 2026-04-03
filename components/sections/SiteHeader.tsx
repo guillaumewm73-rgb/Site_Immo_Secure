@@ -1,5 +1,6 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRightIcon, BoltIcon } from '@/components/ui/Icons';
+import { ArrowRightIcon } from '@/components/ui/Icons';
 import { company, ctaLabels, navLinks } from '@/content/siteContent';
 import { Container } from '@/components/ui/Container';
 
@@ -13,9 +14,15 @@ export function SiteHeader() {
             className="group inline-flex items-center gap-2.5 rounded-full bg-white px-3 py-2 shadow-soft sm:gap-3 sm:bg-transparent sm:px-0 sm:py-0 sm:shadow-none"
           >
             <span className="inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-2xl border border-deep/10 bg-white shadow-soft sm:h-11 sm:w-11">
-              <span className="inline-flex h-full w-full items-center justify-center rounded-2xl bg-deep text-white">
-                <BoltIcon className="h-4 w-4" />
-              </span>
+              <Image
+                src="/logo.png"
+                alt="Logo Immo Secure"
+                width={44}
+                height={44}
+                priority
+                className="h-full w-full rounded-2xl object-cover"
+                sizes="44px"
+              />
             </span>
             <span className="flex flex-col leading-tight">
               <span className="text-sm font-semibold tracking-[0.08em] text-ink">{company.agency}</span>

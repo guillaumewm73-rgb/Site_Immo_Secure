@@ -16,6 +16,9 @@ export function SiteFooter() {
           <Link href={`tel:${company.phoneHref}`} className="font-medium transition hover:text-white">
             {company.phoneDisplay}
           </Link>
+          <Link href={company.linkedinUrl} target="_blank" rel="noreferrer" className="font-medium transition hover:text-white">
+            LinkedIn
+          </Link>
         </div>
       </Container>
     </footer>
