@@ -6,7 +6,6 @@ import {
   BoltIcon,
   CalendarIcon,
   CheckIcon,
-  ClockIcon,
   MessageIcon,
   ShieldIcon
 } from '@/components/ui/Icons';
@@ -91,11 +90,6 @@ export function HeroSection() {
           </div>
 
           <div className="reveal-up relative lg:pt-4" style={{ animationDelay: '0.12s' }}>
-            <div className="float-soft pointer-events-none absolute -right-4 top-8 hidden rounded-full border border-white/70 bg-white/90 px-4 py-2 text-xs font-semibold text-steel shadow-soft sm:inline-flex">
-              <ClockIcon className="h-4 w-4" />
-              <span>Réponse priorisée en quelques secondes</span>
-            </div>
-
             <div className="panel relative overflow-hidden border border-white/90 bg-white/80 p-6 sm:p-7 lg:p-8">
               <div className="pointer-events-none absolute inset-0 bg-hero-grid [background-size:34px_34px] opacity-35" />
               <div className="pointer-events-none absolute inset-x-8 top-0 h-32 rounded-full bg-accent/10 blur-3xl" />
