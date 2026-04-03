@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { SectionHeader } from '@/components/ui/SectionHeader';
-import { CheckIcon, ShieldIcon } from '@/components/ui/Icons';
+import { CheckIcon, LinkedInIcon, ShieldIcon } from '@/components/ui/Icons';
 import { company, credibilityPoints, faqItems } from '@/content/siteContent';
 
 export function CredibilitySection() {
@@ -53,8 +53,9 @@ export function CredibilitySection() {
               href={company.linkedinUrl}
               target="_blank"
               rel="noreferrer"
-              className="btn-secondary mt-4 w-full sm:w-auto"
+              className="btn-secondary mt-4 inline-flex w-full items-center gap-2 sm:w-auto"
             >
+              <LinkedInIcon className="h-4 w-4 shrink-0" />
               Voir le profil LinkedIn
             </Link>
           </div>

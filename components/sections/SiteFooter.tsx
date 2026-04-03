@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
+import { LinkedInIcon } from '@/components/ui/Icons';
 import { company } from '@/content/siteContent';
 
 export function SiteFooter() {
@@ -16,7 +17,13 @@ export function SiteFooter() {
           <Link href={`tel:${company.phoneHref}`} className="font-medium transition hover:text-white">
             {company.phoneDisplay}
           </Link>
-          <Link href={company.linkedinUrl} target="_blank" rel="noreferrer" className="font-medium transition hover:text-white">
+          <Link
+            href={company.linkedinUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 font-medium transition hover:text-white"
+          >
+            <LinkedInIcon className="h-4 w-4 shrink-0" />
             LinkedIn
           </Link>
         </div>

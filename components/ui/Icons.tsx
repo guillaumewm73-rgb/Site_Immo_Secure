@@ -153,3 +153,11 @@ export function TargetIcon(props: IconProps) {
     </svg>
   );
 }
+
+export function LinkedInIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={base} {...props}>
+      <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM8.34 18.34H5.66V9.72h2.68v8.62ZM7 8.53A1.55 1.55 0 1 1 7 5.43a1.55 1.55 0 0 1 0 3.1Zm11.34 9.81h-2.67v-4.19c0-1-.02-2.29-1.4-2.29s-1.61 1.09-1.61 2.22v4.26H10V9.72h2.56V10.9h.04c.36-.67 1.23-1.39 2.53-1.39 2.71 0 3.21 1.78 3.21 4.1v4.73Z" />
+    </svg>
+  );
+}
