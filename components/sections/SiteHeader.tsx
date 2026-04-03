@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRightIcon } from '@/components/ui/Icons';
-import { company, ctaLabels, navLinks } from '@/content/siteContent';
+import { bookingCta, company, navLinks } from '@/content/siteContent';
 import { Container } from '@/components/ui/Container';
 
 export function SiteHeader() {
@@ -43,17 +43,22 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3 md:order-2 md:ml-auto lg:order-3 lg:ml-0">
-            <Link href="#contact" className="btn-primary px-4 py-2.5 text-xs md:px-5 md:py-3 md:text-sm lg:px-4 xl:px-6">
-              <span className="md:hidden">Diagnostic</span>
+            <a
+              href={bookingCta.href}
+              target={bookingCta.isExternal ? '_blank' : undefined}
+              rel={bookingCta.isExternal ? 'noreferrer' : undefined}
+              className="btn-primary px-4 py-2.5 text-xs md:px-5 md:py-3 md:text-sm lg:px-4 xl:px-6"
+            >
+              <span className="md:hidden">{bookingCta.shortLabel}</span>
               <span className="hidden items-center gap-2 md:inline-flex xl:hidden">
-                Diagnostic
+                {bookingCta.shortLabel}
                 <ArrowRightIcon className="h-4 w-4" />
               </span>
               <span className="hidden items-center gap-2 xl:inline-flex">
-                {ctaLabels.secondary}
+                {bookingCta.label}
                 <ArrowRightIcon className="h-4 w-4" />
               </span>
-            </Link>
+            </a>
           </div>
         </div>
       </Container>

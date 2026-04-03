@@ -7,7 +7,7 @@ import {
   CheckIcon,
   MessageIcon
 } from '@/components/ui/Icons';
-import { heroContent } from '@/content/siteContent';
+import { bookingCta, ctaLabels, heroContent } from '@/content/siteContent';
 
 const processFlow = [
   {
@@ -53,15 +53,26 @@ export function HeroSection() {
             </p>
 
             <div className="flex flex-col gap-4">
-              <Link
-                href={heroContent.primaryCta.href}
-                className="btn-primary min-h-[60px] min-w-[280px] justify-center sm:min-w-0 sm:max-w-sm"
-              >
-                {heroContent.primaryCta.label}
-                <ArrowRightIcon className="h-4 w-4" />
-              </Link>
+              <div className="flex flex-col gap-3 sm:max-w-2xl sm:flex-row sm:flex-wrap">
+                <a
+                  href={bookingCta.href}
+                  target={bookingCta.isExternal ? '_blank' : undefined}
+                  rel={bookingCta.isExternal ? 'noreferrer' : undefined}
+                  className="btn-primary min-h-[60px] min-w-[280px] justify-center sm:min-w-0"
+                >
+                  <CalendarIcon className="h-4 w-4" />
+                  {bookingCta.label}
+                </a>
+                <Link
+                  href={heroContent.primaryCta.href}
+                  className="btn-secondary min-h-[60px] min-w-[280px] justify-center sm:min-w-0"
+                >
+                  {ctaLabels.secondary}
+                  <ArrowRightIcon className="h-4 w-4" />
+                </Link>
+              </div>
               <p className="text-sm font-medium text-steel">
-                Diagnostic en 30 min. Compatible avec vos outils actuels.
+                {bookingCta.helper} Diagnostic en 30 min. Compatible avec vos outils actuels.
               </p>
             </div>
           </div>

@@ -9,6 +9,24 @@ export const company = {
   phoneHref: '+33766133702'
 };
 
+const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL?.trim();
+
+export const bookingCta = bookingUrl
+  ? {
+      href: bookingUrl,
+      label: 'Réserver un créneau',
+      shortLabel: 'Créneau',
+      helper: 'Choisissez directement votre créneau de 30 minutes.',
+      isExternal: true
+    }
+  : {
+      href: `tel:${company.phoneHref}`,
+      label: 'Appeler maintenant',
+      shortLabel: 'Appeler',
+      helper: 'Fixons le créneau directement par téléphone.',
+      isExternal: false
+    };
+
 export const seoContent = {
   siteUrl: 'https://immosecure.fr',
   title: 'Immo Secure | Réponse instantanée et relance des estimations pour agences immobilières',

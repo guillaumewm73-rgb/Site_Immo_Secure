@@ -2,8 +2,8 @@
 
 import { FormEvent, useState } from 'react';
 import { Container } from '@/components/ui/Container';
-import { ArrowRightIcon, CheckIcon } from '@/components/ui/Icons';
-import { company, contactContent, ctaLabels } from '@/content/siteContent';
+import { ArrowRightIcon, CalendarIcon, CheckIcon } from '@/components/ui/Icons';
+import { bookingCta, company, contactContent, ctaLabels } from '@/content/siteContent';
 
 type ContactFormValues = {
   firstName: string;
@@ -119,6 +119,24 @@ export function ContactSection() {
                 {contactContent.subtitle}
               </p>
 
+              <div className="mt-6 rounded-[1.5rem] border border-white/12 bg-white/8 p-5">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">
+                  Prise de rendez-vous directe
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-white/80">
+                  {bookingCta.helper}
+                </p>
+                <a
+                  href={bookingCta.href}
+                  target={bookingCta.isExternal ? '_blank' : undefined}
+                  rel={bookingCta.isExternal ? 'noreferrer' : undefined}
+                  className="btn-secondary mt-4 inline-flex w-full items-center gap-2 border-white/15 bg-white text-ink hover:border-white/25 sm:w-auto"
+                >
+                  <CalendarIcon className="h-4 w-4 shrink-0" />
+                  {bookingCta.label}
+                </a>
+              </div>
+
               <ul className="mt-8 space-y-3">
                 {demoOutcomes.map((item) => (
                   <li key={item} className="flex items-start gap-3 rounded-[1.25rem] border border-white/12 bg-white/8 px-4 py-3 text-sm text-white/90">
@@ -151,7 +169,7 @@ export function ContactSection() {
             <div className="mb-6 border-b border-line/80 pb-5">
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">Formulaire</p>
               <h3 className="mt-2 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">Demander un diagnostic</h3>
-              <p className="mt-2 text-base text-steel">Décrivez rapidement votre situation.</p>
+              <p className="mt-2 text-base text-steel">Ou décrivez rapidement votre situation pour être recontacté.</p>
             </div>
 
             <div className="grid gap-4 xl:grid-cols-2">

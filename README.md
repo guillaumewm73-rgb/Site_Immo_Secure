@@ -22,6 +22,16 @@ npm run dev
 
 Le site sera accessible sur `http://localhost:3000`.
 
+## URL de réservation
+
+Pour activer le bouton de prise de rendez-vous direct, ajoute une variable d'environnement publique :
+
+```bash
+NEXT_PUBLIC_BOOKING_URL=https://cal.com/votre-compte/diagnostic
+```
+
+Sans cette variable, le CTA de réservation bascule automatiquement sur un appel direct.
+
 ## Scripts disponibles
 
 ```bash
