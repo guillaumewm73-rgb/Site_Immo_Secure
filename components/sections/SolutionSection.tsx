@@ -32,8 +32,8 @@ export function SolutionSection() {
                 key={pillar.title}
                 className={`panel group flex h-full flex-col overflow-hidden border p-7 transition duration-300 ease-smooth hover:-translate-y-1 hover:shadow-card sm:p-8 ${articleTone}`}
               >
-                <div className="flex flex-wrap items-start justify-between gap-4">
-                  <div className="min-h-[7.5rem]">
+                <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-5">
+                  <div className="min-h-[9rem] min-w-0">
                     <div
                       className={`mb-4 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] ${badgeTone}`}
                     >
@@ -42,7 +42,7 @@ export function SolutionSection() {
                     </div>
                     <h3 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">{pillar.title}</h3>
                   </div>
-                  <span className="icon-chip">
+                  <span className="icon-chip self-start">
                     <Icon className="h-5 w-5" />
                   </span>
                 </div>
