@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        tablet: { min: '768px', max: '1023px' },
+        laptop: { min: '1024px', max: '1279px' }
+      },
       colors: {
         surface: '#F8FAFC',
         'surface-alt': '#F1F5F9',

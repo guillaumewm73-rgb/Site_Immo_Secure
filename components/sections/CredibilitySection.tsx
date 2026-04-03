@@ -8,7 +8,7 @@ export function CredibilitySection() {
   return (
     <section id="confiance" className="section-space bg-surface-alt">
       <Container>
-        <div className="grid items-start gap-10 lg:grid-cols-[1fr_1fr] lg:gap-12">
+        <div className="grid items-start gap-8 md:grid-cols-[1.02fr_0.98fr] md:gap-8 lg:gap-10 xl:gap-12">
           <div>
             <SectionHeader
               title="Un système concret, pas une promesse floue"
@@ -31,7 +31,7 @@ export function CredibilitySection() {
             </ul>
           </div>
 
-          <div className="panel border-line bg-white p-6 sm:p-7">
+          <div className="panel border-line bg-white p-6 sm:p-7 tablet:p-6 lg:p-6 xl:p-7">
             <div className="icon-chip">
               <ShieldIcon />
             </div>

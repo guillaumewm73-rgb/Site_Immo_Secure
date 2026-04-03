@@ -11,14 +11,14 @@ export function SolutionSection() {
       <Container>
         <SectionHeader title={solutionContent.title} description={solutionContent.intro} kicker="Solution" />
 
-        <div className="mt-10 grid items-stretch gap-6 lg:grid-cols-2">
+        <div className="mt-10 grid items-stretch gap-6 md:grid-cols-2">
           {solutionContent.pillars.map((pillar, index) => {
             const Icon = iconMap[index] ?? BoltIcon;
 
             return (
               <article
                 key={pillar.title}
-                className="panel group flex h-full flex-col overflow-hidden border border-line bg-white p-7 transition duration-300 ease-smooth hover:-translate-y-1 hover:shadow-card sm:p-8"
+                className="panel group flex h-full flex-col overflow-hidden border border-line bg-white p-6 transition duration-300 ease-smooth hover:-translate-y-1 hover:shadow-card sm:p-7 lg:p-6 xl:p-8"
               >
                 <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-5">
                   <div className="min-h-[9rem] min-w-0">

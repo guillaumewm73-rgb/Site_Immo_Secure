@@ -22,8 +22,8 @@ export function ProblemSection() {
   return (
     <section id="probleme" className="section-space section-dark">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-16">
-          <div className="lg:max-w-[35rem]">
+        <div className="grid gap-10 md:grid-cols-[0.94fr_1.06fr] md:items-start md:gap-8 lg:gap-10 xl:gap-16">
+          <div className="md:max-w-none lg:max-w-[29rem] xl:max-w-[35rem]">
             <SectionHeader title={problemContent.title} kicker="Point de friction" theme="dark" />
 
             <p className="mt-6 max-w-xl text-base leading-relaxed text-white/78 sm:text-lg">
@@ -49,9 +49,9 @@ export function ProblemSection() {
             </p>
           </div>
 
-          <div className="lg:ml-auto lg:w-full lg:max-w-[40rem]">
-            <div className="panel overflow-hidden border border-line bg-white p-6 sm:p-7">
-              <div className="flex items-start justify-between gap-4">
+          <div className="md:w-full md:max-w-none lg:ml-auto lg:max-w-[36rem] xl:max-w-[40rem]">
+            <div className="panel overflow-hidden border border-line bg-white p-6 sm:p-7 lg:p-6 xl:p-7">
+              <div className="flex items-start justify-between gap-4 tablet:flex-col tablet:items-start">
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
                     Perte silencieuse typique

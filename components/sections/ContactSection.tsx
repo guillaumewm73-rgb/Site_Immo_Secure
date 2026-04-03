@@ -105,8 +105,8 @@ export function ContactSection() {
   return (
     <section id="contact" className="section-space section-dark">
       <Container>
-        <div className="grid gap-7 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10">
-          <div className="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-gradient-to-br from-deep to-secondary p-8 text-white shadow-card sm:p-10">
+        <div className="grid gap-7 md:grid-cols-[0.9fr_1.1fr] md:gap-6 lg:grid-cols-[0.88fr_1.12fr] lg:gap-8 xl:gap-10">
+          <div className="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-gradient-to-br from-deep to-secondary p-8 text-white shadow-card sm:p-10 tablet:p-7 lg:p-7 xl:p-10">
             <div className="absolute -right-14 -top-12 h-40 w-40 rounded-full bg-accent/14 blur-3xl" />
             <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-white/8 blur-3xl" />
 
@@ -114,7 +114,7 @@ export function ContactSection() {
               <p className="inline-flex rounded-full border border-white/12 bg-white/8 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/75">
                 Prise de contact
               </p>
-              <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">{contactContent.title}</h2>
+              <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-[2.95rem] xl:text-5xl">{contactContent.title}</h2>
               <p className="mt-4 text-base leading-relaxed text-white/80 sm:text-lg">
                 {contactContent.subtitle}
               </p>
@@ -147,14 +147,14 @@ export function ContactSection() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} noValidate className="panel border border-line bg-white p-7 shadow-card sm:p-9">
+          <form onSubmit={handleSubmit} noValidate className="panel border border-line bg-white p-7 shadow-card sm:p-9 tablet:p-7 lg:p-7 xl:p-9">
             <div className="mb-6 border-b border-line/80 pb-5">
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">Formulaire</p>
               <h3 className="mt-2 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">Demander un diagnostic</h3>
               <p className="mt-2 text-base text-steel">Décrivez rapidement votre situation.</p>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 xl:grid-cols-2">
               <Field
                 id="firstName"
                 label="Prénom"

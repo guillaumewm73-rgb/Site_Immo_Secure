@@ -6,12 +6,12 @@ import { Container } from '@/components/ui/Container';
 
 export function SiteHeader() {
   return (
-    <header className="relative z-50 px-4 pt-4 sm:fixed sm:inset-x-0 sm:top-0 sm:px-6">
+    <header className="relative z-50 px-4 pt-4 sm:px-5 md:fixed md:inset-x-0 md:top-0 md:px-6">
       <Container>
-        <div className="flex items-center justify-between gap-3 py-1 sm:h-20 sm:rounded-full sm:border sm:border-line/80 sm:bg-white/90 sm:px-6 sm:shadow-soft">
+        <div className="flex items-center justify-between gap-3 py-1 md:flex-wrap md:rounded-[2rem] md:border md:border-line/80 md:bg-white/90 md:px-5 md:py-3 md:shadow-soft lg:h-20 lg:flex-nowrap lg:rounded-full lg:px-5 lg:py-1 xl:px-6">
           <Link
             href="#top"
-            className="group inline-flex items-center gap-2.5 rounded-full bg-white px-3 py-2 shadow-soft sm:gap-3 sm:bg-transparent sm:px-0 sm:py-0 sm:shadow-none"
+            className="group inline-flex items-center gap-2.5 rounded-full bg-white px-3 py-2 shadow-soft sm:gap-3 md:order-1 md:bg-transparent md:px-0 md:py-0 md:shadow-none"
           >
             <span className="inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-2xl border border-deep/10 bg-white shadow-soft sm:h-11 sm:w-11">
               <Image
@@ -26,26 +26,30 @@ export function SiteHeader() {
             </span>
             <span className="flex flex-col leading-tight">
               <span className="text-sm font-semibold tracking-[0.08em] text-ink">{company.agency}</span>
-              <span className="hidden text-xs text-steel sm:inline">{company.offerName}</span>
+              <span className="hidden text-xs text-steel lg:inline">{company.offerName}</span>
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-7 rounded-full border border-line bg-white px-5 py-3 md:flex">
+          <nav className="hidden items-center justify-center gap-5 rounded-full border border-line bg-white px-4 py-2.5 md:order-3 md:flex md:w-full lg:order-2 lg:w-auto lg:flex-1 lg:gap-5 lg:px-4 lg:py-2.5 xl:gap-7 xl:px-5 xl:py-3">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-steel transition-colors duration-200 hover:text-accent"
+                className="text-sm font-medium text-steel transition-colors duration-200 hover:text-accent laptop:text-[13px]"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
 
-          <div className="flex items-center gap-2 sm:gap-3">
-            <Link href="#contact" className="btn-primary px-4 py-2.5 text-xs sm:px-6 sm:py-3 sm:text-sm">
-              <span className="sm:hidden">Diagnostic</span>
-              <span className="hidden items-center gap-2 sm:inline-flex">
+          <div className="flex items-center gap-2 sm:gap-3 md:order-2 md:ml-auto lg:order-3 lg:ml-0">
+            <Link href="#contact" className="btn-primary px-4 py-2.5 text-xs md:px-5 md:py-3 md:text-sm lg:px-4 xl:px-6">
+              <span className="md:hidden">Diagnostic</span>
+              <span className="hidden items-center gap-2 md:inline-flex xl:hidden">
+                Diagnostic
+                <ArrowRightIcon className="h-4 w-4" />
+              </span>
+              <span className="hidden items-center gap-2 xl:inline-flex">
                 {ctaLabels.secondary}
                 <ArrowRightIcon className="h-4 w-4" />
               </span>
