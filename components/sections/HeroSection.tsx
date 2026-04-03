@@ -47,7 +47,7 @@ export function HeroSection() {
               </p>
             </div>
 
-            <p className="max-w-lg rounded-[1.5rem] border border-rose-200/80 bg-rose-50/90 px-5 py-4 text-sm font-semibold text-rose-700 shadow-soft sm:text-base">
+            <p className="max-w-lg rounded-[1.5rem] border border-rose-200/90 bg-gradient-to-r from-rose-50 to-amber-50 px-5 py-4 text-sm font-semibold text-rose-700 shadow-soft sm:text-base">
               {heroContent.tension}
             </p>
 
@@ -66,7 +66,7 @@ export function HeroSection() {
           </div>
 
           <div className="reveal-up relative lg:pt-4" style={{ animationDelay: '0.12s' }}>
-            <div className="panel relative overflow-hidden border border-white/90 bg-white/80 p-6 sm:p-7 lg:p-8">
+            <div className="panel relative overflow-hidden border border-amber-100 bg-gradient-to-br from-white via-white to-amber-50/35 p-6 sm:p-7 lg:p-8">
               <div className="pointer-events-none absolute inset-0 bg-hero-grid [background-size:34px_34px] opacity-35" />
 
               <div className="relative">

@@ -46,7 +46,7 @@ export function CredibilitySection() {
             </div>
 
             <p className="mt-6 rounded-[1.5rem] border border-line bg-white px-5 py-4 text-sm text-slate-600">
-              Interlocuteur direct : <span className="font-semibold text-ink">{company.founder}</span>
+              Interlocuteur direct : <span className="font-semibold text-ink">{company.founderDisplay}</span>
             </p>
           </div>
         </div>

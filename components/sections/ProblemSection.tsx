@@ -1,4 +1,5 @@
 import { Container } from '@/components/ui/Container';
+import { ClockIcon } from '@/components/ui/Icons';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { problemContent } from '@/content/siteContent';
 
@@ -19,7 +20,7 @@ const lossTimeline = [
 
 export function ProblemSection() {
   return (
-    <section id="probleme" className="section-space bg-white/60">
+    <section id="probleme" className="section-space bg-gradient-to-b from-white to-rose-50/35">
       <Container>
         <div className="grid items-start gap-10 lg:grid-cols-[0.98fr_1.02fr] lg:gap-14">
           <div>
@@ -33,10 +34,10 @@ export function ProblemSection() {
               {problemContent.bullets.map((bullet) => (
                 <li
                   key={bullet}
-                  className="metric-card flex items-start gap-4 px-5 py-4 text-sm font-medium text-slate-700 sm:text-base"
+                  className="metric-card flex items-start gap-4 border-rose-100 bg-gradient-to-r from-white to-rose-50/70 px-5 py-4 text-sm font-medium text-slate-700 sm:text-base"
                 >
-                  <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-soft text-sm font-semibold text-deep">
-                    •
+                  <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-rose-100 text-rose-700 shadow-soft">
+                    <ClockIcon className="h-4 w-4" />
                   </span>
                   <span>{bullet}</span>
                 </li>
@@ -49,7 +50,7 @@ export function ProblemSection() {
           </div>
 
           <div>
-            <div className="panel overflow-hidden border border-white/90 bg-gradient-to-br from-white via-white to-surface-alt/70 p-6 sm:p-7">
+            <div className="panel overflow-hidden border border-white/90 bg-gradient-to-br from-white via-white to-rose-50/40 p-6 sm:p-7">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">

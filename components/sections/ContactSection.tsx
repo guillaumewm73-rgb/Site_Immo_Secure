@@ -137,7 +137,7 @@ export function ContactSection() {
                 </div>
                 <div className="rounded-[1.25rem] border border-white/12 bg-white/10 px-4 py-4 text-sm text-white/80">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">Contact direct</p>
-                  <p className="mt-2 font-semibold text-white">{company.founder}</p>
+                  <p className="mt-2 font-semibold text-white">{company.founderDisplay}</p>
                 </div>
                 <div className="rounded-[1.25rem] border border-white/12 bg-white/10 px-4 py-4 text-sm text-white/80 sm:col-span-2">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">Coordonnées</p>
@@ -168,7 +168,7 @@ export function ContactSection() {
                 label="Nom"
                 value={values.lastName}
                 error={errors.lastName}
-                placeholder="Moulin"
+                placeholder="MOULIN"
                 onChange={(value) => handleChange('lastName', value)}
               />
             </div>
@@ -196,7 +196,7 @@ export function ContactSection() {
                 label="Téléphone"
                 value={values.phone}
                 error={errors.phone}
-                placeholder="06 00 00 00 00"
+                placeholder="+33 6 00 00 00 00"
                 onChange={(value) => handleChange('phone', value)}
               />
               <Field

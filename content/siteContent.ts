@@ -1,9 +1,10 @@
 export const company = {
   founder: 'Guillaume Willaime Moulin',
+  founderDisplay: 'Guillaume WILLAIME MOULIN',
   agency: 'Immo Secure',
   offerName: 'Zéro Opportunité Perdue',
   email: 'immosecure@proton.me',
-  phoneDisplay: '07 66 13 37 02',
+  phoneDisplay: '+33 7 66 13 37 02',
   phoneHref: '+33766133702'
 };
 
