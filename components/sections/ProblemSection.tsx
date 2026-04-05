@@ -26,19 +26,21 @@ export function ProblemSection() {
   return (
     <section id="probleme" className="section-space section-dark">
       <Container>
-        <div className="grid gap-10 md:grid-cols-[0.94fr_1.06fr] md:items-start md:gap-8 lg:gap-10 xl:gap-16">
-          <div className="md:max-w-none lg:max-w-[29rem] xl:max-w-[35rem]">
+        <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-stretch lg:gap-8 xl:gap-10">
+          <div className="h-full rounded-[2rem] border border-white/10 bg-white/6 p-6 shadow-soft sm:p-7">
             <SectionHeader title={problemContent.title} kicker="Le vrai coût du retard" theme="dark" />
 
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/78 sm:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/78 sm:text-lg">
               {problemContent.paragraphs[0]}
             </p>
 
-            <ul className="mt-8 grid max-w-xl gap-3.5">
-              {problemContent.bullets.map((bullet) => (
+            <ul className="mt-8 grid gap-3.5 sm:grid-cols-2">
+              {problemContent.bullets.map((bullet, index) => (
                 <li
                   key={bullet}
-                  className="metric-card flex items-start gap-4 border-line bg-white px-4 py-3.5 text-sm font-medium text-ink sm:text-base"
+                  className={`metric-card flex items-start gap-4 border-line bg-white px-4 py-4 text-sm font-medium text-ink sm:text-base ${
+                    index === problemContent.bullets.length - 1 ? 'sm:col-span-2' : ''
+                  }`}
                 >
                   <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent shadow-soft">
                     <ClockIcon className="h-4 w-4" />
@@ -48,13 +50,13 @@ export function ProblemSection() {
               ))}
             </ul>
 
-            <p className="mt-6 max-w-xl rounded-[1.75rem] border border-white/12 bg-white/8 p-6 text-base font-semibold leading-relaxed text-white shadow-soft sm:text-lg">
+            <p className="mt-6 rounded-[1.75rem] border border-white/12 bg-white/8 p-6 text-base font-semibold leading-relaxed text-white shadow-soft sm:text-lg">
               {problemContent.conclusion}
             </p>
           </div>
 
-          <div className="md:w-full md:max-w-none lg:ml-auto lg:max-w-[36rem] xl:max-w-[40rem]">
-            <div className="panel overflow-hidden border border-line bg-white p-6 sm:p-7 lg:p-6 xl:p-7">
+          <div className="h-full">
+            <div className="panel flex h-full flex-col overflow-hidden border border-line bg-white p-6 sm:p-7 lg:p-6 xl:p-7">
               <div className="flex items-start justify-between gap-4 tablet:flex-col tablet:items-start">
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
@@ -67,7 +69,7 @@ export function ProblemSection() {
                 </div>
               </div>
 
-              <ol className="mt-8 space-y-4">
+              <ol className="mt-8 flex-1 space-y-4">
                 {lossTimeline.map((item, index) => (
                   <li key={item.time} className="panel-muted flex items-start gap-4 px-5 py-4">
                     <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-deep text-sm font-semibold text-white shadow-soft">
@@ -81,8 +83,8 @@ export function ProblemSection() {
                 ))}
               </ol>
 
-              <p className="mt-6 rounded-[1.5rem] border border-rose-200 bg-rose-50 px-5 py-4 text-sm font-medium text-rose-800 sm:text-base">
-                Si votre suivi attend le “bon moment”, votre prospect a déjà trouvé une autre agence.
+              <p className="mt-6 rounded-[1.5rem] border border-rose-200 bg-rose-50 px-5 py-4 text-sm font-semibold text-rose-800 sm:text-base">
+                Vous rappelez. L’autre agence a déjà le rendez-vous.
               </p>
             </div>
           </div>

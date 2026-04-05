@@ -110,7 +110,9 @@ export function ContactSection() {
                 <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">
                   Promesse avant le rendez-vous
                 </p>
-                <p className="mt-2 text-base font-semibold text-white">{ctaLabels.helper}</p>
+                <p className="mt-2 text-base font-semibold text-white">
+                  En 30 minutes, vous voyez exactement où vous perdez des mandats et comment les récupérer.
+                </p>
               </div>
 
               <ul className="mt-8 space-y-3">
@@ -150,7 +152,7 @@ export function ContactSection() {
                 {ctaLabels.primary}
               </h3>
               <p className="mt-2 text-base text-steel">
-                3 champs pour identifier où vous perdez des mandats et revenir vers vous rapidement.
+                3 champs pour voir où vos mandats se perdent et revenir vers vous rapidement.
               </p>
             </div>
 

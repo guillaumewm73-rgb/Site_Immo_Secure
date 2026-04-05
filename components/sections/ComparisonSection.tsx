@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
-import { SectionHeader } from '@/components/ui/SectionHeader';
 import { ArrowRightIcon } from '@/components/ui/Icons';
 import { comparisonContent, ctaLabels } from '@/content/siteContent';
 
@@ -11,12 +10,24 @@ export function ComparisonSection() {
   return (
     <section id="avant-apres" className="section-space bg-white">
       <Container>
-        <SectionHeader
-          kicker="Avant / Après"
-          title={comparisonContent.title}
-          description={comparisonContent.description}
-          align="center"
-        />
+        <div className="mx-auto max-w-5xl text-center">
+          <p className="inline-flex rounded-full border border-accent/15 bg-accent-soft/60 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-accent shadow-soft">
+            Avant / Après
+          </p>
+          <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-[2.95rem] xl:text-5xl">
+            <span className="block">Avant: attente, oubli, mandat perdu.</span>
+            <span className="mt-3 block text-accent">Après: réponse, rendez-vous, mandat sécurisé.</span>
+          </h2>
+          <p className="mx-auto mt-5 max-w-3xl text-pretty text-base leading-relaxed text-steel sm:text-lg lg:text-[1.12rem] xl:text-xl">
+            {comparisonContent.description}
+          </p>
+        </div>
+
+        <div className="mt-6 flex justify-center">
+          <p className="rounded-full border border-rose-200 bg-rose-50 px-5 py-3 text-sm font-semibold text-rose-800 shadow-soft sm:text-base">
+            La différence ? 5 minutes.
+          </p>
+        </div>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:gap-8">
           <article className="rounded-[2rem] border border-rose-200 bg-rose-50/90 p-6 shadow-soft sm:p-7">

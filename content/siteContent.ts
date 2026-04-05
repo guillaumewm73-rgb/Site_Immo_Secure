@@ -53,18 +53,18 @@ export const seoContent = {
 export const ctaLabels = {
   primary: 'Demander un diagnostic',
   short: 'Diagnostic',
-  helper: 'En 30 minutes, vous voyez exactement où vous perdez des mandats.'
+  helper: 'En 30 minutes, vous voyez exactement où vous perdez des mandats et comment les récupérer.'
 };
 
 export const heroContent = {
-  title: 'Chaque minute sans réponse offre des mandats à la concurrence.',
+  title: 'Pendant que vous lisez ça, un prospect signe ailleurs.',
   subtitle:
-    'Immo Secure répond aux leads en moins de 60 secondes, relance automatiquement les estimations et pousse vos prospects vers le rendez-vous avant qu’ils ne partent ailleurs.',
+    'Immo Secure répond en moins de 60 secondes, relance automatiquement les estimations et pousse vos prospects au rendez-vous avant la concurrence.',
   primaryCta: {
     label: ctaLabels.primary,
     href: '#contact'
   },
-  tension: 'Un prospect qui attend quelques minutes peut signer ailleurs avant même votre rappel.'
+  tension: 'Chaque lead non répondu est déjà en train de comparer votre agence avec celle qui a répondu avant vous.'
 };
 
 export const heroSignals = [
@@ -99,32 +99,30 @@ export const navLinks = [
 ];
 
 export const demoContent = {
-  title: 'La preuve par une simulation visuelle',
+  title: 'La preuve doit se voir en 2 minutes',
   description:
-    'En quelques secondes, vous voyez comment une demande passe de lead entrant à rendez-vous proposé, sans zone morte entre les deux.',
-  label: 'Simulation visuelle',
+    'En un coup d’œil, vous voyez comment un lead passe de demande entrante à rendez-vous proposé, sans trou dans le suivi.',
+  label: 'Démo courte',
   videoTitle: 'Du lead entrant au rendez-vous',
   videoSubtitle:
-    'Même démonstration, même logique commerciale: vitesse de réponse, relance, puis proposition de rendez-vous.',
+    'La vraie version à brancher ici est une Loom de 2 à 3 minutes. En attendant, cette simulation montre le parcours qui doit convaincre en quelques secondes.',
   bullets: [
-    'Réponse envoyée dès l’entrée du lead',
-    'Qualification sans attente côté prospect',
-    'Relance automatique si la demande reste tiède',
-    'Rendez-vous poussé avant que le prospect décroche'
+    'Le prospect reçoit une réponse avant de douter',
+    'La relance part sans dépendre de votre mémoire',
+    'Le rendez-vous est proposé avant que le lead refroidisse',
+    'Votre équipe intervient seulement sur les leads chauds'
   ]
 };
 
 export const problemContent = {
-  title: 'Le problème n’est pas le manque de leads. C’est le temps perdu avant la réponse.',
-  paragraphs: [
-    'Quand la réponse tarde ou que la relance n’arrive jamais, le prospect compare, se refroidit puis signe avec l’agence qui a répondu la première.'
-  ],
+  title: 'Vous répondez trop tard. Le mandat est déjà parti.',
+  paragraphs: ['Le prospect n’attend pas. Il compare, choisit, puis disparaît.'],
   bullets: [
-    '1 lead non suivi = 1 mandat potentiellement offert à la concurrence',
-    'Une estimation non relancée disparaît du pipe sans jamais revenir',
-    'Quand l’équipe est en visite, les demandes chaudes tombent entre deux tâches'
+    '1 lead non suivi = 1 mandat offert à la concurrence',
+    '1 estimation non relancée = 1 vendeur qui refroidit',
+    '1 équipe occupée = des demandes chaudes perdues'
   ],
-  conclusion: 'Le retard n’est pas neutre: il fait vendre l’agence d’en face à votre place.'
+  conclusion: 'Le retard ne coûte pas du confort. Il coûte des mandats.'
 };
 
 export const problemScenarios = [
@@ -176,22 +174,22 @@ export const scenarioContent = {
 };
 
 export const solutionContent = {
-  title: 'Le système ne rajoute pas du bruit. Il sécurise les moments où vous perdez déjà le mandat.',
-  intro: 'Deux automatisations simples pour rester le premier à répondre et le premier à relancer.',
+  title: 'Le système sert à une seule chose: vous faire gagner les mandats que vous perdiez déjà.',
+  intro: 'Deux leviers. Deux résultats business. Zéro blabla technique.',
   pillars: [
     {
-      title: 'Chaque lead reçoit une réponse immédiate',
+      title: 'Vous êtes le premier à répondre. Vous gagnez le mandat.',
       badge: 'Moins de 60 secondes',
-      does: 'Dès qu’une demande entre, le prospect reçoit une réponse, avance dans la qualification et voit la prochaine étape au lieu d’attendre.',
+      does: 'Le prospect reçoit une réponse immédiate et avance vers le rendez-vous avant même que votre concurrent ne rappelle.',
       sees: 'Le lead arrive cadré, avec les bonnes infos et le bon niveau de priorité.',
-      impact: 'Vous êtes le premier à répondre, pas le deuxième à rappeler.'
+      impact: 'Vous prenez l’avantage quand le lead est encore chaud.'
     },
     {
-      title: 'Chaque estimation continue d’être suivie',
+      title: 'Vous relancez même quand votre équipe pense à autre chose.',
       badge: 'Relance automatique',
-      does: 'Les relances partent automatiquement au bon moment et s’arrêtent dès que le prospect répond ou prend rendez-vous.',
+      does: 'Les relances partent au bon moment et s’arrêtent dès qu’un prospect répond, au lieu de disparaître dans une liste de tâches.',
       sees: 'Le pipeline reste net, sans liste manuelle ni rappel oublié.',
-      impact: 'Vous récupérez des mandats que votre agence perdait déjà en silence.'
+      impact: 'Vous récupérez les mandats qui se perdaient entre deux relances oubliées.'
     }
   ]
 };
@@ -233,22 +231,40 @@ export const comparisonContent = {
   description: 'Le bénéfice doit se comprendre en un coup d’œil.'
 };
 
+export const resultMetrics = [
+  {
+    value: '+3 à 5',
+    label: 'mandats / mois',
+    context: 'potentiel récupéré'
+  },
+  {
+    value: '+30%',
+    label: 'de rendez-vous',
+    context: 'quand la réponse part vite'
+  },
+  {
+    value: '0',
+    label: 'lead oublié',
+    context: 'si le process tourne'
+  }
+];
+
 export const benefits = [
   {
-    title: 'Vous êtes le premier à répondre',
-    text: 'Le prospect reçoit un retour immédiat, même quand votre équipe est en visite ou déjà en rendez-vous.'
+    title: 'Vous passez devant les agences plus lentes',
+    text: 'Le prospect voit votre réactivité avant même d’avoir parlé à un concurrent.'
   },
   {
-    title: 'Vous récupérez des mandats déjà perdus',
-    text: 'Les estimations oubliées reviennent dans le pipe au lieu de disparaître sans suite.'
+    title: 'Vous récupérez les mandats déjà en train de partir',
+    text: 'Les estimations oubliées reviennent dans le pipe au lieu de mourir sans suite.'
   },
   {
-    title: 'Votre suivi reste actif 7j/7',
-    text: 'Le process continue à midi, le soir et le week-end, là où beaucoup de mandats se décident.'
+    title: 'Votre suivi continue quand votre équipe n’est pas disponible',
+    text: 'Midi, soirées, visites, week-ends: le prospect continue d’avancer au lieu d’attendre.'
   },
   {
-    title: 'Votre équipe se concentre sur les leads chauds',
-    text: 'Elle intervient au bon moment, au lieu de perdre du temps à rattraper des oublis.'
+    title: 'Votre équipe intervient là où ça signe',
+    text: 'Elle se concentre sur les leads chauds au lieu de courir après des oublis.'
   }
 ];
 
@@ -331,6 +347,6 @@ export const finalCta = {
 export const contactContent = {
   title: 'Demandez votre diagnostic',
   subtitle:
-    'En 30 minutes, vous identifiez exactement où vous perdez des mandats, ce qu’il faut automatiser et ce qui doit être corrigé en priorité.',
+    'En 30 minutes, vous voyez exactement où vous perdez des mandats et ce qu’il faut corriger pour les récupérer.',
   closing: '3 champs. 30 minutes. Un plan clair pour récupérer plus de rendez-vous.'
 };

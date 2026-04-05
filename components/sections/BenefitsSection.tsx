@@ -1,6 +1,6 @@
 import { Container } from '@/components/ui/Container';
 import { SectionHeader } from '@/components/ui/SectionHeader';
-import { benefits } from '@/content/siteContent';
+import { benefits, resultMetrics } from '@/content/siteContent';
 import { BoltIcon, CalendarIcon, ChartIcon, CheckIcon } from '@/components/ui/Icons';
 
 const icons = [ChartIcon, CalendarIcon, BoltIcon, CheckIcon];
@@ -11,11 +11,21 @@ export function BenefitsSection() {
       <Container>
         <SectionHeader
           title="Les résultats que le prospect ressent et que votre agence récupère"
-          description="Moins d’attente, moins d’oubli, plus de rendez-vous réellement traités."
+          description="Moins d’attente, plus de rendez-vous, plus de mandats récupérés."
           kicker="Résultats"
           align="center"
           theme="dark"
         />
+
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          {resultMetrics.map((metric) => (
+            <article key={metric.label} className="rounded-[1.75rem] border border-white/12 bg-white/8 p-6 text-center shadow-soft sm:p-7">
+              <p className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">{metric.value}</p>
+              <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-white/70">{metric.label}</p>
+              <p className="mt-2 text-sm text-white/75">{metric.context}</p>
+            </article>
+          ))}
+        </div>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {benefits.map((benefit, index) => {
