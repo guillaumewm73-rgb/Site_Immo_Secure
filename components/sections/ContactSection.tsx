@@ -3,7 +3,7 @@
 import { FormEvent, useState } from 'react';
 import { Container } from '@/components/ui/Container';
 import { ArrowRightIcon, CheckIcon } from '@/components/ui/Icons';
-import { company, contactContent, ctaLabels } from '@/content/siteContent';
+import { company, contactContent, ctaLabels, formReassurance } from '@/content/siteContent';
 
 type ContactFormValues = {
   firstName: string;
@@ -24,8 +24,8 @@ const phoneRegex = /^[+()\s\d.-]{8,}$/;
 
 const demoOutcomes = [
   'Les points précis où vos leads refroidissent',
-  'Les relances à automatiser pour récupérer plus de rendez-vous',
-  'Le plan simple à mettre en place pour arrêter de perdre des mandats'
+  'Les relances à automatiser',
+  'Le plan pour récupérer plus de mandats'
 ];
 
 function validate(values: ContactFormValues): FormErrors {
@@ -111,7 +111,7 @@ export function ContactSection() {
                   Promesse avant le rendez-vous
                 </p>
                 <p className="mt-2 text-base font-semibold text-white">
-                  En 30 minutes, vous voyez exactement où vous perdez des mandats et comment les récupérer.
+                  En 30 minutes, vous voyez où vous perdez des mandats et comment les récupérer.
                 </p>
               </div>
 
@@ -192,6 +192,17 @@ export function ContactSection() {
               {status === 'loading' ? 'Envoi en cours...' : ctaLabels.form}
               {status === 'loading' ? null : <ArrowRightIcon className="h-4 w-4" />}
             </button>
+
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-2.5">
+              {formReassurance.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-line/80 bg-surface-alt px-3 py-2 text-xs font-semibold text-steel"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
 
             <p className="mt-4 text-center text-sm font-medium text-steel">{contactContent.closing}</p>
 

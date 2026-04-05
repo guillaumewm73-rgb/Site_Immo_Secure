@@ -102,12 +102,12 @@ export const navLinks = [
 export const demoContent = {
   title: 'La preuve doit se voir en 2 minutes',
   description:
-    'En un coup d’œil, vous voyez comment un lead passe de demande entrante à rendez-vous proposé, sans trou dans le suivi.',
+    'En un coup d’œil, vous voyez comment un lead passe de demande entrante à rendez-vous proposé.',
   label: 'Démo courte',
   videoTitle: 'Du lead entrant au rendez-vous',
   videoSubtitle:
-    'La vraie version à brancher ici est une Loom de 2 à 3 minutes. En attendant, cette simulation montre le parcours qui doit convaincre en quelques secondes.',
-  bullets: ['Le prospect reçoit une réponse avant de douter', 'Le rendez-vous est proposé pendant que le lead est encore chaud']
+    'À remplacer ensuite par une Loom de 2 à 3 minutes avec le vrai parcours.',
+  bullets: ['Réponse avant le doute', 'Rendez-vous avant que le lead refroidisse']
 };
 
 export const proofCaseStudy = {
@@ -128,6 +128,18 @@ export const proofCaseStudy = {
       value: '+4',
       label: 'mandats récupérés'
     }
+  ]
+};
+
+export const proofTestimonial = {
+  eyebrow: 'Preuve sociale',
+  agency: 'Agence Horizon Immobilier, Nantes',
+  quote:
+    'On pensait perdre quelques leads. En réalité, on laissait filer des mandats déjà presque gagnés.',
+  beforeAfter: [
+    'Avant: réponses tardives et relances oubliées',
+    'Après: réponse en moins d’une minute et suivi continu',
+    'Résultat sur 30 jours: 4 mandats récupérés'
   ]
 };
 
@@ -163,7 +175,7 @@ export const proofMessage = {
 
 export const problemContent = {
   title: 'Vous répondez trop tard. Le mandat est déjà parti.',
-  paragraphs: ['Le prospect n’attend pas. Il compare, choisit, puis disparaît.'],
+  paragraphs: ['Le prospect n’attend pas. Il compare puis disparaît.'],
   bullets: [
     '1 lead non suivi = 1 mandat offert à la concurrence',
     '1 estimation non relancée = 1 vendeur qui refroidit',
@@ -394,6 +406,8 @@ export const finalCta = {
 export const contactContent = {
   title: 'Voyez combien vous perdez',
   subtitle:
-    'En 30 minutes, vous voyez exactement où vous perdez des mandats et ce qu’il faut corriger pour les récupérer.',
+    'En 30 minutes, vous voyez où vous perdez des mandats et quoi corriger pour les récupérer.',
   closing: '3 champs. 30 minutes. Un plan clair pour récupérer plus de rendez-vous.'
 };
+
+export const formReassurance = ['Réponse sous 24h', 'Aucun engagement', 'Pas de spam'];

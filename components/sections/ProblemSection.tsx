@@ -14,11 +14,11 @@ const lossTimeline = [
   },
   {
     time: '09:41',
-    event: 'Une autre agence répond et propose un créneau.'
+    event: 'Une autre agence propose un créneau.'
   },
   {
     time: '10:08',
-    event: 'Le rendez-vous est pris ailleurs avant votre rappel.'
+    event: 'Le rendez-vous est pris ailleurs.'
   }
 ];
 

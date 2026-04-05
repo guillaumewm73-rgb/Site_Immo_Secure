@@ -8,6 +8,7 @@ import {
   ctaLabels,
   demoContent,
   proofCaseStudy,
+  proofTestimonial,
   proofMessage
 } from '@/content/siteContent';
 
@@ -115,6 +116,20 @@ export function DemoSection() {
               </p>
             </article>
 
+            <article className="panel mt-5 p-6 sm:p-7">
+              <p className="section-kicker text-accent">{proofTestimonial.eyebrow}</p>
+              <h3 className="mt-3 text-2xl font-semibold tracking-tight text-ink">{proofTestimonial.agency}</h3>
+              <p className="mt-4 text-base font-medium leading-relaxed text-ink">“{proofTestimonial.quote}”</p>
+
+              <div className="mt-5 space-y-3">
+                {proofTestimonial.beforeAfter.map((item) => (
+                  <div key={item} className="panel-accent px-4 py-3">
+                    <p className="text-sm font-medium text-ink sm:text-base">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </article>
+
             <div className="mt-5 space-y-3">
               {demoContent.bullets.map((item) => (
                 <div key={item} className="metric-card flex items-start gap-4 px-5 py-4">
@@ -124,11 +139,6 @@ export function DemoSection() {
                   <p className="text-sm font-semibold text-slate-800 sm:text-base">{item}</p>
                 </div>
               ))}
-            </div>
-
-            <div className="panel mt-8 px-5 py-5">
-              <p className="section-kicker text-accent">Ce qu’il faut ajouter ensuite</p>
-              <p className="mt-3 text-sm leading-relaxed text-steel sm:text-base">{demoContent.videoSubtitle}</p>
             </div>
 
             <div className="mt-8">
