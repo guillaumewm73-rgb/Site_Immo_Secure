@@ -19,9 +19,9 @@ export function BenefitsSection() {
 
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {resultMetrics.map((metric) => (
-            <article key={metric.label} className="rounded-[1.75rem] border border-white/12 bg-white/8 p-6 text-center shadow-soft sm:p-7">
+            <article key={metric.label} className="panel-dark p-6 text-center sm:p-7">
               <p className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">{metric.value}</p>
-              <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-white/70">{metric.label}</p>
+              <p className="mt-3 section-kicker text-white/70">{metric.label}</p>
               <p className="mt-2 text-sm text-white/75">{metric.context}</p>
             </article>
           ))}

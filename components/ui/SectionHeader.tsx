@@ -20,7 +20,7 @@ export function SectionHeader({
       {kicker ? (
         <p
           className={cn(
-            'mb-4 inline-flex rounded-full px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] laptop:px-3.5',
+            'mb-4 inline-flex rounded-full px-4 py-2 section-kicker laptop:px-3.5',
             theme === 'light' && 'border border-accent/15 bg-accent-soft/60 text-accent shadow-soft',
             theme === 'dark' && 'border border-white/12 bg-white/10 text-white/75'
           )}
@@ -30,7 +30,7 @@ export function SectionHeader({
       ) : null}
       <h2
         className={cn(
-          'text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-[2.95rem] xl:text-5xl',
+          'text-balance text-3xl font-semibold leading-[0.97] tracking-tight sm:text-4xl lg:text-[2.95rem] xl:text-5xl',
           theme === 'light' && 'text-ink',
           theme === 'dark' && 'text-white'
         )}

@@ -18,10 +18,10 @@ export function DemoSection() {
         <div className="grid items-start gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14">
           <div className="space-y-5">
             <div className="panel overflow-hidden p-4 sm:p-6">
-              <div className="rounded-[1.75rem] border border-white/80 bg-gradient-to-br from-deep via-[#14273f] to-steel p-5 text-white shadow-card sm:p-6">
+              <div className="panel overflow-hidden border-white/10 bg-gradient-to-br from-deep via-[#14273f] to-steel p-5 text-white shadow-card sm:p-6">
                 <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
                   <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/65">
+                    <p className="section-kicker text-white/65">
                       {demoContent.label}
                     </p>
                     <h3 className="mt-1 text-lg font-semibold sm:text-xl">{demoContent.videoTitle}</h3>
@@ -31,7 +31,7 @@ export function DemoSection() {
                   </div>
                 </div>
 
-                <div className="relative mt-6 overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/95 shadow-soft">
+                <div className="panel-muted relative mt-6 overflow-hidden border-white/10 bg-white/95">
                   <Image
                     src="/dashboard-mockup.svg"
                     alt="Simulation du tableau de bord Immo Secure"
@@ -50,14 +50,14 @@ export function DemoSection() {
               </div>
             </div>
 
-            <article className="rounded-[1.9rem] border border-line bg-white p-6 shadow-soft sm:p-7">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">
+            <article className="panel p-6 sm:p-7">
+              <p className="section-kicker text-accent">
                 {crmCaptureContent.eyebrow}
               </p>
               <h3 className="mt-3 text-2xl font-semibold tracking-tight text-ink">{crmCaptureContent.title}</h3>
 
-              <div className="mt-6 overflow-hidden rounded-[1.5rem] border border-line">
-                <div className="grid grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)_auto] gap-3 bg-surface-alt px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-steel">
+              <div className="panel-muted mt-6 overflow-hidden">
+                <div className="grid grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)_auto] gap-3 bg-surface-alt px-4 py-3 section-kicker text-steel">
                   <span>Lead</span>
                   <span>Étape</span>
                   <span>Heure</span>
@@ -81,8 +81,8 @@ export function DemoSection() {
           <div>
             <SectionHeader kicker="Preuve" title={demoContent.title} description={demoContent.description} />
 
-            <article className="mt-8 rounded-[1.9rem] border border-line bg-white p-6 shadow-soft sm:p-7">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">
+            <article className="panel mt-8 p-6 sm:p-7">
+              <p className="section-kicker text-accent">
                 {proofCaseStudy.eyebrow}
               </p>
               <h3 className="mt-3 text-2xl font-semibold tracking-tight text-ink">{proofCaseStudy.title}</h3>
@@ -90,9 +90,9 @@ export function DemoSection() {
 
               <div className="mt-6 grid gap-3 sm:grid-cols-3">
                 {proofCaseStudy.stats.map((stat) => (
-                  <div key={stat.label} className="rounded-[1.35rem] border border-accent/15 bg-accent-soft/45 px-4 py-4">
+                  <div key={stat.label} className="panel-accent px-4 py-4">
                     <p className="text-xl font-semibold text-ink">{stat.value}</p>
-                    <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
+                    <p className="mt-1 section-kicker text-accent">
                       {stat.label}
                     </p>
                   </div>
@@ -100,13 +100,13 @@ export function DemoSection() {
               </div>
             </article>
 
-            <article className="mt-5 rounded-[1.9rem] border border-line bg-white p-6 shadow-soft sm:p-7">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">
+            <article className="panel mt-5 p-6 sm:p-7">
+              <p className="section-kicker text-accent">
                 {proofMessage.eyebrow}
               </p>
               <h3 className="mt-3 text-2xl font-semibold tracking-tight text-ink">{proofMessage.title}</h3>
 
-              <div className="mt-5 rounded-[1.5rem] border border-accent/15 bg-accent-soft/35 p-5">
+              <div className="panel-accent mt-5 p-5">
                 <p className="text-sm leading-relaxed text-ink sm:text-base">“{proofMessage.body}”</p>
               </div>
 
@@ -126,8 +126,8 @@ export function DemoSection() {
               ))}
             </div>
 
-            <div className="mt-8 rounded-[1.75rem] border border-accent/15 bg-white px-5 py-5 shadow-soft">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">Ce qu’il faut ajouter ensuite</p>
+            <div className="panel mt-8 px-5 py-5">
+              <p className="section-kicker text-accent">Ce qu’il faut ajouter ensuite</p>
               <p className="mt-3 text-sm leading-relaxed text-steel sm:text-base">{demoContent.videoSubtitle}</p>
             </div>
 

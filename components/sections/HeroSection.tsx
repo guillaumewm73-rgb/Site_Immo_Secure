@@ -92,7 +92,7 @@ export function HeroSection() {
               </p>
             </div>
 
-            <p className="max-w-2xl rounded-[1.5rem] border border-rose-200 bg-rose-50 px-5 py-4 text-sm font-semibold text-rose-900 shadow-soft sm:text-base">
+            <p className="panel-danger max-w-2xl px-5 py-4 text-sm font-semibold text-rose-900 sm:text-base">
               {heroContent.tension}
             </p>
 
@@ -115,7 +115,7 @@ export function HeroSection() {
 
               <div className="relative space-y-5">
                 <div className="space-y-3">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent">
+                  <p className="section-kicker text-accent">
                     Compréhension instantanée
                   </p>
                   <h2 className="text-balance text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
@@ -123,9 +123,9 @@ export function HeroSection() {
                   </h2>
                 </div>
 
-                <div className="rounded-[1.75rem] border border-rose-200 bg-rose-50/90 p-4 sm:p-5">
+                <div className="panel-danger p-4 sm:p-5">
                   <div className="flex items-center justify-between gap-4">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-rose-600">Avant</p>
+                    <p className="section-kicker text-rose-600">Avant</p>
                     <p className="text-xs font-semibold text-rose-700">Lead chaud qui refroidit</p>
                   </div>
                   <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -134,7 +134,7 @@ export function HeroSection() {
                       return (
                         <div
                           key={step.title}
-                          className="rounded-[1.35rem] border border-rose-200 bg-white/95 p-4 shadow-soft"
+                          className="flow-card border-rose-200 bg-white/95 p-4 shadow-none"
                         >
                           <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-rose-100 text-rose-700">
                             <Icon className="h-4 w-4" />
@@ -147,9 +147,9 @@ export function HeroSection() {
                   </div>
                 </div>
 
-                <div className="rounded-[1.75rem] border border-deep/10 bg-deep p-4 text-white shadow-card sm:p-5">
+                <div className="panel overflow-hidden border-deep/10 bg-deep p-4 text-white shadow-card sm:p-5">
                   <div className="flex items-center justify-between gap-4">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">Après</p>
+                    <p className="section-kicker text-white/60">Après</p>
                     <p className="text-xs font-semibold text-white/75">Réponse, RDV, mandat</p>
                   </div>
                   <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -158,7 +158,7 @@ export function HeroSection() {
                       return (
                         <div
                           key={step.title}
-                          className="rounded-[1.35rem] border border-white/12 bg-white/10 p-4"
+                          className="rounded-[1.7rem] border border-white/12 bg-white/10 p-4"
                         >
                           <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-white">
                             <Icon className="h-4 w-4" />
@@ -173,7 +173,7 @@ export function HeroSection() {
 
                 <div className="grid gap-3 sm:grid-cols-3">
                   {proofMetrics.map((item) => (
-                    <div key={item.label} className="rounded-[1.35rem] border border-line bg-surface-alt px-4 py-4">
+                    <div key={item.label} className="panel-muted px-4 py-4">
                       <p className="text-lg font-semibold text-ink">{item.value}</p>
                       <p className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-steel">{item.label}</p>
                     </div>

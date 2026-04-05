@@ -65,11 +65,29 @@ section[id] {
 
 @layer components {
   .panel {
-    @apply min-w-0 rounded-[2rem] border border-line bg-white shadow-soft;
+    @apply min-w-0 rounded-[1.9rem] border border-line/90 bg-white shadow-soft;
   }
 
   .panel-muted {
-    @apply min-w-0 rounded-[1.5rem] border border-line bg-surface-alt;
+    @apply min-w-0 rounded-[1.5rem] border border-line/90 bg-surface-alt;
+  }
+
+  .panel-dark {
+    @apply min-w-0 rounded-[1.9rem] border shadow-soft;
+    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .panel-accent {
+    @apply min-w-0 rounded-[1.75rem] border shadow-soft;
+    border-color: rgba(37, 99, 235, 0.15);
+    background: rgba(239, 246, 255, 0.82);
+  }
+
+  .panel-danger {
+    @apply min-w-0 rounded-[1.75rem] border shadow-soft;
+    border-color: rgb(254 205 211);
+    background: rgba(255, 241, 242, 0.9);
   }
 
   .eyebrow {
@@ -81,11 +99,11 @@ section[id] {
   }
 
   .metric-card {
-    @apply min-w-0 overflow-hidden rounded-[1.75rem] border border-line bg-white p-5 shadow-soft transition duration-300 ease-smooth hover:-translate-y-1 hover:shadow-card;
+    @apply min-w-0 overflow-hidden rounded-[1.7rem] border border-line/90 bg-white p-5 shadow-soft transition duration-300 ease-smooth hover:-translate-y-1 hover:shadow-card;
   }
 
   .flow-card {
-    @apply relative min-w-0 overflow-hidden rounded-[1.75rem] border border-line bg-white p-5 shadow-soft;
+    @apply relative min-w-0 overflow-hidden rounded-[1.7rem] border border-line/90 bg-white p-5 shadow-soft;
   }
 
   .btn-primary {
@@ -98,6 +116,10 @@ section[id] {
 
   .field-input {
     @apply mt-2 w-full rounded-2xl border border-line bg-white px-5 py-4 text-[15px] text-ink outline-none transition duration-300 ease-smooth focus:border-accent focus:ring-2 focus:ring-accent/10 sm:text-base;
+  }
+
+  .section-kicker {
+    @apply text-[11px] font-semibold uppercase tracking-[0.18em];
   }
 
   .section-tint {

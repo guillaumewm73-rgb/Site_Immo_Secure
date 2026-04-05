@@ -27,7 +27,7 @@ export function ProblemSection() {
     <section id="probleme" className="section-space section-dark">
       <Container>
         <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-stretch lg:gap-8 xl:gap-10">
-          <div className="h-full rounded-[2rem] border border-white/10 bg-white/6 p-6 shadow-soft sm:p-7">
+          <div className="panel-dark h-full p-6 sm:p-7">
             <SectionHeader title={problemContent.title} kicker="Le vrai coût du retard" theme="dark" />
 
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/78 sm:text-lg">
@@ -59,12 +59,10 @@ export function ProblemSection() {
             <div className="panel flex h-full flex-col overflow-hidden border border-line bg-white p-6 sm:p-7 lg:p-6 xl:p-7">
               <div className="flex items-start justify-between gap-4 tablet:flex-col tablet:items-start">
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
-                    Scénario le plus fréquent
-                  </p>
+                  <p className="section-kicker text-accent">Scénario le plus fréquent</p>
                   <h3 className="mt-3 text-2xl font-semibold tracking-tight text-ink">Le mandat se joue avant votre rappel</h3>
                 </div>
-                <div className="rounded-full border border-rose-200 bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700">
+                <div className="rounded-full border border-rose-200 bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700 shadow-soft">
                   Quelques minutes suffisent
                 </div>
               </div>
@@ -83,7 +81,7 @@ export function ProblemSection() {
                 ))}
               </ol>
 
-              <p className="mt-6 rounded-[1.5rem] border border-rose-200 bg-rose-50 px-5 py-4 text-sm font-semibold text-rose-800 sm:text-base">
+              <p className="panel-danger mt-6 px-5 py-4 text-sm font-semibold text-rose-800 sm:text-base">
                 Vous rappelez. L’autre agence a déjà le rendez-vous.
               </p>
             </div>

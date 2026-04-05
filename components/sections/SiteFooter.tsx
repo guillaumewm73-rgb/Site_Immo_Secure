@@ -6,26 +6,28 @@ import { company } from '@/content/siteContent';
 export function SiteFooter() {
   return (
     <footer className="border-t border-white/10 bg-deep py-10 text-white">
-      <Container className="flex flex-col gap-4 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
-        <p>
-          © {new Date().getFullYear()} {company.agency} · {company.offerName}
-        </p>
-        <div className="flex flex-wrap items-center gap-4">
-          <Link href={`mailto:${company.email}`} className="font-medium transition hover:text-white">
-            {company.email}
-          </Link>
-          <Link href={`tel:${company.phoneHref}`} className="font-medium transition hover:text-white">
-            {company.phoneDisplay}
-          </Link>
-          <Link
-            href={company.linkedinUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 font-medium transition hover:text-white"
-          >
-            <LinkedInIcon className="h-4 w-4 shrink-0" />
-            LinkedIn
-          </Link>
+      <Container>
+        <div className="panel-dark flex flex-col gap-4 px-6 py-5 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            © {new Date().getFullYear()} {company.agency} · {company.offerName}
+          </p>
+          <div className="flex flex-wrap items-center gap-4">
+            <Link href={`mailto:${company.email}`} className="font-medium transition hover:text-white">
+              {company.email}
+            </Link>
+            <Link href={`tel:${company.phoneHref}`} className="font-medium transition hover:text-white">
+              {company.phoneDisplay}
+            </Link>
+            <Link
+              href={company.linkedinUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 font-medium transition hover:text-white"
+            >
+              <LinkedInIcon className="h-4 w-4 shrink-0" />
+              LinkedIn
+            </Link>
+          </div>
         </div>
       </Container>
     </footer>

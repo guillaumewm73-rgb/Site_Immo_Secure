@@ -91,12 +91,12 @@ export function ContactSection() {
     <section id="contact" className="section-space section-dark">
       <Container>
         <div className="grid gap-7 md:grid-cols-[0.92fr_1.08fr] md:gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-8 xl:gap-10">
-          <div className="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-gradient-to-br from-deep to-secondary p-8 text-white shadow-card sm:p-10 lg:p-8 xl:p-10">
+          <div className="panel relative overflow-hidden border-white/10 bg-gradient-to-br from-deep to-secondary p-8 text-white shadow-card sm:p-10 lg:p-8 xl:p-10">
             <div className="absolute -right-14 -top-12 h-40 w-40 rounded-full bg-accent/14 blur-3xl" />
             <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-white/8 blur-3xl" />
 
             <div className="relative">
-              <p className="inline-flex rounded-full border border-white/12 bg-white/8 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/75">
+              <p className="inline-flex rounded-full border border-white/12 bg-white/8 px-4 py-2 section-kicker text-white/75">
                 Diagnostic conversion
               </p>
               <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-[2.95rem] xl:text-5xl">
@@ -106,8 +106,8 @@ export function ContactSection() {
                 {contactContent.subtitle}
               </p>
 
-              <div className="mt-6 rounded-[1.5rem] border border-white/12 bg-white/8 p-5">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">
+              <div className="panel-dark mt-6 p-5">
+                <p className="section-kicker text-white/55">
                   Promesse avant le rendez-vous
                 </p>
                 <p className="mt-2 text-base font-semibold text-white">
@@ -117,7 +117,7 @@ export function ContactSection() {
 
               <ul className="mt-8 space-y-3">
                 {demoOutcomes.map((item) => (
-                  <li key={item} className="flex items-start gap-3 rounded-[1.25rem] border border-white/12 bg-white/8 px-4 py-3 text-sm text-white/90">
+                  <li key={item} className="panel-dark flex items-start gap-3 px-4 py-3 text-sm text-white/90">
                     <span className="mt-0.5 inline-flex rounded-full bg-accent p-1 text-white">
                       <CheckIcon className="h-3.5 w-3.5" />
                     </span>
@@ -127,16 +127,16 @@ export function ContactSection() {
               </ul>
 
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-[1.25rem] border border-white/12 bg-white/8 px-4 py-4 text-sm text-white/80">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">Durée</p>
+                <div className="panel-dark px-4 py-4 text-sm text-white/80">
+                  <p className="section-kicker text-white/55">Durée</p>
                   <p className="mt-2 font-semibold text-white">30 minutes</p>
                 </div>
-                <div className="rounded-[1.25rem] border border-white/12 bg-white/8 px-4 py-4 text-sm text-white/80">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">Interlocuteur</p>
+                <div className="panel-dark px-4 py-4 text-sm text-white/80">
+                  <p className="section-kicker text-white/55">Interlocuteur</p>
                   <p className="mt-2 font-semibold text-white">{company.founderDisplay}</p>
                 </div>
-                <div className="rounded-[1.25rem] border border-white/12 bg-white/8 px-4 py-4 text-sm text-white/80 sm:col-span-2">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">Coordonnées</p>
+                <div className="panel-dark px-4 py-4 text-sm text-white/80 sm:col-span-2">
+                  <p className="section-kicker text-white/55">Coordonnées</p>
                   <p className="mt-2 font-semibold text-white">
                     {company.email} · {company.phoneDisplay}
                   </p>
@@ -147,7 +147,7 @@ export function ContactSection() {
 
           <form onSubmit={handleSubmit} noValidate className="panel border border-line bg-white p-7 shadow-card sm:p-9 lg:p-8 xl:p-9">
             <div className="mb-6 border-b border-line/80 pb-5">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">Formulaire</p>
+              <p className="section-kicker text-accent">Formulaire</p>
               <h3 className="mt-2 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
                 {ctaLabels.primary}
               </h3>
