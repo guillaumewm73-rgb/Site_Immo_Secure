@@ -10,8 +10,8 @@ export function BenefitsSection() {
     <section id="resultats" className="section-space section-dark">
       <Container>
         <SectionHeader
-          title="Ce que cela change pour votre agence"
-          description="Moins de pertes. Plus de constance. Plus de mandats."
+          title="Les résultats que le prospect ressent et que votre agence récupère"
+          description="Moins d’attente, moins d’oubli, plus de rendez-vous réellement traités."
           kicker="Résultats"
           align="center"
           theme="dark"

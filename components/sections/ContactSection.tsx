@@ -2,36 +2,30 @@
 
 import { FormEvent, useState } from 'react';
 import { Container } from '@/components/ui/Container';
-import { ArrowRightIcon, CalendarIcon, CheckIcon } from '@/components/ui/Icons';
-import { bookingCta, company, contactContent, ctaLabels } from '@/content/siteContent';
+import { ArrowRightIcon, CheckIcon } from '@/components/ui/Icons';
+import { company, contactContent, ctaLabels } from '@/content/siteContent';
 
 type ContactFormValues = {
   firstName: string;
-  lastName: string;
-  agency: string;
   email: string;
   phone: string;
-  message: string;
 };
 
 type FormErrors = Partial<Record<keyof ContactFormValues, string>>;
 
 const initialValues: ContactFormValues = {
   firstName: '',
-  lastName: '',
-  agency: '',
   email: '',
-  phone: '',
-  message: ''
+  phone: ''
 };
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRegex = /^[+()\s\d.-]{8,}$/;
 
 const demoOutcomes = [
-  'Un diagnostic clair de votre suivi',
-  'Les priorités à corriger',
-  'Le potentiel à récupérer'
+  'Les points précis où vos leads refroidissent',
+  'Les relances à automatiser pour récupérer plus de rendez-vous',
+  'Le plan simple à mettre en place pour arrêter de perdre des mandats'
 ];
 
 function validate(values: ContactFormValues): FormErrors {
@@ -40,20 +34,11 @@ function validate(values: ContactFormValues): FormErrors {
   if (values.firstName.trim().length < 2) {
     errors.firstName = 'Prénom requis (2 caractères minimum).';
   }
-  if (values.lastName.trim().length < 2) {
-    errors.lastName = 'Nom requis (2 caractères minimum).';
-  }
-  if (values.agency.trim().length < 2) {
-    errors.agency = 'Nom d’agence requis.';
-  }
   if (!emailRegex.test(values.email.trim())) {
     errors.email = 'Adresse email invalide.';
   }
   if (!phoneRegex.test(values.phone.trim())) {
     errors.phone = 'Numéro de téléphone invalide.';
-  }
-  if (values.message.trim().length < 12) {
-    errors.message = 'Message trop court (12 caractères minimum).';
   }
 
   return errors;
@@ -105,36 +90,27 @@ export function ContactSection() {
   return (
     <section id="contact" className="section-space section-dark">
       <Container>
-        <div className="grid gap-7 md:grid-cols-[0.9fr_1.1fr] md:gap-6 lg:grid-cols-[0.88fr_1.12fr] lg:gap-8 xl:gap-10">
-          <div className="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-gradient-to-br from-deep to-secondary p-8 text-white shadow-card sm:p-10 tablet:p-7 lg:p-7 xl:p-10">
+        <div className="grid gap-7 md:grid-cols-[0.92fr_1.08fr] md:gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-8 xl:gap-10">
+          <div className="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-gradient-to-br from-deep to-secondary p-8 text-white shadow-card sm:p-10 lg:p-8 xl:p-10">
             <div className="absolute -right-14 -top-12 h-40 w-40 rounded-full bg-accent/14 blur-3xl" />
             <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-white/8 blur-3xl" />
 
             <div className="relative">
               <p className="inline-flex rounded-full border border-white/12 bg-white/8 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/75">
-                Prise de contact
+                Diagnostic conversion
               </p>
-              <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-[2.95rem] xl:text-5xl">{contactContent.title}</h2>
+              <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-[2.95rem] xl:text-5xl">
+                {contactContent.title}
+              </h2>
               <p className="mt-4 text-base leading-relaxed text-white/80 sm:text-lg">
                 {contactContent.subtitle}
               </p>
 
               <div className="mt-6 rounded-[1.5rem] border border-white/12 bg-white/8 p-5">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">
-                  Prise de rendez-vous directe
+                  Promesse avant le rendez-vous
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-white/80">
-                  {bookingCta.helper}
-                </p>
-                <a
-                  href={bookingCta.href}
-                  target={bookingCta.isExternal ? '_blank' : undefined}
-                  rel={bookingCta.isExternal ? 'noreferrer' : undefined}
-                  className="btn-secondary mt-4 inline-flex w-full items-center gap-2 border-white/15 bg-white text-ink hover:border-white/25 sm:w-auto"
-                >
-                  <CalendarIcon className="h-4 w-4 shrink-0" />
-                  {bookingCta.label}
-                </a>
+                <p className="mt-2 text-base font-semibold text-white">{ctaLabels.helper}</p>
               </div>
 
               <ul className="mt-8 space-y-3">
@@ -150,29 +126,35 @@ export function ContactSection() {
 
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 <div className="rounded-[1.25rem] border border-white/12 bg-white/8 px-4 py-4 text-sm text-white/80">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">Diagnostic</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">Durée</p>
                   <p className="mt-2 font-semibold text-white">30 minutes</p>
                 </div>
                 <div className="rounded-[1.25rem] border border-white/12 bg-white/8 px-4 py-4 text-sm text-white/80">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">Contact direct</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">Interlocuteur</p>
                   <p className="mt-2 font-semibold text-white">{company.founderDisplay}</p>
                 </div>
                 <div className="rounded-[1.25rem] border border-white/12 bg-white/8 px-4 py-4 text-sm text-white/80 sm:col-span-2">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">Coordonnées</p>
-                  <p className="mt-2 font-semibold text-white">{company.email} · {company.phoneDisplay}</p>
+                  <p className="mt-2 font-semibold text-white">
+                    {company.email} · {company.phoneDisplay}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} noValidate className="panel border border-line bg-white p-7 shadow-card sm:p-9 tablet:p-7 lg:p-7 xl:p-9">
+          <form onSubmit={handleSubmit} noValidate className="panel border border-line bg-white p-7 shadow-card sm:p-9 lg:p-8 xl:p-9">
             <div className="mb-6 border-b border-line/80 pb-5">
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">Formulaire</p>
-              <h3 className="mt-2 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">Demander un diagnostic</h3>
-              <p className="mt-2 text-base text-steel">Ou décrivez rapidement votre situation pour être recontacté.</p>
+              <h3 className="mt-2 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+                {ctaLabels.primary}
+              </h3>
+              <p className="mt-2 text-base text-steel">
+                3 champs pour identifier où vous perdez des mandats et revenir vers vous rapidement.
+              </p>
             </div>
 
-            <div className="grid gap-4 xl:grid-cols-2">
+            <div className="grid gap-4">
               <Field
                 id="firstName"
                 label="Prénom"
@@ -180,25 +162,6 @@ export function ContactSection() {
                 error={errors.firstName}
                 placeholder="Guillaume"
                 onChange={(value) => handleChange('firstName', value)}
-              />
-              <Field
-                id="lastName"
-                label="Nom"
-                value={values.lastName}
-                error={errors.lastName}
-                placeholder="MOULIN"
-                onChange={(value) => handleChange('lastName', value)}
-              />
-            </div>
-
-            <div className="mt-4 grid gap-4">
-              <Field
-                id="agency"
-                label="Nom de l’agence"
-                value={values.agency}
-                error={errors.agency}
-                placeholder="Immo Centre Ville"
-                onChange={(value) => handleChange('agency', value)}
               />
               <Field
                 id="email"
@@ -217,23 +180,14 @@ export function ContactSection() {
                 placeholder="+33 6 00 00 00 00"
                 onChange={(value) => handleChange('phone', value)}
               />
-              <Field
-                id="message"
-                label="Message"
-                value={values.message}
-                error={errors.message}
-                placeholder="Décrivez rapidement votre situation (volume de leads, suivi actuel, difficultés)."
-                multiline
-                onChange={(value) => handleChange('message', value)}
-              />
             </div>
 
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="btn-primary mt-6 w-full disabled:cursor-not-allowed disabled:opacity-70"
+              className="btn-primary mt-6 min-h-[60px] w-full disabled:cursor-not-allowed disabled:opacity-70"
             >
-              {status === 'loading' ? 'Envoi en cours...' : ctaLabels.secondary}
+              {status === 'loading' ? 'Envoi en cours...' : ctaLabels.primary}
               {status === 'loading' ? null : <ArrowRightIcon className="h-4 w-4" />}
             </button>
 
@@ -241,7 +195,7 @@ export function ContactSection() {
 
             {status === 'success' ? (
               <p className="mt-5 rounded-[1.25rem] border border-accent/15 bg-accent-soft/45 px-4 py-3 text-sm text-accent">
-                Votre demande a bien été envoyée. Nous revenons vers vous rapidement.
+                Votre demande a bien été envoyée. Nous revenons vers vous rapidement pour caler le diagnostic.
               </p>
             ) : null}
 
@@ -264,7 +218,6 @@ type FieldProps = {
   error?: string;
   placeholder?: string;
   type?: 'text' | 'email';
-  multiline?: boolean;
   onChange: (value: string) => void;
 };
 
@@ -275,33 +228,20 @@ function Field({
   error,
   placeholder,
   type = 'text',
-  multiline = false,
   onChange
 }: FieldProps) {
   return (
     <label htmlFor={id} className="block text-sm font-medium text-ink">
       {label}
-      {multiline ? (
-        <textarea
-          id={id}
-          name={id}
-          value={value}
-          rows={5}
-          placeholder={placeholder}
-          onChange={(event) => onChange(event.target.value)}
-          className="field-input resize-y"
-        />
-      ) : (
-        <input
-          id={id}
-          name={id}
-          type={type}
-          value={value}
-          placeholder={placeholder}
-          onChange={(event) => onChange(event.target.value)}
-          className="field-input"
-        />
-      )}
+      <input
+        id={id}
+        name={id}
+        type={type}
+        value={value}
+        placeholder={placeholder}
+        onChange={(event) => onChange(event.target.value)}
+        className="field-input"
+      />
       {error ? <span className="mt-2 block text-xs text-steel">{error}</span> : null}
     </label>
   );

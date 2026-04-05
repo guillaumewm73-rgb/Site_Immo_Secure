@@ -1,14 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRightIcon } from '@/components/ui/Icons';
-import { bookingCta, company, navLinks } from '@/content/siteContent';
+import { company, ctaLabels, navLinks } from '@/content/siteContent';
 import { Container } from '@/components/ui/Container';
 
 export function SiteHeader() {
   return (
-    <header className="relative z-50 px-4 pt-4 sm:px-5 md:fixed md:inset-x-0 md:top-0 md:px-6">
+    <header className="sticky top-0 z-50 px-4 pt-3 sm:px-5 md:px-6">
       <Container>
-        <div className="flex items-center justify-between gap-3 py-1 md:flex-wrap md:rounded-[2rem] md:border md:border-line/80 md:bg-white/90 md:px-5 md:py-3 md:shadow-soft lg:h-20 lg:flex-nowrap lg:rounded-full lg:px-5 lg:py-1 xl:px-6">
+        <div className="flex items-center justify-between gap-3 rounded-[1.75rem] border border-line/80 bg-white/92 px-4 py-3 shadow-soft backdrop-blur md:flex-wrap md:px-5 lg:h-20 lg:flex-nowrap lg:rounded-full lg:py-1 xl:px-6">
           <Link
             href="#top"
             className="group inline-flex items-center gap-2.5 rounded-full bg-white px-3 py-2 shadow-soft sm:gap-3 md:order-1 md:bg-transparent md:px-0 md:py-0 md:shadow-none"
@@ -43,22 +43,20 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3 md:order-2 md:ml-auto lg:order-3 lg:ml-0">
-            <a
-              href={bookingCta.href}
-              target={bookingCta.isExternal ? '_blank' : undefined}
-              rel={bookingCta.isExternal ? 'noreferrer' : undefined}
+            <Link
+              href="#contact"
               className="btn-primary px-4 py-2.5 text-xs md:px-5 md:py-3 md:text-sm lg:px-4 xl:px-6"
             >
-              <span className="md:hidden">{bookingCta.shortLabel}</span>
+              <span className="md:hidden">{ctaLabels.short}</span>
               <span className="hidden items-center gap-2 md:inline-flex xl:hidden">
-                {bookingCta.shortLabel}
+                {ctaLabels.short}
                 <ArrowRightIcon className="h-4 w-4" />
               </span>
               <span className="hidden items-center gap-2 xl:inline-flex">
-                {bookingCta.label}
+                {ctaLabels.primary}
                 <ArrowRightIcon className="h-4 w-4" />
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </Container>

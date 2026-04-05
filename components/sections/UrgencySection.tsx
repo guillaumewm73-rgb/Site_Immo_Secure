@@ -29,7 +29,7 @@ export function UrgencySection() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link href="#contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-sm font-semibold text-deep transition duration-300 ease-smooth hover:-translate-y-0.5 hover:bg-slate-100 sm:text-base">
-                {ctaLabels.secondary}
+                {ctaLabels.primary}
                 <ArrowRightIcon className="h-4 w-4" />
               </Link>
               <Link href="#contact" className="inline-flex items-center justify-center rounded-full border border-white/18 bg-transparent px-6 py-4 text-sm font-semibold text-white transition duration-300 ease-smooth hover:-translate-y-0.5 hover:bg-white/8 sm:text-base">

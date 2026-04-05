@@ -84,7 +84,7 @@ export function ScenarioSection() {
             </div>
 
             <Link href="#contact" className="btn-secondary mt-8 w-full sm:w-auto">
-              {ctaLabels.secondary}
+              {ctaLabels.primary}
               <ArrowRightIcon className="h-4 w-4" />
             </Link>
           </div>

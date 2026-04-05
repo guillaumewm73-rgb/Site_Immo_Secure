@@ -2,11 +2,8 @@ import { NextResponse } from 'next/server';
 
 type ContactPayload = {
   firstName?: string;
-  lastName?: string;
-  agency?: string;
   email?: string;
   phone?: string;
-  message?: string;
 };
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -23,20 +20,14 @@ export async function POST(request: Request) {
 
   const normalized = {
     firstName: body.firstName?.trim() ?? '',
-    lastName: body.lastName?.trim() ?? '',
-    agency: body.agency?.trim() ?? '',
     email: body.email?.trim() ?? '',
-    phone: body.phone?.trim() ?? '',
-    message: body.message?.trim() ?? ''
+    phone: body.phone?.trim() ?? ''
   };
 
   const isValid =
     normalized.firstName.length >= 2 &&
-    normalized.lastName.length >= 2 &&
-    normalized.agency.length >= 2 &&
     emailRegex.test(normalized.email) &&
-    phoneRegex.test(normalized.phone) &&
-    normalized.message.length >= 12;
+    phoneRegex.test(normalized.phone);
 
   if (!isValid) {
     return NextResponse.json(

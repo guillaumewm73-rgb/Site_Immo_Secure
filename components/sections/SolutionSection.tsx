@@ -9,7 +9,7 @@ export function SolutionSection() {
   return (
     <section id="solution" className="section-space bg-surface">
       <Container>
-        <SectionHeader title={solutionContent.title} description={solutionContent.intro} kicker="Solution" />
+        <SectionHeader title={solutionContent.title} description={solutionContent.intro} kicker="Ce qui change" />
 
         <div className="mt-10 grid items-stretch gap-6 md:grid-cols-2">
           {solutionContent.pillars.map((pillar, index) => {
@@ -39,7 +39,7 @@ export function SolutionSection() {
                   <p className="text-base leading-relaxed text-steel">{pillar.does}</p>
 
                   <div className="mt-auto rounded-[1.5rem] border border-accent/15 bg-accent-soft/45 p-5">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">Impact</p>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">Résultat business</p>
                     <p className="mt-2 font-medium text-ink">{pillar.impact}</p>
                   </div>
                 </div>

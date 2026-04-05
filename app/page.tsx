@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { BenefitsSection } from '@/components/sections/BenefitsSection';
+import { ComparisonSection } from '@/components/sections/ComparisonSection';
 import { ContactSection } from '@/components/sections/ContactSection';
-import { CredibilitySection } from '@/components/sections/CredibilitySection';
+import { DemoSection } from '@/components/sections/DemoSection';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { ProblemSection } from '@/components/sections/ProblemSection';
 import { SiteFooter } from '@/components/sections/SiteFooter';
@@ -9,9 +10,9 @@ import { SiteHeader } from '@/components/sections/SiteHeader';
 import { SolutionSection } from '@/components/sections/SolutionSection';
 import { company, seoContent } from '@/content/siteContent';
 
-const title = 'Réponse instantanée et relance des estimations pour agences immobilières';
+const title = 'Ne perdez plus de mandats faute de réponse rapide';
 const description =
-  'Améliorez le suivi commercial de votre agence immobilière indépendante avec un système qui répond immédiatement aux leads, relance les estimations et aide à récupérer plus de mandats.';
+  'Immo Secure aide les agences immobilières à répondre en moins de 60 secondes, relancer automatiquement les estimations et récupérer les mandats perdus faute de suivi.';
 
 export const metadata: Metadata = {
   title,
@@ -99,9 +100,10 @@ export default function Home() {
       <main>
         <HeroSection />
         <ProblemSection />
+        <ComparisonSection />
         <SolutionSection />
         <BenefitsSection />
-        <CredibilitySection />
+        <DemoSection />
         <ContactSection />
       </main>
       <SiteFooter />

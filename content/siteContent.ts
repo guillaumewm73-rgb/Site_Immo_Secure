@@ -29,12 +29,12 @@ export const bookingCta = bookingUrl
 
 export const seoContent = {
   siteUrl: 'https://immosecure.fr',
-  title: 'Immo Secure | Réponse instantanée et relance des estimations pour agences immobilières',
+  title: 'Immo Secure | Ne perdez plus de mandats faute de réponse rapide',
   shortTitle: 'Immo Secure',
   description:
-    'Immo Secure aide les agences immobilières indépendantes à répondre instantanément aux leads, relancer les estimations et récupérer plus de mandats sans alourdir leur équipe.',
+    'Immo Secure aide les agences immobilières à répondre en moins de 60 secondes, relancer automatiquement les estimations et récupérer les mandats perdus faute de suivi.',
   socialDescription:
-    'Réponse instantanée aux leads immobiliers, relance automatique des estimations et suivi commercial plus rigoureux pour signer plus de mandats.',
+    'Réponse immédiate aux leads, relance automatique des estimations et diagnostic commercial pour récupérer plus de rendez-vous et plus de mandats.',
   keywords: [
     'agence immobilière indépendante',
     'leads immobiliers',
@@ -51,19 +51,20 @@ export const seoContent = {
 };
 
 export const ctaLabels = {
-  primary: 'Voir comment récupérer plus de mandats',
-  secondary: 'Demander un diagnostic'
+  primary: 'Demander un diagnostic',
+  short: 'Diagnostic',
+  helper: 'En 30 minutes, vous voyez exactement où vous perdez des mandats.'
 };
 
 export const heroContent = {
-  title: 'Chaque lead non suivi peut devenir un mandat perdu.',
+  title: 'Chaque minute sans réponse offre des mandats à la concurrence.',
   subtitle:
-    'Nous mettons en place un système concret qui répond vite, relance les estimations et aide votre agence à signer plus de mandats.',
+    'Immo Secure répond aux leads en moins de 60 secondes, relance automatiquement les estimations et pousse vos prospects vers le rendez-vous avant qu’ils ne partent ailleurs.',
   primaryCta: {
     label: ctaLabels.primary,
     href: '#contact'
   },
-  tension: 'Pendant que vous attendez, un concurrent prend le rendez-vous.'
+  tension: 'Un prospect qui attend quelques minutes peut signer ailleurs avant même votre rappel.'
 };
 
 export const heroSignals = [
@@ -90,36 +91,40 @@ export const proofStripItems = [
 
 export const navLinks = [
   { label: 'Problème', href: '#probleme' },
+  { label: 'Avant / Après', href: '#avant-apres' },
   { label: 'Solution', href: '#solution' },
   { label: 'Résultats', href: '#resultats' },
-  { label: 'Confiance', href: '#confiance' },
-  { label: 'Contact', href: '#contact' }
+  { label: 'Preuve', href: '#preuve' },
+  { label: 'Diagnostic', href: '#contact' }
 ];
 
 export const demoContent = {
-  title: 'Voyez le système en action',
+  title: 'La preuve par une simulation visuelle',
   description:
-    'En quelques instants, vous comprenez comment un lead est capté, qualifié et transformé en rendez-vous sans laisser votre équipe courir après le suivi.',
-  label: 'Démonstration courte',
-  videoTitle: 'Aperçu vidéo du système',
-  videoSubtitle: 'Placeholder premium en attendant votre vraie démo',
+    'En quelques secondes, vous voyez comment une demande passe de lead entrant à rendez-vous proposé, sans zone morte entre les deux.',
+  label: 'Simulation visuelle',
+  videoTitle: 'Du lead entrant au rendez-vous',
+  videoSubtitle:
+    'Même démonstration, même logique commerciale: vitesse de réponse, relance, puis proposition de rendez-vous.',
   bullets: [
-    'Lead capté dès son entrée',
-    'Qualification immédiate',
-    'Proposition de rendez-vous',
-    'Alerte envoyée à l’agence au bon moment'
+    'Réponse envoyée dès l’entrée du lead',
+    'Qualification sans attente côté prospect',
+    'Relance automatique si la demande reste tiède',
+    'Rendez-vous poussé avant que le prospect décroche'
   ]
 };
 
 export const problemContent = {
-  title: 'Le problème n’est pas le volume de leads. C’est le délai.',
-  paragraphs: ['Quand la réponse tarde ou que le suivi s’arrête, le mandat part ailleurs.'],
-  bullets: [
-    'Leads non rappelés à temps',
-    'Estimations non relancées',
-    'Suivi irrégulier quand l’équipe est prise'
+  title: 'Le problème n’est pas le manque de leads. C’est le temps perdu avant la réponse.',
+  paragraphs: [
+    'Quand la réponse tarde ou que la relance n’arrive jamais, le prospect compare, se refroidit puis signe avec l’agence qui a répondu la première.'
   ],
-  conclusion: 'Sans système clair, vous laissez du chiffre d’affaires sur la table.'
+  bullets: [
+    '1 lead non suivi = 1 mandat potentiellement offert à la concurrence',
+    'Une estimation non relancée disparaît du pipe sans jamais revenir',
+    'Quand l’équipe est en visite, les demandes chaudes tombent entre deux tâches'
+  ],
+  conclusion: 'Le retard n’est pas neutre: il fait vendre l’agence d’en face à votre place.'
 };
 
 export const problemScenarios = [
@@ -171,22 +176,22 @@ export const scenarioContent = {
 };
 
 export const solutionContent = {
-  title: 'Le système fait peu de choses. Mais il les fait jusqu’au bout.',
-  intro: 'Deux leviers concrets pour récupérer ce que votre suivi laisse filer.',
+  title: 'Le système ne rajoute pas du bruit. Il sécurise les moments où vous perdez déjà le mandat.',
+  intro: 'Deux automatisations simples pour rester le premier à répondre et le premier à relancer.',
   pillars: [
     {
-      title: 'Réponse instantanée',
-      badge: 'Lead entrant',
-      does: 'Chaque demande reçoit une réponse immédiate et avance vers le rendez-vous sans attendre.',
+      title: 'Chaque lead reçoit une réponse immédiate',
+      badge: 'Moins de 60 secondes',
+      does: 'Dès qu’une demande entre, le prospect reçoit une réponse, avance dans la qualification et voit la prochaine étape au lieu d’attendre.',
       sees: 'Le lead arrive cadré, avec les bonnes infos et le bon niveau de priorité.',
-      impact: 'Vous prenez l’avantage plus vite.'
+      impact: 'Vous êtes le premier à répondre, pas le deuxième à rappeler.'
     },
     {
-      title: 'Relance automatique des estimations',
-      badge: 'Après estimation',
-      does: 'Les relances partent au bon moment et s’arrêtent dès qu’un prospect répond.',
+      title: 'Chaque estimation continue d’être suivie',
+      badge: 'Relance automatique',
+      does: 'Les relances partent automatiquement au bon moment et s’arrêtent dès que le prospect répond ou prend rendez-vous.',
       sees: 'Le pipeline reste net, sans liste manuelle ni rappel oublié.',
-      impact: 'Vous récupérez des mandats qui seraient restés froids.'
+      impact: 'Vous récupérez des mandats que votre agence perdait déjà en silence.'
     }
   ]
 };
@@ -224,26 +229,26 @@ export const deliverablesContent = {
 };
 
 export const comparisonContent = {
-  title: 'Ce qui change concrètement dans votre agence',
-  description: 'Un avant après simple à lire en quelques secondes.'
+  title: 'Avant: attente, oubli, mandat perdu. Après: réponse, rendez-vous, mandat sécurisé.',
+  description: 'Le bénéfice doit se comprendre en un coup d’œil.'
 };
 
 export const benefits = [
   {
-    title: 'Plus de mandats',
-    text: 'Vous laissez moins d’opportunités se perdre.'
+    title: 'Vous êtes le premier à répondre',
+    text: 'Le prospect reçoit un retour immédiat, même quand votre équipe est en visite ou déjà en rendez-vous.'
   },
   {
-    title: 'Plus de réactivité',
-    text: 'Votre agence répond mieux, même quand l’équipe est prise.'
+    title: 'Vous récupérez des mandats déjà perdus',
+    text: 'Les estimations oubliées reviennent dans le pipe au lieu de disparaître sans suite.'
   },
   {
-    title: 'Moins d’oubli',
-    text: 'Le suivi ne dépend plus de la mémoire des agents.'
+    title: 'Votre suivi reste actif 7j/7',
+    text: 'Le process continue à midi, le soir et le week-end, là où beaucoup de mandats se décident.'
   },
   {
-    title: 'Suivi plus clair',
-    text: 'Chaque lead suit un chemin commercial net.'
+    title: 'Votre équipe se concentre sur les leads chauds',
+    text: 'Elle intervient au bon moment, au lieu de perdre du temps à rattraper des oublis.'
   }
 ];
 
@@ -320,11 +325,12 @@ export const faqItems = [
 export const finalCta = {
   title: 'Chaque lead non relancé peut devenir un mandat perdu',
   text: 'En 30 minutes, vous voyez exactement où votre agence perd des mandats et comment corriger ça.',
-  button: ctaLabels.secondary
+  button: ctaLabels.primary
 };
 
 export const contactContent = {
-  title: 'Voyez où votre agence perd des mandats',
-  subtitle: 'En 30 minutes, vous repartez avec un diagnostic clair et les priorités à corriger.',
-  closing: 'Quelques opportunités mieux traitées peuvent déjà changer votre mois.'
+  title: 'Demandez votre diagnostic',
+  subtitle:
+    'En 30 minutes, vous identifiez exactement où vous perdez des mandats, ce qu’il faut automatiser et ce qui doit être corrigé en priorité.',
+  closing: '3 champs. 30 minutes. Un plan clair pour récupérer plus de rendez-vous.'
 };

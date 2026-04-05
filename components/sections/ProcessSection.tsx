@@ -30,7 +30,7 @@ export function ProcessSection() {
         <div className="mt-10 flex flex-col items-center gap-4 text-center">
           <p className="text-sm text-slate-600 sm:text-base">Pas besoin de changer de CRM. Pas de déploiement lourd.</p>
           <Link href="#contact" className="btn-secondary w-full sm:w-auto">
-            {ctaLabels.secondary}
+            {ctaLabels.primary}
             <ArrowRightIcon className="h-4 w-4" />
           </Link>
         </div>
