@@ -58,16 +58,16 @@ const afterFlow = [
 
 const proofMetrics = [
   {
-    value: '+3 à 5',
-    label: 'mandats / mois'
+    value: '38',
+    label: 'leads / mois'
   },
   {
-    value: '< 60 sec',
+    value: '52 sec',
     label: 'première réponse'
   },
   {
-    value: '0 oubli',
-    label: 'sur les leads chauds'
+    value: '+4',
+    label: 'mandats récupérés'
   }
 ];
 
@@ -81,7 +81,7 @@ export function HeroSection() {
       <Container>
         <div className="grid items-start gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-10 xl:gap-14">
           <div className="reveal-up space-y-7 sm:space-y-8">
-            <p className="eyebrow">Perte immédiate</p>
+            <p className="eyebrow">Perte invisible</p>
 
             <div className="space-y-4">
               <h1 className="max-w-4xl text-balance text-[3rem] font-semibold leading-[0.9] tracking-[-0.05em] text-ink sm:text-[4.2rem] lg:max-w-[33rem] lg:text-[4.5rem] xl:max-w-4xl xl:text-[5.2rem]">

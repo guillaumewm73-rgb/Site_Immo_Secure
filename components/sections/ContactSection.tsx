@@ -189,7 +189,7 @@ export function ContactSection() {
               disabled={status === 'loading'}
               className="btn-primary mt-6 min-h-[60px] w-full disabled:cursor-not-allowed disabled:opacity-70"
             >
-              {status === 'loading' ? 'Envoi en cours...' : ctaLabels.primary}
+              {status === 'loading' ? 'Envoi en cours...' : ctaLabels.form}
               {status === 'loading' ? null : <ArrowRightIcon className="h-4 w-4" />}
             </button>
 

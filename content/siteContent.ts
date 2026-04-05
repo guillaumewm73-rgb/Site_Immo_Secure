@@ -51,20 +51,21 @@ export const seoContent = {
 };
 
 export const ctaLabels = {
-  primary: 'Demander un diagnostic',
-  short: 'Diagnostic',
+  primary: 'Voir combien vous perdez',
+  short: 'Vos pertes',
+  form: 'Faire le test maintenant',
   helper: 'En 30 minutes, vous voyez exactement où vous perdez des mandats et comment les récupérer.'
 };
 
 export const heroContent = {
-  title: 'Pendant que vous lisez ça, un prospect signe ailleurs.',
+  title: 'Vous perdez des mandats tous les jours. Vous ne le voyez juste pas.',
   subtitle:
-    'Immo Secure répond en moins de 60 secondes, relance automatiquement les estimations et pousse vos prospects au rendez-vous avant la concurrence.',
+    'Chaque minute sans réponse, un lead chaud compare, hésite puis signe avec l’agence la plus rapide.',
   primaryCta: {
     label: ctaLabels.primary,
     href: '#contact'
   },
-  tension: 'Chaque lead non répondu est déjà en train de comparer votre agence avec celle qui a répondu avant vous.'
+  tension: 'Le pire, c’est que ces mandats étaient déjà à vous.'
 };
 
 export const heroSignals = [
@@ -106,12 +107,58 @@ export const demoContent = {
   videoTitle: 'Du lead entrant au rendez-vous',
   videoSubtitle:
     'La vraie version à brancher ici est une Loom de 2 à 3 minutes. En attendant, cette simulation montre le parcours qui doit convaincre en quelques secondes.',
-  bullets: [
-    'Le prospect reçoit une réponse avant de douter',
-    'La relance part sans dépendre de votre mémoire',
-    'Le rendez-vous est proposé avant que le lead refroidisse',
-    'Votre équipe intervient seulement sur les leads chauds'
+  bullets: ['Le prospect reçoit une réponse avant de douter', 'Le rendez-vous est proposé pendant que le lead est encore chaud']
+};
+
+export const proofCaseStudy = {
+  eyebrow: 'Cas client simulé',
+  title: 'Agence indépendante, 38 leads/mois, 4 mandats récupérés en 30 jours',
+  text:
+    'Avant: réponses irrégulières, relances manquées, estimation froide. Après: réponse en 52 secondes, 11 estimations relancées, 4 mandats récupérés sur le mois.',
+  stats: [
+    {
+      value: '52 sec',
+      label: 'première réponse'
+    },
+    {
+      value: '11',
+      label: 'estimations relancées'
+    },
+    {
+      value: '+4',
+      label: 'mandats récupérés'
+    }
   ]
+};
+
+export const crmCaptureContent = {
+  eyebrow: 'Capture CRM simulée',
+  title: 'Pipeline du jour',
+  rows: [
+    {
+      lead: 'Mme Martin · estimation T3',
+      stage: 'Réponse envoyée',
+      eta: '09:14'
+    },
+    {
+      lead: 'M. Bernard · vente maison',
+      stage: 'RDV proposé',
+      eta: '09:19'
+    },
+    {
+      lead: 'Mme Lopes · estimation',
+      stage: 'Relance J+1',
+      eta: '09:42'
+    }
+  ]
+};
+
+export const proofMessage = {
+  eyebrow: 'Message réellement envoyé',
+  title: 'Exemple de réponse automatique',
+  body:
+    'Bonjour Mme Martin, votre demande d’estimation est bien reçue. Nous pouvons vous proposer un rendez-vous jeudi à 18h ou vendredi à 12h. Quel créneau vous convient ?',
+  footer: 'Objectif: répondre vite, proposer un créneau, faire avancer le lead.'
 };
 
 export const problemContent = {
@@ -235,7 +282,7 @@ export const resultMetrics = [
   {
     value: '+3 à 5',
     label: 'mandats / mois',
-    context: 'potentiel récupéré'
+    context: 'sur une agence type'
   },
   {
     value: '+30%',
@@ -245,7 +292,7 @@ export const resultMetrics = [
   {
     value: '0',
     label: 'lead oublié',
-    context: 'si le process tourne'
+    context: 'quand le process tourne'
   }
 ];
 
@@ -345,7 +392,7 @@ export const finalCta = {
 };
 
 export const contactContent = {
-  title: 'Demandez votre diagnostic',
+  title: 'Voyez combien vous perdez',
   subtitle:
     'En 30 minutes, vous voyez exactement où vous perdez des mandats et ce qu’il faut corriger pour les récupérer.',
   closing: '3 champs. 30 minutes. Un plan clair pour récupérer plus de rendez-vous.'
