@@ -67,10 +67,10 @@ export function ProblemSection() {
                 </div>
               </div>
 
-              <ol className="mt-8 flex-1 space-y-4">
+              <ol className="relative mt-8 flex-1 space-y-4 before:absolute before:bottom-8 before:left-[1.35rem] before:top-8 before:w-px before:bg-gradient-to-b before:from-accent/40 before:via-deep/20 before:to-rose-200">
                 {lossTimeline.map((item, index) => (
-                  <li key={item.time} className="panel-muted flex items-start gap-4 px-5 py-4">
-                    <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-deep text-sm font-semibold text-white shadow-soft">
+                  <li key={item.time} className="panel-muted relative flex items-start gap-4 px-5 py-4">
+                    <span className="relative z-10 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-deep text-sm font-semibold text-white shadow-soft">
                       {index + 1}
                     </span>
                     <div>

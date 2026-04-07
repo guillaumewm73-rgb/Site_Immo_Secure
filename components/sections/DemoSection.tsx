@@ -16,9 +16,11 @@ export function DemoSection() {
     <section id="preuve" className="section-space section-tint">
       <Container>
         <div className="grid items-start gap-10 lg:grid-cols-[1.12fr_0.88fr] lg:gap-14">
-          <div className="space-y-5">
+          <div className="space-y-5 lg:sticky lg:top-28">
             <div className="panel overflow-hidden p-3 sm:p-4">
-              <div className="panel overflow-hidden border-white/10 bg-gradient-to-br from-deep via-[#14273f] to-steel p-4 text-white shadow-card sm:p-5">
+              <div className="panel relative overflow-hidden border-white/10 bg-gradient-to-br from-deep via-[#14273f] to-steel p-4 text-white shadow-card sm:p-5">
+                <div className="pointer-events-none absolute inset-x-16 top-0 h-20 rounded-full bg-accent/16 blur-3xl" />
+
                 <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
                   <div>
                     <p className="section-kicker text-white/65">
@@ -36,14 +38,14 @@ export function DemoSection() {
                   </Link>
                 </div>
 
-                <p className="mt-5 max-w-xl text-base font-semibold leading-relaxed text-white sm:text-lg">
+                <p className="relative mt-5 max-w-xl text-base font-semibold leading-relaxed text-white sm:text-lg">
                   {demoContent.videoIntro}
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-white/70 sm:text-base">
+                <p className="relative mt-2 text-sm leading-relaxed text-white/70 sm:text-base">
                   {demoContent.videoSubtitle}
                 </p>
 
-                <div className="panel-muted mt-5 overflow-hidden border-white/10 bg-white/95">
+                <div className="panel-muted relative mt-5 overflow-hidden border-white/10 bg-white/95">
                   <div className="aspect-video w-full bg-black">
                     <iframe
                       src={demoContent.loomEmbedUrl}
@@ -54,11 +56,11 @@ export function DemoSection() {
                   </div>
                 </div>
 
-                <p className="mt-5 max-w-xl text-sm font-medium leading-relaxed text-white/88 sm:text-base">
+                <p className="relative mt-5 max-w-xl text-sm font-medium leading-relaxed text-white/88 sm:text-base">
                   {demoContent.videoOutro}
                 </p>
 
-                <div className="mt-5">
+                <div className="relative mt-5">
                   <Link href="#contact" className="btn-primary w-full sm:w-auto">
                     {ctaLabels.primary}
                     <ArrowRightIcon className="h-4 w-4" />

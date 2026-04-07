@@ -78,10 +78,12 @@ export function HeroSection() {
       className="relative overflow-hidden pb-16 pt-8 sm:pb-20 sm:pt-10 md:pt-16 lg:pb-24 lg:pt-20 xl:pb-28 xl:pt-24"
     >
       <div className="pointer-events-none absolute inset-0 bg-mesh-soft opacity-80" />
+      <div className="pointer-events-none absolute -left-20 top-24 h-56 w-56 rounded-full bg-accent/10 blur-3xl sm:h-72 sm:w-72" />
+      <div className="pointer-events-none absolute right-0 top-12 h-48 w-48 rounded-full bg-deep/8 blur-3xl sm:h-64 sm:w-64" />
       <Container>
         <div className="grid items-start gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-10 xl:gap-14">
           <div className="reveal-up space-y-7 sm:space-y-8">
-            <p className="eyebrow">Perte invisible</p>
+            <p className="eyebrow shadow-card">Perte invisible</p>
 
             <div className="space-y-4">
               <h1 className="max-w-4xl text-balance text-[3rem] font-semibold leading-[0.9] tracking-[-0.05em] text-ink sm:text-[4.2rem] lg:max-w-[33rem] lg:text-[4.5rem] xl:max-w-4xl xl:text-[5.2rem]">
@@ -96,7 +98,7 @@ export function HeroSection() {
               {heroContent.tension}
             </p>
 
-            <div className="flex flex-col gap-3">
+            <div className="panel inline-flex max-w-2xl flex-col gap-3 p-3 sm:p-4">
               <Link
                 href={heroContent.primaryCta.href}
                 className="btn-primary min-h-[64px] w-full justify-center text-base sm:w-auto sm:min-w-[320px] sm:px-8 sm:text-lg"
@@ -104,14 +106,15 @@ export function HeroSection() {
                 {heroContent.primaryCta.label}
                 <ArrowRightIcon className="h-4 w-4" />
               </Link>
-              <p className="text-sm font-medium text-steel sm:text-base">{ctaLabels.helper}</p>
+              <p className="px-2 text-sm font-medium text-steel sm:text-base">{ctaLabels.helper}</p>
             </div>
           </div>
 
           <div className="reveal-up relative lg:pt-2" style={{ animationDelay: '0.12s' }}>
-            <div className="panel relative overflow-hidden border border-line bg-white p-5 sm:p-6 lg:p-7">
+            <div className="panel float-soft relative overflow-hidden border border-line bg-white p-5 sm:p-6 lg:p-7">
               <div className="pointer-events-none absolute inset-0 bg-hero-grid [background-size:34px_34px] opacity-40" />
               <div className="pointer-events-none absolute inset-x-12 top-0 h-24 rounded-full bg-accent/10 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-10 right-0 h-32 w-32 rounded-full bg-deep/10 blur-3xl" />
 
               <div className="relative space-y-5">
                 <div className="space-y-3">
@@ -173,8 +176,8 @@ export function HeroSection() {
 
                 <div className="grid gap-3 sm:grid-cols-3">
                   {proofMetrics.map((item) => (
-                    <div key={item.label} className="panel-muted px-4 py-4">
-                      <p className="text-lg font-semibold text-ink">{item.value}</p>
+                    <div key={item.label} className="panel-muted px-4 py-4 text-center">
+                      <p className="text-xl font-semibold text-ink">{item.value}</p>
                       <p className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-steel">{item.label}</p>
                     </div>
                   ))}

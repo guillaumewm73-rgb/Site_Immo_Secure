@@ -94,6 +94,7 @@ export function ContactSection() {
           <div className="panel relative overflow-hidden border-white/10 bg-gradient-to-br from-deep to-secondary p-8 text-white shadow-card sm:p-10 lg:p-8 xl:p-10">
             <div className="absolute -right-14 -top-12 h-40 w-40 rounded-full bg-accent/14 blur-3xl" />
             <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-white/8 blur-3xl" />
+            <div className="absolute inset-x-14 top-0 h-20 rounded-full bg-white/6 blur-3xl" />
 
             <div className="relative">
               <p className="inline-flex rounded-full border border-white/12 bg-white/8 px-4 py-2 section-kicker text-white/75">
@@ -145,8 +146,11 @@ export function ContactSection() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} noValidate className="panel border border-line bg-white p-7 shadow-card sm:p-9 lg:p-8 xl:p-9">
-            <div className="mb-6 border-b border-line/80 pb-5">
+          <form onSubmit={handleSubmit} noValidate className="panel relative overflow-hidden border border-line bg-white p-7 shadow-card sm:p-9 lg:p-8 xl:p-9">
+            <div className="pointer-events-none absolute -right-10 top-0 h-28 w-28 rounded-full bg-accent/8 blur-3xl" />
+            <div className="pointer-events-none absolute bottom-0 left-0 h-24 w-24 rounded-full bg-deep/5 blur-3xl" />
+
+            <div className="relative mb-6 border-b border-line/80 pb-5">
               <p className="section-kicker text-accent">Formulaire</p>
               <h3 className="mt-2 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
                 {ctaLabels.primary}
@@ -156,7 +160,7 @@ export function ContactSection() {
               </p>
             </div>
 
-            <div className="grid gap-4">
+            <div className="relative grid gap-4 sm:grid-cols-2">
               <Field
                 id="firstName"
                 label="Prénom"
@@ -166,6 +170,7 @@ export function ContactSection() {
                 onChange={(value) => handleChange('firstName', value)}
               />
               <Field
+                className="sm:col-span-2"
                 id="email"
                 type="email"
                 label="Email"
@@ -187,7 +192,7 @@ export function ContactSection() {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="btn-primary mt-6 min-h-[60px] w-full disabled:cursor-not-allowed disabled:opacity-70"
+              className="btn-primary relative mt-6 min-h-[60px] w-full disabled:cursor-not-allowed disabled:opacity-70"
             >
               {status === 'loading' ? 'Envoi en cours...' : ctaLabels.form}
               {status === 'loading' ? null : <ArrowRightIcon className="h-4 w-4" />}
@@ -225,6 +230,7 @@ export function ContactSection() {
 }
 
 type FieldProps = {
+  className?: string;
   id: string;
   label: string;
   value: string;
@@ -235,6 +241,7 @@ type FieldProps = {
 };
 
 function Field({
+  className,
   id,
   label,
   value,
@@ -244,8 +251,8 @@ function Field({
   onChange
 }: FieldProps) {
   return (
-    <label htmlFor={id} className="block text-sm font-medium text-ink">
-      {label}
+    <label htmlFor={id} className={`block text-sm font-medium text-ink ${className ?? ''}`}>
+      <span className="section-kicker text-steel">{label}</span>
       <input
         id={id}
         name={id}

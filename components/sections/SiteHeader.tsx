@@ -6,12 +6,15 @@ import { Container } from '@/components/ui/Container';
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 px-4 pt-3 sm:px-5 md:px-6">
+    <header className="sticky top-0 z-50 px-4 pt-4 sm:px-5 md:px-6">
       <Container>
-        <div className="flex items-center justify-between gap-3 rounded-[1.9rem] border border-line/80 bg-white/92 px-4 py-3 shadow-soft backdrop-blur md:flex-wrap md:px-5 lg:h-20 lg:flex-nowrap lg:rounded-full lg:py-1 xl:px-6">
+        <div className="relative flex items-center justify-between gap-3 overflow-hidden rounded-[1.9rem] border border-white/70 bg-white/80 px-4 py-3 shadow-card backdrop-blur-xl md:flex-wrap md:px-5 lg:h-20 lg:flex-nowrap lg:rounded-full lg:py-1 xl:px-6">
+          <div className="pointer-events-none absolute inset-x-10 top-0 h-14 rounded-full bg-accent/6 blur-2xl" />
+          <div className="pointer-events-none absolute -right-8 bottom-0 h-14 w-28 rounded-full bg-deep/6 blur-2xl" />
+
           <Link
             href="#top"
-            className="group inline-flex items-center gap-2.5 rounded-full bg-white px-3 py-2 shadow-soft sm:gap-3 md:order-1 md:bg-transparent md:px-0 md:py-0 md:shadow-none"
+            className="group relative z-10 inline-flex items-center gap-2.5 rounded-full bg-white/92 px-3 py-2 shadow-soft sm:gap-3 md:order-1 md:bg-transparent md:px-0 md:py-0 md:shadow-none"
           >
             <span className="inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-2xl border border-deep/10 bg-white shadow-soft sm:h-11 sm:w-11">
               <Image
@@ -30,19 +33,19 @@ export function SiteHeader() {
             </span>
           </Link>
 
-          <nav className="hidden items-center justify-center gap-5 rounded-full border border-line/80 bg-white/80 px-4 py-2.5 md:order-3 md:flex md:w-full lg:order-2 lg:w-auto lg:flex-1 lg:gap-5 lg:px-4 lg:py-2.5 xl:gap-7 xl:px-5 xl:py-3">
+          <nav className="relative z-10 hidden items-center justify-center gap-2 rounded-full border border-white/70 bg-white/72 px-3 py-2.5 shadow-soft md:order-3 md:flex md:w-full lg:order-2 lg:w-auto lg:flex-1 lg:gap-2 lg:px-3 lg:py-2.5 xl:gap-3 xl:px-4 xl:py-3">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-steel transition-colors duration-200 hover:text-accent laptop:text-[13px]"
+                className="rounded-full px-3 py-2 text-sm font-medium text-steel transition duration-200 hover:bg-surface-alt hover:text-ink laptop:text-[13px]"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
 
-          <div className="flex items-center gap-2 sm:gap-3 md:order-2 md:ml-auto lg:order-3 lg:ml-0">
+          <div className="relative z-10 flex items-center gap-2 sm:gap-3 md:order-2 md:ml-auto lg:order-3 lg:ml-0">
             <Link
               href="#contact"
               className="btn-primary px-4 py-2.5 text-xs md:px-5 md:py-3 md:text-sm lg:px-4 xl:px-6"

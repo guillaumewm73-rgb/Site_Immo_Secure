@@ -29,7 +29,12 @@ export function ComparisonSection() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:gap-8">
+        <div className="relative mt-10 grid gap-6 lg:grid-cols-2 lg:gap-8">
+          <div className="pointer-events-none absolute left-1/2 top-12 hidden h-[calc(100%-6rem)] w-px -translate-x-1/2 bg-gradient-to-b from-rose-200/0 via-accent/45 to-white/0 lg:block" />
+          <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-line/80 bg-white shadow-card lg:flex">
+            <ArrowRightIcon className="h-5 w-5 text-accent" />
+          </div>
+
           <article className="panel-danger p-6 sm:p-7">
             <div className="flex items-start justify-between gap-4">
               <div>

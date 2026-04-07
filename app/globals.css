@@ -12,7 +12,10 @@ html {
 
 body {
   min-height: 100vh;
-  background: linear-gradient(180deg, #f8fafc 0%, #f8fafc 100%);
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 24%),
+    radial-gradient(circle at top right, rgba(15, 23, 42, 0.06), transparent 28%),
+    linear-gradient(180deg, #f8fafc 0%, #eff5fb 40%, #f8fafc 100%);
   color: #0f172a;
 }
 
@@ -28,6 +31,32 @@ h3 {
 
 main {
   @apply relative overflow-hidden;
+}
+
+main::before,
+main::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  border-radius: 9999px;
+  filter: blur(88px);
+  opacity: 0.55;
+}
+
+main::before {
+  top: 8rem;
+  left: -9rem;
+  height: 18rem;
+  width: 18rem;
+  background: rgba(37, 99, 235, 0.08);
+}
+
+main::after {
+  right: -10rem;
+  top: 38rem;
+  height: 22rem;
+  width: 22rem;
+  background: rgba(15, 23, 42, 0.07);
 }
 
 section[id] {
@@ -65,29 +94,42 @@ section[id] {
 
 @layer components {
   .panel {
-    @apply min-w-0 rounded-[1.9rem] border border-line/90 bg-white shadow-soft;
+    @apply min-w-0 rounded-[2rem] border shadow-soft;
+    border-color: rgba(226, 232, 240, 0.84);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 1));
+    box-shadow:
+      0 18px 48px rgba(15, 23, 42, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.65);
   }
 
   .panel-muted {
-    @apply min-w-0 rounded-[1.5rem] border border-line/90 bg-surface-alt;
+    @apply min-w-0 rounded-[1.55rem] border bg-surface-alt;
+    border-color: rgba(226, 232, 240, 0.82);
+    background: linear-gradient(180deg, rgba(248, 250, 252, 0.96), rgba(241, 245, 249, 0.9));
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
   }
 
   .panel-dark {
     @apply min-w-0 rounded-[1.9rem] border shadow-soft;
     border-color: rgba(255, 255, 255, 0.12);
-    background: rgba(255, 255, 255, 0.08);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.07)),
+      linear-gradient(135deg, rgba(15, 23, 42, 0.94), rgba(30, 41, 59, 0.94));
+    box-shadow:
+      0 24px 56px rgba(2, 6, 23, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 
   .panel-accent {
     @apply min-w-0 rounded-[1.75rem] border shadow-soft;
     border-color: rgba(37, 99, 235, 0.15);
-    background: rgba(239, 246, 255, 0.82);
+    background: linear-gradient(180deg, rgba(239, 246, 255, 0.96), rgba(219, 234, 254, 0.78));
   }
 
   .panel-danger {
     @apply min-w-0 rounded-[1.75rem] border shadow-soft;
     border-color: rgb(254 205 211);
-    background: rgba(255, 241, 242, 0.9);
+    background: linear-gradient(180deg, rgba(255, 241, 242, 0.98), rgba(255, 228, 230, 0.9));
   }
 
   .eyebrow {
@@ -99,23 +141,38 @@ section[id] {
   }
 
   .metric-card {
-    @apply min-w-0 overflow-hidden rounded-[1.7rem] border border-line/90 bg-white p-5 shadow-soft transition duration-300 ease-smooth hover:-translate-y-1 hover:shadow-card;
+    @apply min-w-0 overflow-hidden rounded-[1.8rem] border p-5 shadow-soft transition duration-300 ease-smooth hover:-translate-y-1 hover:shadow-card;
+    border-color: rgba(226, 232, 240, 0.88);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98));
   }
 
   .flow-card {
-    @apply relative min-w-0 overflow-hidden rounded-[1.7rem] border border-line/90 bg-white p-5 shadow-soft;
+    @apply relative min-w-0 overflow-hidden rounded-[1.8rem] border p-5 shadow-soft;
+    border-color: rgba(226, 232, 240, 0.84);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.96));
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 whitespace-normal text-center rounded-full bg-accent px-7 py-4 text-sm font-semibold text-white shadow-cta transition duration-300 ease-smooth hover:-translate-y-1 hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/30 focus-visible:ring-offset-2 sm:text-base;
+    @apply inline-flex items-center justify-center gap-2 whitespace-normal text-center rounded-full px-7 py-4 text-sm font-semibold text-white shadow-cta transition duration-300 ease-smooth hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/30 focus-visible:ring-offset-2 sm:text-base;
+    background-image: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    box-shadow:
+      0 20px 40px rgba(37, 99, 235, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.18);
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center whitespace-normal text-center rounded-full border border-line bg-white px-7 py-4 text-sm font-semibold text-ink shadow-soft transition duration-300 ease-smooth hover:-translate-y-1 hover:border-accent/20 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/20 focus-visible:ring-offset-2 sm:text-base;
+    @apply inline-flex items-center justify-center whitespace-normal text-center rounded-full border px-7 py-4 text-sm font-semibold text-ink shadow-soft transition duration-300 ease-smooth hover:-translate-y-1 hover:border-accent/20 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/20 focus-visible:ring-offset-2 sm:text-base;
+    border-color: rgba(226, 232, 240, 0.92);
+    background: rgba(255, 255, 255, 0.86);
   }
 
   .field-input {
-    @apply mt-2 w-full rounded-2xl border border-line bg-white px-5 py-4 text-[15px] text-ink outline-none transition duration-300 ease-smooth focus:border-accent focus:ring-2 focus:ring-accent/10 sm:text-base;
+    @apply mt-2 w-full rounded-2xl border px-5 py-4 text-[15px] text-ink outline-none transition duration-300 ease-smooth focus:border-accent focus:ring-2 focus:ring-accent/10 sm:text-base;
+    border-color: rgba(226, 232, 240, 0.9);
+    background: rgba(248, 250, 252, 0.98);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.8),
+      0 12px 26px rgba(15, 23, 42, 0.04);
   }
 
   .section-kicker {
@@ -123,11 +180,15 @@ section[id] {
   }
 
   .section-tint {
-    @apply bg-surface-alt;
+    background: linear-gradient(180deg, rgba(241, 245, 249, 0.86), rgba(248, 250, 252, 0.96));
   }
 
   .section-dark {
-    @apply bg-section-dark text-white;
+    @apply text-white;
+    background-image:
+      radial-gradient(circle at top left, rgba(37, 99, 235, 0.14), transparent 26%),
+      radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.06), transparent 24%),
+      linear-gradient(180deg, rgba(15, 23, 42, 1), rgba(30, 41, 59, 1));
   }
 
   .reveal-up {
