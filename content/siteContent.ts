@@ -105,7 +105,7 @@ export const demoContent = {
     'En un coup d’œil, vous voyez comment un lead passe de demande entrante à rendez-vous proposé.',
   label: 'Démo courte',
   videoTitle: 'Du lead entrant au rendez-vous',
-  videoIntro: 'En 2 minutes, voyez exactement pourquoi vous perdez des mandats.',
+  videoIntro: 'En 2 minutes, voyez pourquoi vous perdez des mandats.',
   loomUrl: 'https://www.loom.com/share/c30d8970d4914118a57a0a07676337be',
   loomEmbedUrl: 'https://www.loom.com/embed/c30d8970d4914118a57a0a07676337be',
   videoSubtitle:

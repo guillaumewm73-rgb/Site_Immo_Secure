@@ -99,11 +99,11 @@ export default function Home() {
       <SiteHeader />
       <main>
         <HeroSection />
+        <DemoSection />
         <ProblemSection />
         <ComparisonSection />
         <SolutionSection />
         <BenefitsSection />
-        <DemoSection />
         <ContactSection />
       </main>
       <SiteFooter />
