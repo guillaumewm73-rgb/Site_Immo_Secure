@@ -105,8 +105,10 @@ export const demoContent = {
     'En un coup d’œil, vous voyez comment un lead passe de demande entrante à rendez-vous proposé.',
   label: 'Démo courte',
   videoTitle: 'Du lead entrant au rendez-vous',
+  loomUrl: 'https://www.loom.com/share/c30d8970d4914118a57a0a07676337be',
+  loomEmbedUrl: 'https://www.loom.com/embed/c30d8970d4914118a57a0a07676337be',
   videoSubtitle:
-    'À remplacer ensuite par une Loom de 2 à 3 minutes avec le vrai parcours.',
+    'Démo Loom réelle du parcours de réponse et de relance.',
   bullets: ['Réponse avant le doute', 'Rendez-vous avant que le lead refroidisse']
 };
 

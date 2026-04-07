@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { Container } from '@/components/ui/Container';
 import { ArrowRightIcon, CheckIcon } from '@/components/ui/Icons';
 import { SectionHeader } from '@/components/ui/SectionHeader';
@@ -27,19 +26,25 @@ export function DemoSection() {
                     </p>
                     <h3 className="mt-1 text-lg font-semibold sm:text-xl">{demoContent.videoTitle}</h3>
                   </div>
-                  <div className="rounded-full border border-white/12 bg-white/10 px-3 py-1 text-xs font-semibold text-white/80">
-                    Loom 2-3 min à brancher
-                  </div>
+                  <Link
+                    href={demoContent.loomUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-full border border-white/12 bg-white/10 px-3 py-1 text-xs font-semibold text-white/80 transition hover:bg-white/15"
+                  >
+                    Ouvrir sur Loom
+                  </Link>
                 </div>
 
                 <div className="panel-muted relative mt-6 overflow-hidden border-white/10 bg-white/95">
-                  <Image
-                    src="/dashboard-mockup.svg"
-                    alt="Simulation du tableau de bord Immo Secure"
-                    width={1200}
-                    height={900}
-                    className="h-auto w-full"
-                  />
+                  <div className="aspect-video w-full bg-black">
+                    <iframe
+                      src={demoContent.loomEmbedUrl}
+                      title={demoContent.videoTitle}
+                      className="h-full w-full"
+                      allowFullScreen
+                    />
+                  </div>
 
                   <div className="pointer-events-none absolute left-4 top-4 rounded-full border border-white/80 bg-white/95 px-4 py-2 text-xs font-semibold text-deep shadow-soft">
                     Réponse envoyée en 52 secondes
