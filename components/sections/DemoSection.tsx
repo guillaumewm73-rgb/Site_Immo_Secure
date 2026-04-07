@@ -15,10 +15,10 @@ export function DemoSection() {
   return (
     <section id="preuve" className="section-space section-tint">
       <Container>
-        <div className="grid items-start gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14">
+        <div className="grid items-start gap-10 lg:grid-cols-[1.12fr_0.88fr] lg:gap-14">
           <div className="space-y-5">
-            <div className="panel overflow-hidden p-4 sm:p-6">
-              <div className="panel overflow-hidden border-white/10 bg-gradient-to-br from-deep via-[#14273f] to-steel p-5 text-white shadow-card sm:p-6">
+            <div className="panel overflow-hidden p-3 sm:p-4">
+              <div className="panel overflow-hidden border-white/10 bg-gradient-to-br from-deep via-[#14273f] to-steel p-4 text-white shadow-card sm:p-5">
                 <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
                   <div>
                     <p className="section-kicker text-white/65">
@@ -36,7 +36,7 @@ export function DemoSection() {
                   </Link>
                 </div>
 
-                <div className="panel-muted relative mt-6 overflow-hidden border-white/10 bg-white/95">
+                <div className="panel-muted mt-5 overflow-hidden border-white/10 bg-white/95">
                   <div className="aspect-video w-full bg-black">
                     <iframe
                       src={demoContent.loomEmbedUrl}
@@ -44,13 +44,6 @@ export function DemoSection() {
                       className="h-full w-full"
                       allowFullScreen
                     />
-                  </div>
-
-                  <div className="pointer-events-none absolute left-4 top-4 rounded-full border border-white/80 bg-white/95 px-4 py-2 text-xs font-semibold text-deep shadow-soft">
-                    Réponse envoyée en 52 secondes
-                  </div>
-                  <div className="pointer-events-none absolute bottom-4 right-4 rounded-full border border-deep/10 bg-deep px-4 py-2 text-xs font-semibold text-white shadow-soft">
-                    RDV proposé avant 09:20
                   </div>
                 </div>
               </div>
