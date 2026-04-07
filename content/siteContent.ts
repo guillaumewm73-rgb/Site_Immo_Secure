@@ -105,10 +105,13 @@ export const demoContent = {
     'En un coup d’œil, vous voyez comment un lead passe de demande entrante à rendez-vous proposé.',
   label: 'Démo courte',
   videoTitle: 'Du lead entrant au rendez-vous',
+  videoIntro: 'En 2 minutes, voyez exactement pourquoi vous perdez des mandats.',
   loomUrl: 'https://www.loom.com/share/c30d8970d4914118a57a0a07676337be',
   loomEmbedUrl: 'https://www.loom.com/embed/c30d8970d4914118a57a0a07676337be',
   videoSubtitle:
     'Démo Loom réelle du parcours de réponse et de relance.',
+  videoOutro:
+    'Ce que vous voyez ici, c’est ce qui fait la différence entre perdre un lead et signer un mandat.',
   bullets: ['Réponse avant le doute', 'Rendez-vous avant que le lead refroidisse']
 };
 

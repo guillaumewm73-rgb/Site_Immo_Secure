@@ -36,6 +36,13 @@ export function DemoSection() {
                   </Link>
                 </div>
 
+                <p className="mt-5 max-w-xl text-base font-semibold leading-relaxed text-white sm:text-lg">
+                  {demoContent.videoIntro}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-white/70 sm:text-base">
+                  {demoContent.videoSubtitle}
+                </p>
+
                 <div className="panel-muted mt-5 overflow-hidden border-white/10 bg-white/95">
                   <div className="aspect-video w-full bg-black">
                     <iframe
@@ -45,6 +52,17 @@ export function DemoSection() {
                       allowFullScreen
                     />
                   </div>
+                </div>
+
+                <p className="mt-5 max-w-xl text-sm font-medium leading-relaxed text-white/88 sm:text-base">
+                  {demoContent.videoOutro}
+                </p>
+
+                <div className="mt-5">
+                  <Link href="#contact" className="btn-primary w-full sm:w-auto">
+                    {ctaLabels.primary}
+                    <ArrowRightIcon className="h-4 w-4" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -137,13 +155,6 @@ export function DemoSection() {
                   <p className="text-sm font-semibold text-slate-800 sm:text-base">{item}</p>
                 </div>
               ))}
-            </div>
-
-            <div className="mt-8">
-              <Link href="#contact" className="btn-primary w-full sm:w-auto">
-                {ctaLabels.primary}
-                <ArrowRightIcon className="h-4 w-4" />
-              </Link>
             </div>
           </div>
         </div>
