@@ -21,8 +21,8 @@ export function BenefitsSection() {
           {resultMetrics.map((metric) => (
             <article key={metric.label} className="panel-dark p-6 text-center sm:p-7">
               <p className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">{metric.value}</p>
-              <p className="mt-3 section-kicker text-white/70">{metric.label}</p>
-              <p className="mt-2 text-sm text-white/75">{metric.context}</p>
+              <p className="mt-3 section-kicker text-white/82">{metric.label}</p>
+              <p className="mt-2 text-sm text-white/84">{metric.context}</p>
             </article>
           ))}
         </div>

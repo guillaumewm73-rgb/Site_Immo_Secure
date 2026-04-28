@@ -13,21 +13,21 @@ const config: Config = {
         laptop: { min: '1024px', max: '1279px' }
       },
       colors: {
-        surface: '#F8FAFC',
-        'surface-alt': '#F1F5F9',
+        surface: '#F7F9FC',
+        'surface-alt': '#EEF3F8',
         ink: '#0F172A',
-        steel: '#64748B',
+        steel: '#475569',
         deep: '#0F172A',
         secondary: '#1E293B',
         accent: '#2563EB',
         'accent-strong': '#1D4ED8',
-        'accent-soft': '#DBEAFE',
-        line: '#E2E8F0'
+        'accent-soft': '#EAF2FF',
+        line: '#D7E1EC'
       },
       boxShadow: {
-        soft: '0 16px 40px rgba(15, 23, 42, 0.08)',
-        card: '0 28px 64px rgba(15, 23, 42, 0.12)',
-        cta: '0 18px 38px rgba(37, 99, 235, 0.24)'
+        soft: '0 12px 30px rgba(15, 23, 42, 0.07)',
+        card: '0 22px 54px rgba(15, 23, 42, 0.11)',
+        cta: '0 16px 32px rgba(37, 99, 235, 0.22)'
       },
       backgroundImage: {
         'mesh-soft':

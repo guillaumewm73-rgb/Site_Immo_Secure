@@ -30,7 +30,7 @@ export function ProblemSection() {
           <div className="panel-dark h-full p-6 sm:p-7">
             <SectionHeader title={problemContent.title} kicker="Le vrai coût du retard" theme="dark" />
 
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/78 sm:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/86 sm:text-lg">
               {problemContent.paragraphs[0]}
             </p>
 
@@ -50,7 +50,7 @@ export function ProblemSection() {
               ))}
             </ul>
 
-            <p className="mt-6 rounded-[1.75rem] border border-white/12 bg-white/8 p-6 text-base font-semibold leading-relaxed text-white shadow-soft sm:text-lg">
+            <p className="mt-6 rounded-[1.1rem] border border-white/15 bg-white/10 p-6 text-base font-semibold leading-relaxed text-white shadow-soft sm:text-lg">
               {problemContent.conclusion}
             </p>
           </div>

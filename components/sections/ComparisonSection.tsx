@@ -60,27 +60,27 @@ export function ComparisonSection() {
             </p>
           </article>
 
-          <article className="panel overflow-hidden border-deep/10 bg-deep p-6 text-white shadow-card sm:p-7">
+          <article className="panel-contrast overflow-hidden p-6 text-white sm:p-7">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="section-kicker text-white/60">Après</p>
+                <p className="section-kicker text-white/75">Après</p>
                 <h3 className="mt-3 text-2xl font-semibold tracking-tight text-white">Le lead avance jusqu’au rendez-vous</h3>
               </div>
-              <div className="rounded-full border border-white/12 bg-white/10 px-4 py-2 text-sm font-semibold text-white/85">
+              <div className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white/90">
                 Pipeline sécurisé
               </div>
             </div>
 
             <div className="mt-6 grid gap-3 sm:grid-cols-[repeat(4,minmax(0,1fr))]">
               {afterFlow.map((item, index) => (
-                <div key={item} className="rounded-[1.7rem] border border-white/12 bg-white/10 px-4 py-4 text-center">
-                  <p className="section-kicker text-white/55">Étape {index + 1}</p>
+                <div key={item} className="rounded-[1rem] border border-white/15 bg-white/10 px-4 py-4 text-center">
+                  <p className="section-kicker text-white/70">Étape {index + 1}</p>
                   <p className="mt-2 text-sm font-semibold text-white sm:text-base">{item}</p>
                 </div>
               ))}
             </div>
 
-            <p className="mt-5 text-sm font-medium leading-relaxed text-white/80 sm:text-base">
+            <p className="mt-5 text-sm font-medium leading-relaxed text-white/86 sm:text-base">
               Avec un suivi immédiat et des relances automatiques, le prospect reçoit une réponse avant de douter.
             </p>
           </article>

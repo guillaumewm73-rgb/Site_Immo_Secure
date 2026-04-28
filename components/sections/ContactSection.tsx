@@ -92,23 +92,19 @@ export function ContactSection() {
       <Container>
         <div className="grid gap-7 md:grid-cols-[0.92fr_1.08fr] md:gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-8 xl:gap-10">
           <div className="panel relative overflow-hidden border-white/10 bg-gradient-to-br from-deep to-secondary p-8 text-white shadow-card sm:p-10 lg:p-8 xl:p-10">
-            <div className="absolute -right-14 -top-12 h-40 w-40 rounded-full bg-accent/14 blur-3xl" />
-            <div className="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-white/8 blur-3xl" />
-            <div className="absolute inset-x-14 top-0 h-20 rounded-full bg-white/6 blur-3xl" />
-
             <div className="relative">
-              <p className="inline-flex rounded-full border border-white/12 bg-white/8 px-4 py-2 section-kicker text-white/75">
+              <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 section-kicker text-white/85">
                 Diagnostic conversion
               </p>
               <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-[2.95rem] xl:text-5xl">
                 {contactContent.title}
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-white/80 sm:text-lg">
+              <p className="mt-4 text-base leading-relaxed text-white/86 sm:text-lg">
                 {contactContent.subtitle}
               </p>
 
               <div className="panel-dark mt-6 p-5">
-                <p className="section-kicker text-white/55">
+                <p className="section-kicker text-white/72">
                   Promesse avant le rendez-vous
                 </p>
                 <p className="mt-2 text-base font-semibold text-white">
@@ -128,17 +124,17 @@ export function ContactSection() {
               </ul>
 
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                <div className="panel-dark px-4 py-4 text-sm text-white/80">
-                  <p className="section-kicker text-white/55">Durée</p>
+                <div className="panel-dark px-4 py-4 text-sm text-white/86">
+                  <p className="section-kicker text-white/72">Durée</p>
                   <p className="mt-2 font-semibold text-white">30 minutes</p>
                 </div>
-                <div className="panel-dark px-4 py-4 text-sm text-white/80">
-                  <p className="section-kicker text-white/55">Interlocuteur</p>
+                <div className="panel-dark px-4 py-4 text-sm text-white/86">
+                  <p className="section-kicker text-white/72">Interlocuteur</p>
                   <p className="mt-2 font-semibold text-white">{company.founderDisplay}</p>
                 </div>
-                <div className="panel-dark px-4 py-4 text-sm text-white/80 sm:col-span-2">
-                  <p className="section-kicker text-white/55">Coordonnées</p>
-                  <p className="mt-2 font-semibold text-white">
+                <div className="panel-dark px-4 py-4 text-sm text-white/86 sm:col-span-2">
+                  <p className="section-kicker text-white/72">Coordonnées</p>
+                  <p className="mt-2 font-semibold text-white [overflow-wrap:anywhere]">
                     {company.email} · {company.phoneDisplay}
                   </p>
                 </div>
@@ -148,7 +144,6 @@ export function ContactSection() {
 
           <form onSubmit={handleSubmit} noValidate className="panel relative overflow-hidden border border-line bg-white p-7 shadow-card sm:p-9 lg:p-8 xl:p-9">
             <div className="pointer-events-none absolute -right-10 top-0 h-28 w-28 rounded-full bg-accent/8 blur-3xl" />
-            <div className="pointer-events-none absolute bottom-0 left-0 h-24 w-24 rounded-full bg-deep/5 blur-3xl" />
 
             <div className="relative mb-6 border-b border-line/80 pb-5">
               <p className="section-kicker text-accent">Formulaire</p>

@@ -75,18 +75,16 @@ export function HeroSection() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden pb-16 pt-8 sm:pb-20 sm:pt-10 md:pt-16 lg:pb-24 lg:pt-20 xl:pb-28 xl:pt-24"
+      className="relative overflow-hidden pb-14 pt-8 sm:pb-16 sm:pt-10 md:pt-14 lg:pb-20 lg:pt-16 xl:pb-24 xl:pt-20"
     >
-      <div className="pointer-events-none absolute inset-0 bg-mesh-soft opacity-80" />
-      <div className="pointer-events-none absolute -left-20 top-24 h-56 w-56 rounded-full bg-accent/10 blur-3xl sm:h-72 sm:w-72" />
-      <div className="pointer-events-none absolute right-0 top-12 h-48 w-48 rounded-full bg-deep/8 blur-3xl sm:h-64 sm:w-64" />
+      <div className="pointer-events-none absolute inset-0 bg-mesh-soft opacity-45" />
       <Container>
         <div className="grid items-start gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-10 xl:gap-14">
           <div className="reveal-up space-y-7 sm:space-y-8">
             <p className="eyebrow shadow-card">Perte invisible</p>
 
             <div className="space-y-4">
-              <h1 className="max-w-4xl text-balance text-[3rem] font-semibold leading-[0.9] tracking-[-0.05em] text-ink sm:text-[4.2rem] lg:max-w-[33rem] lg:text-[4.5rem] xl:max-w-4xl xl:text-[5.2rem]">
+              <h1 className="max-w-4xl text-balance text-[2.85rem] font-semibold leading-[0.92] tracking-[-0.04em] text-ink sm:text-[4rem] lg:max-w-[33rem] lg:text-[4.35rem] xl:max-w-4xl xl:text-[5rem]">
                 {heroContent.title}
               </h1>
               <p className="max-w-2xl text-pretty text-lg leading-relaxed text-steel sm:text-xl lg:max-w-[34rem] xl:text-[1.34rem]">
@@ -113,8 +111,6 @@ export function HeroSection() {
           <div className="reveal-up relative lg:pt-2" style={{ animationDelay: '0.12s' }}>
             <div className="panel float-soft relative overflow-hidden border border-line bg-white p-5 sm:p-6 lg:p-7">
               <div className="pointer-events-none absolute inset-0 bg-hero-grid [background-size:34px_34px] opacity-40" />
-              <div className="pointer-events-none absolute inset-x-12 top-0 h-24 rounded-full bg-accent/10 blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-10 right-0 h-32 w-32 rounded-full bg-deep/10 blur-3xl" />
 
               <div className="relative space-y-5">
                 <div className="space-y-3">
@@ -150,10 +146,10 @@ export function HeroSection() {
                   </div>
                 </div>
 
-                <div className="panel overflow-hidden border-deep/10 bg-deep p-4 text-white shadow-card sm:p-5">
+                <div className="panel-contrast overflow-hidden p-4 text-white sm:p-5">
                   <div className="flex items-center justify-between gap-4">
-                    <p className="section-kicker text-white/60">Après</p>
-                    <p className="text-xs font-semibold text-white/75">Réponse, RDV, mandat</p>
+                    <p className="section-kicker text-white/75">Après</p>
+                    <p className="text-xs font-semibold text-white/85">Réponse, RDV, mandat</p>
                   </div>
                   <div className="mt-4 grid gap-3 sm:grid-cols-2">
                     {afterFlow.map((step) => {
@@ -161,13 +157,13 @@ export function HeroSection() {
                       return (
                         <div
                           key={step.title}
-                          className="rounded-[1.7rem] border border-white/12 bg-white/10 p-4"
+                          className="rounded-[1rem] border border-white/15 bg-white/10 p-4"
                         >
                           <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-white">
                             <Icon className="h-4 w-4" />
                           </span>
                           <p className="mt-3 text-sm font-semibold text-white">{step.title}</p>
-                          <p className="mt-1 text-sm leading-relaxed text-white/75">{step.text}</p>
+                          <p className="mt-1 text-sm leading-relaxed text-white/82">{step.text}</p>
                         </div>
                       );
                     })}

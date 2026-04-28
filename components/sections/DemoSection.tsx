@@ -19,11 +19,9 @@ export function DemoSection() {
           <div className="space-y-5 lg:sticky lg:top-28">
             <div className="panel overflow-hidden p-3 sm:p-4">
               <div className="panel relative overflow-hidden border-white/10 bg-gradient-to-br from-deep via-[#14273f] to-steel p-4 text-white shadow-card sm:p-5">
-                <div className="pointer-events-none absolute inset-x-16 top-0 h-20 rounded-full bg-accent/16 blur-3xl" />
-
                 <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
                   <div>
-                    <p className="section-kicker text-white/65">
+                    <p className="section-kicker text-white/80">
                       {demoContent.label}
                     </p>
                     <h3 className="mt-1 text-lg font-semibold sm:text-xl">{demoContent.videoTitle}</h3>
@@ -32,7 +30,7 @@ export function DemoSection() {
                     href={demoContent.loomUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="rounded-full border border-white/12 bg-white/10 px-3 py-1 text-xs font-semibold text-white/80 transition hover:bg-white/15"
+                    className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold text-white/90 transition hover:bg-white/15"
                   >
                     Ouvrir sur Loom
                   </Link>
@@ -41,7 +39,7 @@ export function DemoSection() {
                 <p className="relative mt-5 max-w-xl text-base font-semibold leading-relaxed text-white sm:text-lg">
                   {demoContent.videoIntro}
                 </p>
-                <p className="relative mt-2 text-sm leading-relaxed text-white/70 sm:text-base">
+                <p className="relative mt-2 text-sm leading-relaxed text-white/82 sm:text-base">
                   {demoContent.videoSubtitle}
                 </p>
 
@@ -56,7 +54,7 @@ export function DemoSection() {
                   </div>
                 </div>
 
-                <p className="relative mt-5 max-w-xl text-sm font-medium leading-relaxed text-white/88 sm:text-base">
+                <p className="relative mt-5 max-w-xl text-sm font-medium leading-relaxed text-white/90 sm:text-base">
                   {demoContent.videoOutro}
                 </p>
 

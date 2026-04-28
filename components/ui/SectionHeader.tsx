@@ -22,7 +22,7 @@ export function SectionHeader({
           className={cn(
             'mb-4 inline-flex rounded-full px-4 py-2 section-kicker laptop:px-3.5',
             theme === 'light' && 'border border-accent/15 bg-accent-soft/60 text-accent shadow-soft',
-            theme === 'dark' && 'border border-white/12 bg-white/10 text-white/75'
+            theme === 'dark' && 'border border-white/15 bg-white/10 text-white/85'
           )}
         >
           {kicker}
@@ -43,7 +43,7 @@ export function SectionHeader({
             'mt-5 max-w-3xl text-pretty text-base leading-relaxed sm:text-lg lg:text-[1.12rem] xl:text-xl',
             align === 'center' && 'mx-auto',
             theme === 'light' && 'text-steel',
-            theme === 'dark' && 'text-white/80'
+            theme === 'dark' && 'text-white/86'
           )}
         >
           {description}
