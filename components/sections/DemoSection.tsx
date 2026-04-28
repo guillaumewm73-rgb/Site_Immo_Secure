@@ -131,31 +131,33 @@ export function DemoSection() {
                 {proofMessage.footer}
               </p>
             </article>
+          </div>
+        </div>
 
-            <article className="panel mt-5 p-6 sm:p-7">
-              <p className="section-kicker text-accent">{proofTestimonial.eyebrow}</p>
-              <h3 className="mt-3 text-2xl font-semibold tracking-tight text-ink">{proofTestimonial.agency}</h3>
-              <p className="mt-4 text-base font-medium leading-relaxed text-ink">“{proofTestimonial.quote}”</p>
+        <div className="mt-5 grid items-start gap-5 lg:grid-cols-[1.12fr_0.88fr] lg:gap-14">
+          <article className="panel p-6 sm:p-7">
+            <p className="section-kicker text-accent">{proofTestimonial.eyebrow}</p>
+            <h3 className="mt-3 text-2xl font-semibold tracking-tight text-ink">{proofTestimonial.agency}</h3>
+            <p className="mt-4 text-base font-medium leading-relaxed text-ink">“{proofTestimonial.quote}”</p>
 
-              <div className="mt-5 space-y-3">
-                {proofTestimonial.beforeAfter.map((item) => (
-                  <div key={item} className="panel-accent px-4 py-3">
-                    <p className="text-sm font-medium text-ink sm:text-base">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </article>
-
-            <div className="mt-5 space-y-3">
-              {demoContent.bullets.map((item) => (
-                <div key={item} className="metric-card flex items-start gap-4 px-5 py-4">
-                  <span className="mt-0.5 inline-flex rounded-full bg-accent p-1 text-white">
-                    <CheckIcon className="h-3.5 w-3.5" />
-                  </span>
-                  <p className="text-sm font-semibold text-slate-800 sm:text-base">{item}</p>
+            <div className="mt-5 grid gap-3 md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+              {proofTestimonial.beforeAfter.map((item) => (
+                <div key={item} className="panel-accent px-4 py-3">
+                  <p className="text-sm font-medium text-ink sm:text-base">{item}</p>
                 </div>
               ))}
             </div>
+          </article>
+
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+            {demoContent.bullets.map((item) => (
+              <div key={item} className="metric-card flex items-start gap-4 px-5 py-4">
+                <span className="mt-0.5 inline-flex rounded-full bg-accent p-1 text-white">
+                  <CheckIcon className="h-3.5 w-3.5" />
+                </span>
+                <p className="text-sm font-semibold text-slate-800 sm:text-base">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
       </Container>
